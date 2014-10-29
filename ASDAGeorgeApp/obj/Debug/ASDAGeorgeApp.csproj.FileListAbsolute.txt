@@ -51,3 +51,8 @@ D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\C
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.TrustInfo.xml
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.exe.manifest
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.application
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\bin\Debug\ASDAGeorgeApp.exe.manifest
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\bin\Debug\ASDAGeorgeApp.application
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.TrustInfo.xml
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.exe.manifest
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.application

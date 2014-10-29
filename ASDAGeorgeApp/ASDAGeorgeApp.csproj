@@ -24,13 +24,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://ftp.teadia.co.uk/Uni/AHCI/George/</InstallUrl>
+    <InstallUrl>http://www.teadia.co.uk/Uni/AHCI/George/</InstallUrl>
     <TargetCulture>en</TargetCulture>
     <ProductName>George Kinect Application</ProductName>
     <PublisherName>Approximate Knowledge</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -148,16 +148,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Microsoft.Kinect.Toolkit.Controls\Microsoft.Kinect.Toolkit.Controls.csproj">
-      <Project>{4508c4d1-85bb-4f3f-9e3b-cc93d231c65d}</Project>
-      <Name>Microsoft.Kinect.Toolkit.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Microsoft.Kinect.Toolkit\Microsoft.Kinect.Toolkit.csproj">
-      <Project>{c6f9c31b-6130-4443-a5cc-ef0664552ecd}</Project>
-      <Name>Microsoft.Kinect.Toolkit</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -173,6 +163,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="image\load.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </SplashScreen>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Kinect.Toolkit.Controls\Microsoft.Kinect.Toolkit.Controls.csproj">
+      <Project>{4508c4d1-85bb-4f3f-9e3b-cc93d231c65d}</Project>
+      <Name>Microsoft.Kinect.Toolkit.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Kinect.Toolkit\Microsoft.Kinect.Toolkit.csproj">
+      <Project>{c6f9c31b-6130-4443-a5cc-ef0664552ecd}</Project>
+      <Name>Microsoft.Kinect.Toolkit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

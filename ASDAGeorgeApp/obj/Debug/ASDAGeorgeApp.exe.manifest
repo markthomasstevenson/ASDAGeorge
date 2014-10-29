@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="ASDAGeorgeApp.exe" version="0.0.1.1" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="ASDAGeorgeApp.exe" version="0.0.1.3" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="12800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="56320">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>smqttRYIPbizeYwNieet/poiPzMXGT7tfoGtJ4AYQGk=</dsig:DigestValue>
+        <dsig:DigestValue>JDl/4q1quudUB0qBlLbSbB5Gh2EoHVbVgnNar7Trjdc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,7 +66,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9OVYQhKftXI1oO1XPegyaL/GQXYAknBvcmntEukeFVM=</dsig:DigestValue>
+        <dsig:DigestValue>MFH7U2pvCvwHJ80U/d1fluzD4d/Nt25VobkGL7PAdVg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,7 +78,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QFfUYMX3EcWE+s4OHWRg9ukws+jEmG4UYsysiOmYshE=</dsig:DigestValue>
+        <dsig:DigestValue>fzYuRq4bNpwTdxLA1+fbzvRKIihFjXUuriRz/KFNJF8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

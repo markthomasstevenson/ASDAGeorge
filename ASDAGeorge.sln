@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASDAGeorgeApp", "ASDAGeorgeApp\ASDAGeorgeApp.csproj", "{7FBBB940-7E55-4988-8191-70F94908BB7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Kinect.Toolkit", "..\Microsoft.Kinect.Toolkit\Microsoft.Kinect.Toolkit.csproj", "{C6F9C31B-6130-4443-A5CC-EF0664552ECD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Kinect.Toolkit", "Microsoft.Kinect.Toolkit\Microsoft.Kinect.Toolkit.csproj", "{C6F9C31B-6130-4443-A5CC-EF0664552ECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Kinect.Toolkit.Controls", "..\Microsoft.Kinect.Toolkit.Controls\Microsoft.Kinect.Toolkit.Controls.csproj", "{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Kinect.Toolkit.Controls", "Microsoft.Kinect.Toolkit.Controls\Microsoft.Kinect.Toolkit.Controls.csproj", "{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

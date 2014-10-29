@@ -7,9 +7,9 @@
         <ResourceDictionary>
             <SolidColorBrush x:Key="BlueBrush" Color="#FF00BCF2" />
             <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e"/>
-            <sys:Double x:Key="ButtonSize">150</sys:Double>
-            <sys:Double x:Key="DoubleButtonSize">310</sys:Double>
-            <sys:Double x:Key="TripleButtonSize">470</sys:Double>
+            <sys:Double x:Key="ButtonSize">208</sys:Double>
+            <sys:Double x:Key="DoubleButtonSize">424</sys:Double>
+            <sys:Double x:Key="TripleButtonSize">640</sys:Double>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
