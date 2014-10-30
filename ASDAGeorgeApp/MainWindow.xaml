@@ -27,85 +27,16 @@
         <Viewbox Grid.RowSpan="3" Stretch="Uniform" HorizontalAlignment="Center">
             <Image Name="KinectImage" Width="640" Height="480"/>
         </Viewbox>
-        
+
+        <Viewbox Grid.RowSpan="3" Stretch="Uniform" HorizontalAlignment="Center">
+            <Image Name="Image" Width="640" Height="480"/>
+        </Viewbox>
+
         <Grid Grid.Row="0" Margin="20 10 0 0">
             <k:KinectSensorChooserUI Grid.Column="1" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Top" Name="sensorChooserUi" />
         </Grid>
 
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <Grid Margin="60 10 60 10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-            
-                <Grid Grid.Column="0" x:Name="Pins"
-                      Margin="0 0 50 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        
-                        <Button Grid.Row="0" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                        <Button Grid.Row="1" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                        <Button Grid.Row="2" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                    </Grid>
-
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-
-                        <Button Grid.Row="0" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                        <Button Grid.Row="1" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                        <Button Grid.Row="2" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                    </Grid>
-                </Grid>
-                
-                <Grid Grid.Column="1" x:Name="Home"
-                      Margin="50 0 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Column="0" Width="{StaticResource ButtonSize}" Height="{StaticResource TripleButtonSize}"></Button>
-
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        
-                        <Button Grid.Row="0" Width="{StaticResource TripleButtonSize}" Height="{StaticResource DoubleButtonSize}"></Button>
-                        
-                        <Grid Grid.Row="1">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Button Grid.Column="0" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                            <Button Grid.Column="1" Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"></Button>
-                            <Button Grid.Column="2" FontSize="22"
-                                    Width="{StaticResource ButtonSize}" Height="{StaticResource ButtonSize}"
-                                    Name="ExitApplication" Click="ExitApplication_Click">Exit Application</Button>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
         </ScrollViewer>
     </Grid>
 </Window>
