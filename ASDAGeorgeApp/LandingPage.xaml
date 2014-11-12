@@ -1,0 +1,95 @@
+﻿<Window x:Class="ASDAGeorgeApp.LandingPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LandingPage" Height="800" Width="1200">
+    <Grid>
+        <!-- TOP LEVEL GRIDS -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <!-- LEFT PANEL -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <!-- GEORGE LOGO -->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalAlignment="Right">
+                        <Image Height="30px" Source="icons\align14Yellow.png"></Image>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="10,10,0,0">
+                        <Image Source="image\logo.png"></Image>
+                    </Grid>
+                </Grid>
+
+
+                <!-- BACK TO DRESSES -->
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="*" />
+                        
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalAlignment="Right" Margin="0,17,0,0">
+                      
+                        <!-- LEFT CARET -->
+                        <TextBlock FontFamily="webdings" FontSize="30" Foreground="White">
+                3
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="10,10,0,0">
+                        <TextBlock FontSize="30" Foreground="White">
+                            Back to dresses
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- RIGHT PANEL -->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Right" Margin="0,17,0,0">
+
+                <!-- LEFT CARET -->
+                <TextBlock FontFamily="webdings" FontSize="30" Foreground="White">
+                3
+                </TextBlock>
+            </Grid>
+            <Grid Grid.Column="1" Margin="10,10,0,0">
+                <TextBlock FontSize="30" Foreground="White">
+                            Back to dresses
+                </TextBlock>
+            </Grid>
+        </Grid>
+
+
+
+    </Grid>
+</Window>

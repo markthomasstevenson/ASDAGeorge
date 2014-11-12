@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDAGeorgeApp"
         Title="MainPageMock" Height="800" Width="1400"
-        Background="Transparent">
+        Background="Black">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -42,8 +42,8 @@
                             <TextBlock Foreground="White" FontSize="30">Shop by product</TextBlock>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                            <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" >
+                                <WrapPanel Margin="-100px,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                                     <k:KinectTileButton Label="New In" />                         
                                     <k:KinectTileButton Label="Accessories" />
                                     <k:KinectTileButton Label="Coats &amp; jackets" />
@@ -72,7 +72,7 @@
                         </Grid>
                         <Grid Grid.Row="3">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <WrapPanel Margin="-100px,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                                     <k:KinectTileButton Label="Boots &amp; Wellies" />
                                     <k:KinectTileButton Label="Flats" />
                                     <k:KinectTileButton Label="Heels" />
@@ -88,7 +88,7 @@
                         </Grid>
                         <Grid Grid.Row="5">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <WrapPanel Margin="-100px,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                                     <k:KinectTileButton Label="Character Shop" />
                                     <k:KinectTileButton Label="Fancy Dress" />
                                     <k:KinectTileButton Label="Graduate Fashion Week" />
