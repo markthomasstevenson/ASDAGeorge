@@ -539,5 +539,11 @@ namespace ASDAGeorgeApp
         }
 
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainPageMock mock = new MainPageMock();
+            mock.ShowDialog();
+        }
     }
 }

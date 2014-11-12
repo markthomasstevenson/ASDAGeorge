@@ -5,16 +5,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDAGeorgeApp"
-        Title="MainPageMock" Height="800" Width="1400">
-    <Grid Background="Black">
+        Title="MainPageMock" Height="800" Width="1400"
+        Background="Transparent">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="27*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="4*" />
@@ -62,8 +64,6 @@
                                     <k:KinectTileButton Label="Tops" />
                                     <k:KinectTileButton Label="Trousers &amp; Shorts" />
                                     <k:KinectTileButton Label="Last Chance To Buy" />
-
-
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -151,53 +151,61 @@
                 <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
-                    George
-                </TextBlock>
+            <Grid Grid.Row="0" Margin="40,0,40,0">
+                <Image Height="25px" HorizontalAlignment="Left" Source="icons/align14Yellow.png"/>
+                <Image Height="50px" Margin="0,15,0,0" Source="image\logo.png"/>
             </Grid>
-            <Grid Grid.Row="1">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+            <Grid Grid.Row="1" Background="Gray" Margin="80,0,80,0">
+                <Image Height="25px" HorizontalAlignment="Left" Source="icons/yellowsearch.png"/>
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Search
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="2">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Garden &amp; Home
                 </TextBlock>
             </Grid>
-            <Grid Grid.Row="3">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+            <Grid Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="11*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="1" BorderThickness="0,0,0,8" BorderBrush="Yellow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                <Grid Grid.Column="1">
+                    <TextBlock  Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Womens
-                </TextBlock>
+                    </TextBlock>
+                </Grid>
             </Grid>
             <Grid Grid.Row="4">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Mens
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="5">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Boys
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="6">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Girls
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="7">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Baby
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="8">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Trends
                 </TextBlock>
             </Grid>
             <Grid Grid.Row="10">
-                <TextBlock Foreground="white" FontSize="40" TextAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Hi Jessica
                 </TextBlock>
             </Grid>

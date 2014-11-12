@@ -52,7 +52,7 @@
                         <view:FeatureUserControl Grid.Row="0"></view:FeatureUserControl>
                         
                         <Grid Grid.Row="1" Background="{StaticResource BackgroundBlack}">
-                            
+                            <Button Click="Button_Click" />
                         </Grid>
                     </Grid>
                 </Border>
