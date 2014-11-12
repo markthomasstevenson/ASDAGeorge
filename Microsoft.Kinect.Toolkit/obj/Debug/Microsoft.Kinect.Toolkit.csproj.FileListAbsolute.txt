@@ -50,3 +50,16 @@ D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\C
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csproj.GenerateResource.Cache
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.dll
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.pdb
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.pdb
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.CodeAnalysisLog.xml
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.lastcodeanalysissucceeded
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.baml
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.g.cs
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit_MarkupCompile.cache
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.g.resources
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.Properties.Resources.resources
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csproj.GenerateResource.Cache
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.dll
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.pdb

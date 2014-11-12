@@ -50,3 +50,15 @@ D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\C
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+\\psf\Home\Documents\sites\ASDAGeorge\.Debug\KinectInteraction180_32.dll
+\\psf\Home\Documents\sites\ASDAGeorge\.Debug\KinectInteraction180_64.dll
+\\psf\Home\Documents\sites\ASDAGeorge\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+\\psf\Home\Documents\sites\ASDAGeorge\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+\\psf\Home\Documents\sites\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
