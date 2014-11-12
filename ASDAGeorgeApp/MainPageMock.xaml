@@ -155,11 +155,20 @@
                 <Image Height="25px" HorizontalAlignment="Left" Source="icons/align14Yellow.png"/>
                 <Image Height="50px" Margin="0,15,0,0" Source="image\logo.png"/>
             </Grid>
-            <Grid Grid.Row="1" Background="Gray" Margin="80,0,80,0">
-                <Image Height="25px" HorizontalAlignment="Left" Source="icons/yellowsearch.png"/>
-                <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
+            <Grid Grid.Row="1" Background="Gray">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="11*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" HorizontalAlignment="Right">
+                    <Image Height="25px" HorizontalAlignment="Left" Source="icons/yellowsearch.png"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
                     Search
-                </TextBlock>
+                    </TextBlock>
+                </Grid>
             </Grid>
             <Grid Grid.Row="2">
                 <TextBlock Foreground="white" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">
