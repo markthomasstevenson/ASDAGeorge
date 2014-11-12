@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="60928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="227840">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>65hlIbyELknJgR3YmRu0WmJAHdUUFf8f9fZ+/b1QDrE=</dsig:DigestValue>
+        <dsig:DigestValue>KvbzT0VqPYROlj4Y3lqobjXS7rJ4/w2WqqO7geeGGjY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,7 +66,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ii2sbrgSlcoFGlZdpO+niPUANdr2UcHOI86m5iiRJqs=</dsig:DigestValue>
+        <dsig:DigestValue>YEvQTqiiKOVqf8q4vLqqUkg+q1FfKHC0+F6hTh3xFw0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,7 +78,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5wWDh1rJEMuEcntusJbxuDNxJTCByaTHVsQdw8lUZYY=</dsig:DigestValue>
+        <dsig:DigestValue>9pQFApTCQoPQPx9jY6Ip1L/Rc4lgb81u5422qwO4fHs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

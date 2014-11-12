@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDAGeorgeApp"
+        xmlns:view="clr-namespace:ASDAGeorgeApp.Views"
         Height="768" Width="1024"
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -12,24 +13,49 @@
         Closing="Window_Closing"
         Background="Black"
         KeyUp="Window_KeyUp">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BackgroundFeatured" Color="Wheat" Opacity="0.5" />
+        <SolidColorBrush x:Key="BackgroundBlack" Color="Black" Opacity="0.5" />
+    </Window.Resources>
     <Grid>
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
+            <Image Name="BackImage" Width="960" Height="540" Source="image\Background Image.jpg" />
+        </Viewbox>
+
+        <Viewbox Stretch="UniformToFill" HorizontalAlignment="Center">
+            <Image Name="KinectImage" Width="640" Height="480"/>
+        </Viewbox>
+        
+        <Viewbox Stretch="UniformToFill" HorizontalAlignment="Center">
+            <Image Name="Image" Width="640" Height="480"/>
+        </Viewbox>
+
+        <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" DefaultUserColor="Gray" />
+        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+
         <k:KinectRegion x:Name="kinectRegion">
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-                <Viewbox Grid.RowSpan="2" Stretch="UniformToFill" HorizontalAlignment="Center">
-                    <Image Name="KinectImage" Width="640" Height="480"/>
-                </Viewbox>
-
-                <Viewbox Grid.RowSpan="2" Stretch="UniformToFill" HorizontalAlignment="Center">
-                    <Image Name="Image" Width="640" Height="480"/>
-                </Viewbox>
-
-                <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" DefaultUserColor="Gray" />
-                <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+                <Border Margin="10 10 10 10"
+                        Background="{StaticResource BackgroundFeatured}"
+                        Grid.Column="1" CornerRadius="5 5 5 5">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="6*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <view:FeatureUserControl Grid.Row="0"></view:FeatureUserControl>
+                        
+                        <Grid Grid.Row="1" Background="{StaticResource BackgroundBlack}">
+                            
+                        </Grid>
+                    </Grid>
+                </Border>
             </Grid>
         </k:KinectRegion>
     </Grid>

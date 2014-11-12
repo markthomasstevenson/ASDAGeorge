@@ -1,4 +1,5 @@
-﻿using Microsoft.Kinect;
+﻿using ASDAGeorgeApp.ViewModels;
+using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
 using System;
@@ -181,6 +182,8 @@ namespace ASDAGeorgeApp
             // Thread.Sleep(5000);
             InitializeComponent();
 
+            MainWindowViewModel model = new MainWindowViewModel();
+
             /* initialize the sensor chooser and UI */
             this.sensorChooser = new KinectSensorChooser();
             this.sensorChooser.KinectChanged += this.SensorChooserOnKinectChanged;
@@ -191,6 +194,8 @@ namespace ASDAGeorgeApp
             var regionSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
         }
+
+        #region CodeBehind Functions
 
         private void SensorSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
         {
@@ -427,10 +432,6 @@ namespace ASDAGeorgeApp
 
                     /* Null the drawing group we'll use for drawing */
                     this.drawingGroup = null;
-
-                    /* Null an image source that we can use in our image control */
-                    this.imageSource = null;
-
                 }
                 catch (InvalidOperationException)
                 {
@@ -481,6 +482,8 @@ namespace ASDAGeorgeApp
             }
         }
 
+#endregion
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged(string propertyName = null)
@@ -498,6 +501,7 @@ namespace ASDAGeorgeApp
         }
         #endregion
 
+        #region Window Functions
         private void ExitApplication_Click(object sender, RoutedEventArgs e)
         {
             this.Window_Closing(sender, new CancelEventArgs(true));
@@ -534,5 +538,6 @@ namespace ASDAGeorgeApp
                 this.Window_Closing(sender, new CancelEventArgs(true));
         }
 
+        #endregion
     }
 }
