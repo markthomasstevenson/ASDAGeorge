@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDAGeorgeApp"
         Title="MainPageMock" Height="800" Width="1400"
-        Background="Transparent">
+        Background="Black">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -42,6 +42,7 @@
                             <TextBlock Foreground="White" FontSize="30">Shop by product</TextBlock>
                         </Grid>
                         <Grid Grid.Row="1">
+<<<<<<< HEAD
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
                                 <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                     <k:KinectTileButton Label="New In">
@@ -144,6 +145,30 @@
                                             <ImageBrush ImageSource="image\lastchance.jpg"></ImageBrush>
                                         </k:KinectTileButton.Background>
                                     </k:KinectTileButton>
+=======
+                            <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" >
+                                <WrapPanel Margin="-100px,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="New In" />                         
+                                    <k:KinectTileButton Label="Accessories" />
+                                    <k:KinectTileButton Label="Coats &amp; jackets" />
+                                    <k:KinectTileButton Label="Dresses" />
+                                    <k:KinectTileButton Label="Hats, Gloves &amp; Scarves" />
+                                    <k:KinectTileButton Label="Jeans" />
+                                    <k:KinectTileButton Label="Jumpers &amp; Cardigans" />
+                                    <k:KinectTileButton Label="Jumpsuits &amp; Playsuits" />
+                                    <k:KinectTileButton Label="Lingerie" />
+                                    <k:KinectTileButton Label="Maternity" />
+                                    <k:KinectTileButton Label="Nightwear &amp; Slippers" />
+                                    <k:KinectTileButton Label="Onesies" />
+                                    <k:KinectTileButton Label="Plus Size" />
+                                    <k:KinectTileButton Label="Shirts &amp; Blouses" />
+                                    <k:KinectTileButton Label="Skirts" />
+                                    <k:KinectTileButton Label="Socks &amp; Tights" />
+                                    <k:KinectTileButton Label="Swimwear" />
+                                    <k:KinectTileButton Label="Tops" />
+                                    <k:KinectTileButton Label="Trousers &amp; Shorts" />
+                                    <k:KinectTileButton Label="Last Chance To Buy" />
+>>>>>>> origin/master
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -152,6 +177,7 @@
                         </Grid>
                         <Grid Grid.Row="3">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
+<<<<<<< HEAD
                                 <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                     <k:KinectTileButton Label="Boots &amp; Wellies">
                                         <k:KinectTileButton.Background>
@@ -190,6 +216,16 @@
                                             <ImageBrush ImageSource="image\trainers.jpg"></ImageBrush>
                                         </k:KinectTileButton.Background>
                                     </k:KinectTileButton>
+=======
+                                <WrapPanel Margin="-100px,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="Boots &amp; Wellies" />
+                                    <k:KinectTileButton Label="Flats" />
+                                    <k:KinectTileButton Label="Heels" />
+                                    <k:KinectTileButton Label="Sandals &amp; Flip-flops" />
+                                    <k:KinectTileButton Label="Shoes" />
+                                    <k:KinectTileButton Label="Slippers" />
+                                    <k:KinectTileButton Label="Trainers" />
+>>>>>>> origin/master
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -198,6 +234,7 @@
                         </Grid>
                         <Grid Grid.Row="5">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
+<<<<<<< HEAD
                                 <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">                                    
                                     <k:KinectTileButton Label="Character Shop">
                                         <k:KinectTileButton.Background>
@@ -259,6 +296,22 @@
                                             <ImageBrush ImageSource="image\workwear.jpg"></ImageBrush>
                                         </k:KinectTileButton.Background>
                                     </k:KinectTileButton>                                    
+=======
+                                <WrapPanel Margin="-100px,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="Character Shop" />
+                                    <k:KinectTileButton Label="Fancy Dress" />
+                                    <k:KinectTileButton Label="Graduate Fashion Week" />
+                                    <k:KinectTileButton Label="Holiday Shop" />
+                                    <k:KinectTileButton Label="Novelty" />
+                                    <k:KinectTileButton Label="Party" />
+                                    <k:KinectTileButton Label="Sportswear" />
+                                    <k:KinectTileButton Label="The Contemporay" />
+                                    <k:KinectTileButton Label="Collection" />
+                                    <k:KinectTileButton Label="Thermal" />
+                                    <k:KinectTileButton Label="Tickled Pink" />
+                                    <k:KinectTileButton Label="Winter Warmers" />
+                                    <k:KinectTileButton Label="Workwear" />
+>>>>>>> origin/master
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
