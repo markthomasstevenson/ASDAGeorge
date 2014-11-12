@@ -29,6 +29,12 @@
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
                             <TextBlock Foreground="White" FontSize="30">Shop by product</TextBlock>
@@ -36,14 +42,28 @@
                         <Grid Grid.Row="1">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
                                 <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
+                                    <k:KinectTileButton Label="New In" />                         
+                                    <k:KinectTileButton Label="Accessories" />
+                                    <k:KinectTileButton Label="Coats &amp; jackets" />
+                                    <k:KinectTileButton Label="Dresses" />
+                                    <k:KinectTileButton Label="Hats, Gloves &amp; Scarves" />
+                                    <k:KinectTileButton Label="Jeans" />
+                                    <k:KinectTileButton Label="Jumpers &amp; Cardigans" />
+                                    <k:KinectTileButton Label="Jumpsuits &amp; Playsuits" />
+                                    <k:KinectTileButton Label="Lingerie" />
+                                    <k:KinectTileButton Label="Maternity" />
+                                    <k:KinectTileButton Label="Nightwear &amp; Slippers" />
+                                    <k:KinectTileButton Label="Onesies" />
+                                    <k:KinectTileButton Label="Plus Size" />
+                                    <k:KinectTileButton Label="Shirts &amp; Blouses" />
+                                    <k:KinectTileButton Label="Skirts" />
+                                    <k:KinectTileButton Label="Socks &amp; Tights" />
+                                    <k:KinectTileButton Label="Swimwear" />
+                                    <k:KinectTileButton Label="Tops" />
+                                    <k:KinectTileButton Label="Trousers &amp; Shorts" />
+                                    <k:KinectTileButton Label="Last Chance To Buy" />
+
+
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -53,14 +73,13 @@
                         <Grid Grid.Row="3">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
                                 <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
+                                    <k:KinectTileButton Label="Boots &amp; Wellies" />
+                                    <k:KinectTileButton Label="Flats" />
+                                    <k:KinectTileButton Label="Heels" />
+                                    <k:KinectTileButton Label="Sandals &amp; Flip-flops" />
+                                    <k:KinectTileButton Label="Shoes" />
+                                    <k:KinectTileButton Label="Slippers" />
+                                    <k:KinectTileButton Label="Trainers" />
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -70,14 +89,47 @@
                         <Grid Grid.Row="5">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
                                 <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
-                                    <k:KinectTileButton Label="Something" />
+                                    <k:KinectTileButton Label="Character Shop" />
+                                    <k:KinectTileButton Label="Fancy Dress" />
+                                    <k:KinectTileButton Label="Graduate Fashion Week" />
+                                    <k:KinectTileButton Label="Holiday Shop" />
+                                    <k:KinectTileButton Label="Novelty" />
+                                    <k:KinectTileButton Label="Party" />
+                                    <k:KinectTileButton Label="Sportswear" />
+                                    <k:KinectTileButton Label="The Contemporay" />
+                                    <k:KinectTileButton Label="Collection" />
+                                    <k:KinectTileButton Label="Thermal" />
+                                    <k:KinectTileButton Label="Tickled Pink" />
+                                    <k:KinectTileButton Label="Winter Warmers" />
+                                    <k:KinectTileButton Label="Workwear" />
+                                </WrapPanel>
+                            </k:KinectScrollViewer>
+                        </Grid>
+                        <Grid Grid.Row="6">
+                            <TextBlock Foreground="White" FontSize="30">Shop by Fit</TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="7">
+                            <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
+                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="Maternity" />
+                                    <k:KinectTileButton Label="Petite" />
+                                    <k:KinectTileButton Label="Plus Size" />
+                                                                  
+                                </WrapPanel>
+                            </k:KinectScrollViewer>
+                        </Grid>
+                        <Grid Grid.Row="8">
+                            <TextBlock Foreground="White" FontSize="30">Electrical Beauty</TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="9">
+                            <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
+                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="hairdryers" />
+                                    <k:KinectTileButton Label="Hair Removal" />
+                                    <k:KinectTileButton Label="Hair Straighteners" />
+                                    <k:KinectTileButton Label="Hair Styling" />
+                                    <k:KinectTileButton Label="Spa and Massage" />
+
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
