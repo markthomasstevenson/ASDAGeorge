@@ -10,7 +10,9 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Closing="Window_Closing"
-        Background="Black">
+        Background="Black"
+        KeyUp="Window_KeyUp"
+        >
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="4"/>
@@ -18,25 +20,66 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <k:KinectRegion IsCursorVisible="True" Cursor="Hand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.RowSpan="3" Stretch="Uniform" HorizontalAlignment="Center">
-            <Image Name="KinectImage" Width="640" Height="480"/>
-        </Viewbox>
+                <Viewbox Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center">
+                    <Image Name="KinectImage" Width="640" Height="480"/>
+                </Viewbox>
 
-        <Viewbox Grid.RowSpan="3" Stretch="Uniform" HorizontalAlignment="Center">
-            <Image Name="Image" Width="640" Height="480"/>
-        </Viewbox>
+                <Viewbox Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center">
+                    <Image Name="Image" Width="640" Height="480"/>
+                </Viewbox>
 
-        <Grid Grid.Row="0" Margin="20 10 0 0">
-            <k:KinectSensorChooserUI Grid.Column="1" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Top" Name="sensorChooserUi" />
-        </Grid>
+                <Grid Grid.Row="0" Margin="20 10 0 0">
+                    <k:KinectSensorChooserUI Grid.Column="1" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Top" Name="sensorChooserUi" />
+                </Grid>
 
-        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-        </ScrollViewer>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.Background>
+                            <SolidColorBrush Color="Wheat" Opacity="0.5" />
+                        </Grid.Background>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.Background>
+                            <SolidColorBrush Color="Black" Opacity="0.5" />
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="0" x:Name="RadioFeatured1" GroupName="FeatureGroup" Checked="RadioFeatured1_Checked"
+                                             VerticalAlignment="Center"/>
+                            <RadioButton Grid.Column="1" x:Name="RadioFeatured2" GroupName="FeatureGroup" Checked="RadioFeatured2_Checked"
+                                             VerticalAlignment="Center"/>
+                            <RadioButton Grid.Column="2" x:Name="RadioFeatured3" GroupName="FeatureGroup" Checked="RadioFeatured3_Checked"
+                                             VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                </ScrollViewer>
+            </Grid>
+        </k:KinectRegion>
     </Grid>
 </Window>
