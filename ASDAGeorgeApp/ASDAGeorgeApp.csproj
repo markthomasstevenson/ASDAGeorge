@@ -196,9 +196,6 @@
     <Resource Include="image\Background Image.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\dress.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="icons\adjust4.png" />
     <Resource Include="icons\align14.png" />
     <Resource Include="icons\align14Yellow.png" />
@@ -573,6 +570,61 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\accessories.jpg" />
+    <Resource Include="image\blouse.jpg" />
+    <Resource Include="image\coat.jpg" />
+    <Resource Include="image\dresses.jpg" />
+    <Resource Include="image\jeans.jpg" />
+    <Resource Include="image\jumpers.jpg" />
+    <Resource Include="image\jumpsuits.jpg" />
+    <Resource Include="image\lastchance.jpg" />
+    <Resource Include="image\lingerie.jpg" />
+    <Resource Include="image\maternity.jpg" />
+    <Resource Include="image\newin.jpg" />
+    <Resource Include="image\onesie.jpg" />
+    <Resource Include="image\plussize.jpg" />
+    <Resource Include="image\pyjama.jpg" />
+    <Resource Include="image\scarf.jpg" />
+    <Resource Include="image\shorts.jpg" />
+    <Resource Include="image\skirt.jpg" />
+    <Resource Include="image\socks.jpg" />
+    <Resource Include="image\swimwear.jpg" />
+    <Resource Include="image\tops.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\boots.jpg" />
+    <Resource Include="image\flats.jpg" />
+    <Resource Include="image\heels.jpg" />
+    <Resource Include="image\sandals.jpg" />
+    <Resource Include="image\shoes.jpg" />
+    <Resource Include="image\slippers.jpg" />
+    <Resource Include="image\trainers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\petite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\hairdryer.jpg" />
+    <Resource Include="image\removal.jpg" />
+    <Resource Include="image\spa.jpg" />
+    <Resource Include="image\straightners.jpg" />
+    <Resource Include="image\styling.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\character.jpg" />
+    <Resource Include="image\contemporary.jpg" />
+    <Resource Include="image\fancydress.jpg" />
+    <Resource Include="image\graduate.jpg" />
+    <Resource Include="image\hshop.jpg" />
+    <Resource Include="image\novelty.jpg" />
+    <Resource Include="image\party.jpg" />
+    <Resource Include="image\sportswear.jpg" />
+    <Resource Include="image\thermal.jpg" />
+    <Resource Include="image\tickled.jpg" />
+    <Resource Include="image\winter.jpg" />
+    <Resource Include="image\workwear.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

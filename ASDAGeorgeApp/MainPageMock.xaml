@@ -43,27 +43,107 @@
                         </Grid>
                         <Grid Grid.Row="1">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="New In" />                         
-                                    <k:KinectTileButton Label="Accessories" />
-                                    <k:KinectTileButton Label="Coats &amp; jackets" />
-                                    <k:KinectTileButton Label="Dresses" />
-                                    <k:KinectTileButton Label="Hats, Gloves &amp; Scarves" />
-                                    <k:KinectTileButton Label="Jeans" />
-                                    <k:KinectTileButton Label="Jumpers &amp; Cardigans" />
-                                    <k:KinectTileButton Label="Jumpsuits &amp; Playsuits" />
-                                    <k:KinectTileButton Label="Lingerie" />
-                                    <k:KinectTileButton Label="Maternity" />
-                                    <k:KinectTileButton Label="Nightwear &amp; Slippers" />
-                                    <k:KinectTileButton Label="Onesies" />
-                                    <k:KinectTileButton Label="Plus Size" />
-                                    <k:KinectTileButton Label="Shirts &amp; Blouses" />
-                                    <k:KinectTileButton Label="Skirts" />
-                                    <k:KinectTileButton Label="Socks &amp; Tights" />
-                                    <k:KinectTileButton Label="Swimwear" />
-                                    <k:KinectTileButton Label="Tops" />
-                                    <k:KinectTileButton Label="Trousers &amp; Shorts" />
-                                    <k:KinectTileButton Label="Last Chance To Buy" />
+                                <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="New In">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\newin.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Accessories">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\accessories.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Coats &amp; jackets">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\coat.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Dresses">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\dresses.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Hats, Gloves &amp; Scarves">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\scarf.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Jeans">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\jeans.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Jumpers &amp; Cardigans">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\jumpers.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Jumpsuits &amp; Playsuits">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\jumpsuits.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Lingerie">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\lingerie.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Maternity">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\maternity.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Nightwear &amp; Slippers">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\pyjama.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Onesies">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\onesie.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Plus Size">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\plussize.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                                            
+                                    <k:KinectTileButton Label="Shirts &amp; Blouses">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\blouse.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Skirts">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\skirt.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                          
+                                    <k:KinectTileButton Label="Socks &amp; Tights">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\socks.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Swimwear">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\swimwear.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Tops">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\tops.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Trousers &amp; Shorts">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\shorts.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Last Chance To Buy">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\lastchance.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -72,14 +152,44 @@
                         </Grid>
                         <Grid Grid.Row="3">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Boots &amp; Wellies" />
-                                    <k:KinectTileButton Label="Flats" />
-                                    <k:KinectTileButton Label="Heels" />
-                                    <k:KinectTileButton Label="Sandals &amp; Flip-flops" />
-                                    <k:KinectTileButton Label="Shoes" />
-                                    <k:KinectTileButton Label="Slippers" />
-                                    <k:KinectTileButton Label="Trainers" />
+                                <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="Boots &amp; Wellies">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\boots.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                  
+                                    <k:KinectTileButton Label="Flats">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\flats.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Heels">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\heels.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Sandals &amp; Flip-flops">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\sandals.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                   
+                                    <k:KinectTileButton Label="Shoes">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\shoes.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Slippers">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\slippers.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Trainers">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\trainers.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -88,20 +198,67 @@
                         </Grid>
                         <Grid Grid.Row="5">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Character Shop" />
-                                    <k:KinectTileButton Label="Fancy Dress" />
-                                    <k:KinectTileButton Label="Graduate Fashion Week" />
-                                    <k:KinectTileButton Label="Holiday Shop" />
-                                    <k:KinectTileButton Label="Novelty" />
-                                    <k:KinectTileButton Label="Party" />
-                                    <k:KinectTileButton Label="Sportswear" />
-                                    <k:KinectTileButton Label="The Contemporay" />
-                                    <k:KinectTileButton Label="Collection" />
-                                    <k:KinectTileButton Label="Thermal" />
-                                    <k:KinectTileButton Label="Tickled Pink" />
-                                    <k:KinectTileButton Label="Winter Warmers" />
-                                    <k:KinectTileButton Label="Workwear" />
+                                <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">                                    
+                                    <k:KinectTileButton Label="Character Shop">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\character.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Fancy Dress">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\fancydress.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Graduate Fashion Week">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\graduate.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Holiday Shop">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\hshop.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Novelty">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\novelty.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Party">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\party.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Swimwear">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\swimwear.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="The Contemporay">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\contemporary.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                    
+                                    <k:KinectTileButton Label="Thermal">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\thermal.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Tickled Pink">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\tickled.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Winter Warmers">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\winter.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                   
+                                    <k:KinectTileButton Label="Workwear">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\workwear.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                    
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -110,11 +267,23 @@
                         </Grid>
                         <Grid Grid.Row="7">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="Maternity" />
-                                    <k:KinectTileButton Label="Petite" />
-                                    <k:KinectTileButton Label="Plus Size" />
-                                                                  
+                                <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <k:KinectTileButton Label="Maternity">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\maternity.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    <k:KinectTileButton Label="Petite">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\petite.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                   
+                                    <k:KinectTileButton Label="Plus Size">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\plussize.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+
                                 </WrapPanel>
                             </k:KinectScrollViewer>
                         </Grid>
@@ -123,12 +292,34 @@
                         </Grid>
                         <Grid Grid.Row="9">
                             <k:KinectScrollViewer   VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Margin="10,0,-9.6,0.6" >
-                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                    <k:KinectTileButton Label="hairdryers" />
-                                    <k:KinectTileButton Label="Hair Removal" />
-                                    <k:KinectTileButton Label="Hair Straighteners" />
-                                    <k:KinectTileButton Label="Hair Styling" />
-                                    <k:KinectTileButton Label="Spa and Massage" />
+                                <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                  
+                                    <k:KinectTileButton Label="Hairdryers">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\hairdryer.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
+                                    
+                                    <k:KinectTileButton Label="Hair Removal">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\removal.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                    
+                                    <k:KinectTileButton Label="Hair Straighteners">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\straightners.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                    
+                                    <k:KinectTileButton Label="Hair Styling">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\styling.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>                                    
+                                    <k:KinectTileButton Label="Spa and Massage">
+                                        <k:KinectTileButton.Background>
+                                            <ImageBrush ImageSource="image\spa.jpg"></ImageBrush>
+                                        </k:KinectTileButton.Background>
+                                    </k:KinectTileButton>
 
                                 </WrapPanel>
                             </k:KinectScrollViewer>
