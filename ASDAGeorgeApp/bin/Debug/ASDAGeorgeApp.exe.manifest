@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="61952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="60928">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Nvw3+Pr8V9r3oqmQykUopu1z6hJFd2t/aiAmbGBh29o=</dsig:DigestValue>
+        <dsig:DigestValue>TXRnbFJWTAfrCqqabqPPaAH+u2YnCAOlmcV1DRPfrcY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -11,8 +11,6 @@ C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.csproj.GenerateResource.Cache
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.exe
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.pdb
-C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\Interop.KinectManagement.dll
-C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.csproj.ResolveComReference.cache
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\ASDAGeorgeApp.csprojResolveAssemblyReference.cache
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\App.baml
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\bin\Debug\KinectInteraction180_32.dll

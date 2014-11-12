@@ -1,5 +1,6 @@
 ﻿using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
+using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -179,56 +180,16 @@ namespace ASDAGeorgeApp
             /* HACK : This keeps the splashscreen from disappearing by adding a second to the load time for the Initialisation */
             // Thread.Sleep(5000);
             InitializeComponent();
-            
-            /* Create the drawing group we'll use for drawing */
-            this.drawingGroup = new DrawingGroup();
-
-            /* Create an image source that we can use in our image control */
-            this.imageSource = new DrawingImage(this.drawingGroup);
-
-            /* Display the drawing using our image control */
-            Image.Source = this.imageSource;
-
 
             /* initialize the sensor chooser and UI */
             this.sensorChooser = new KinectSensorChooser();
-            this.sensorChooserUi.KinectSensorChooser = this.sensorChooser;
             this.sensorChooser.KinectChanged += this.SensorChooserOnKinectChanged;
+            this.sensorChooserUi.KinectSensorChooser = this.sensorChooser;
             this.sensorChooser.Start();
 
-            if (null != this.sensorChooser.Kinect)
-            {
-                /* Turn on the skeleton stream to receive skeleton frames */
-                this.sensorChooser.Kinect.SkeletonStream.Enable();
-
-                /* Add an event handler to be called whenever there is new color frame data */
-                this.sensorChooser.Kinect.SkeletonFrameReady += this.SensorSkeletonFrameReady;
-
-                /* Turn on the color stream to receive color frames */
-                this.sensorChooser.Kinect.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
-
-                /* Allocate space to put the pixels we'll receive */
-                this.colorPixels = new byte[this.sensorChooser.Kinect.ColorStream.FramePixelDataLength];
-
-                /* This is the bitmap we'll display on-screen */
-                this.colorBitmap = new WriteableBitmap(this.sensorChooser.Kinect.ColorStream.FrameWidth, this.sensorChooser.Kinect.ColorStream.FrameHeight, 96.0, 96.0, PixelFormats.Bgr32, null);
-
-                /* Set the image we display to point to the bitmap where we'll put the image data */
-                this.KinectImage.Source = this.colorBitmap;
-
-                /* Add an event handler to be called whenever there is new color frame data */
-                this.sensorChooser.Kinect.ColorFrameReady += this.SensorColorFrameReady;
-
-                /* Start the sensor! */
-                try
-                {
-                    this.sensorChooser.Kinect.Start();
-                }
-                catch (IOException)
-                {
-                    this.sensorChooser.Kinect.Dispose();
-                }
-            }
+            // Bind the sensor chooser's current sensor to the KinectRegion
+            var regionSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
+            BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
         }
 
         private void SensorSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
@@ -447,9 +408,29 @@ namespace ASDAGeorgeApp
             {
                 try
                 {
+                    /* Disable Streams */
                     args.OldSensor.DepthStream.Disable();
                     args.OldSensor.ColorStream.Disable();
                     args.OldSensor.SkeletonStream.Disable();
+
+                    /* Remove an event handler to be called whenever there is new color frame data */
+                    args.OldSensor.SkeletonFrameReady -= this.SensorSkeletonFrameReady;
+
+                    /* Null space to put the pixels we'll receive */
+                    this.colorPixels = null;
+
+                    /* This is the bitmap we'll display on-screen, nulled */
+                    this.colorBitmap = null;
+
+                    /* Remove an event handler to be called whenever there is new color frame data */
+                    args.OldSensor.ColorFrameReady -= this.SensorColorFrameReady;
+
+                    /* Null the drawing group we'll use for drawing */
+                    this.drawingGroup = null;
+
+                    /* Null an image source that we can use in our image control */
+                    this.imageSource = null;
+
                 }
                 catch (InvalidOperationException)
                 {
@@ -462,9 +443,34 @@ namespace ASDAGeorgeApp
             {
                 try
                 {
-                    args.NewSensor.DepthStream.Enable(DepthFormat);
-                    args.NewSensor.ColorStream.Enable(ColorFormat);
+                    /* Turn on the streams to receive frames */
                     args.NewSensor.SkeletonStream.Enable();
+                    args.NewSensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
+                    args.NewSensor.DepthStream.Enable(DepthImageFormat.Resolution640x480Fps30);
+
+                    /* Add an event handler to be called whenever there is new color frame data */
+                    args.NewSensor.SkeletonFrameReady += this.SensorSkeletonFrameReady;
+
+                    /* Allocate space to put the pixels we'll receive */
+                    this.colorPixels = new byte[args.NewSensor.ColorStream.FramePixelDataLength];
+
+                    /* This is the bitmap we'll display on-screen */
+                    this.colorBitmap = new WriteableBitmap(args.NewSensor.ColorStream.FrameWidth, this.sensorChooser.Kinect.ColorStream.FrameHeight, 96.0, 96.0, PixelFormats.Bgr32, null);
+
+                    /* Set the image we display to point to the bitmap where we'll put the image data */
+                    this.KinectImage.Source = this.colorBitmap;
+
+                    /* Add an event handler to be called whenever there is new color frame data */
+                    args.NewSensor.ColorFrameReady += this.SensorColorFrameReady;
+
+                    /* Create the drawing group we'll use for drawing */
+                    this.drawingGroup = new DrawingGroup();
+
+                    /* Create an image source that we can use in our image control */
+                    this.imageSource = new DrawingImage(this.drawingGroup);
+
+                    /* Display the drawing using our image control */
+                    Image.Source = this.imageSource;
 
                 }
                 catch (InvalidOperationException)
