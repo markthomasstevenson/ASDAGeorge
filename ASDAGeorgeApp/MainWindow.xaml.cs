@@ -1,4 +1,7 @@
-﻿using ASDAGeorgeApp.ViewModels;
+﻿using ASDAGeorgeApp.Interface;
+using ASDAGeorgeApp.Models;
+using ASDAGeorgeApp.ViewModels;
+using ASDAGeorgeApp.Views;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
@@ -181,8 +184,8 @@ namespace ASDAGeorgeApp
             /* HACK : This keeps the splashscreen from disappearing by adding a second to the load time for the Initialisation */
             // Thread.Sleep(5000);
             InitializeComponent();
-
-            MainWindowViewModel model = new MainWindowViewModel();
+            Switcher.pageSwitcher = this;
+            Switcher.Switch(new LandingPage());
 
             /* initialize the sensor chooser and UI */
             this.sensorChooser = new KinectSensorChooser();
@@ -444,8 +447,17 @@ namespace ASDAGeorgeApp
             {
                 try
                 {
+                    var parameters = new TransformSmoothParameters
+                    {
+                        Smoothing = 0.1f,
+                        Correction = 0.0f,
+                        Prediction = 0.1f,
+                        JitterRadius = 0.2f,
+                        MaxDeviationRadius = 0.1f
+                    };
+
                     /* Turn on the streams to receive frames */
-                    args.NewSensor.SkeletonStream.Enable();
+                    args.NewSensor.SkeletonStream.Enable(parameters);
                     args.NewSensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
                     args.NewSensor.DepthStream.Enable(DepthImageFormat.Resolution640x480Fps30);
 
@@ -517,19 +529,20 @@ namespace ASDAGeorgeApp
             Application.Current.Shutdown();
         }
 
-        private void RadioFeatured1_Checked(object sender, RoutedEventArgs e)
+        public void Navigate(UserControl nextPage)
         {
-
+            this.kinectRegion.Content = nextPage;
         }
 
-        private void RadioFeatured2_Checked(object sender, RoutedEventArgs e)
+        public void Navigate(UserControl nextPage, object state)
         {
+            this.kinectRegion.Content = nextPage;
+            ISwitchable s = nextPage as ISwitchable;
 
-        }
-
-        private void RadioFeatured3_Checked(object sender, RoutedEventArgs e)
-        {
-
+            if (s != null)
+                s.UtiliseState(state);
+            else
+                throw new ArgumentException("NextPage is not ISwitchable! " + nextPage.Name.ToString());
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
@@ -539,11 +552,5 @@ namespace ASDAGeorgeApp
         }
 
         #endregion
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainPageMock mock = new MainPageMock();
-            mock.ShowDialog();
-        }
     }
 }

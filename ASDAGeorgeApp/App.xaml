@@ -1,15 +1,62 @@
 ﻿<Application x:Class="ASDAGeorgeApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="BlueBrush" Color="#FF00BCF2" />
-            <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e"/>
-            <sys:Double x:Key="ButtonSize">208</sys:Double>
-            <sys:Double x:Key="DoubleButtonSize">424</sys:Double>
-            <sys:Double x:Key="TripleButtonSize">640</sys:Double>
+            <SolidColorBrush x:Key="BackgroundBlack" Color="Black" Opacity="0.5" />
+            <SolidColorBrush x:Key="BackgroundGray" Color="Gray" Opacity="0.5"/>
+            <SolidColorBrush x:Key="BackgroundWhite" Color="White" Opacity="0.7"/>
+            <SolidColorBrush x:Key="VerySeeThroughWhite" Color="White" Opacity="0.2" />
+            <SolidColorBrush x:Key="KinectButtonPressedOverlayBrush" Color="#32000000"/>
+
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            
+            <Style x:Key="Underline" TargetType="Border" >
+                <Setter Property="BorderThickness" Value="0 0 0 8" />
+                <Setter Property="BorderBrush" Value="Yellow" />
+            </Style>
+            
+            <Style x:Key="VerticalScroll" TargetType="{x:Type k:KinectScrollViewer}">
+                <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+            </Style>
+            
+            <Style x:Key="HorizontalScroll" TargetType="{x:Type k:KinectScrollViewer}">
+                <Setter Property="VerticalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+            </Style>
+
+            <Style x:Key="ClickableText" TargetType="{x:Type model:KinectTextButton}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type model:KinectTextButton}">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                                <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsHandPointerOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource VerySeeThroughWhite}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

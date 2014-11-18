@@ -13,10 +13,6 @@
         Closing="Window_Closing"
         Background="Black"
         KeyUp="Window_KeyUp">
-    <Window.Resources>
-        <SolidColorBrush x:Key="BackgroundFeatured" Color="Wheat" Opacity="0.5" />
-        <SolidColorBrush x:Key="BackgroundBlack" Color="Black" Opacity="0.5" />
-    </Window.Resources>
     <Grid>
         <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
             <Image Name="BackImage" Width="960" Height="540" Source="image\Background Image.jpg" />
@@ -34,29 +30,6 @@
         <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
 
         <k:KinectRegion x:Name="kinectRegion">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Border Margin="10 10 10 10"
-                        Background="{StaticResource BackgroundFeatured}"
-                        Grid.Column="1" CornerRadius="5 5 5 5">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="6*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        
-                        <view:FeatureUserControl Grid.Row="0"></view:FeatureUserControl>
-                        
-                        <Grid Grid.Row="1" Background="{StaticResource BackgroundBlack}">
-                            <Button Click="Button_Click" />
-                        </Grid>
-                    </Grid>
-                </Border>
-            </Grid>
         </k:KinectRegion>
     </Grid>
 </Window>

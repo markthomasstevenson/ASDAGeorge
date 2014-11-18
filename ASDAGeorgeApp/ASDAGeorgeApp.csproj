@@ -94,8 +94,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainPageMock.xaml.cs">
-      <DependentUpon>MainPageMock.xaml</DependentUpon>
+    <Compile Include="Interface\ISwitchable.cs" />
+    <Compile Include="Models\KinectTextButton.cs" />
+    <Compile Include="Views\CategoryPage.xaml.cs">
+      <DependentUpon>CategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LandingPage.xaml.cs">
+      <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoryListPage.xaml.cs">
+      <DependentUpon>CategoryListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DeliveryOptions.cs" />
@@ -103,13 +114,31 @@
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Switcher.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\FeaturedViewModel.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\FeatureUserControl.xaml.cs">
+    <Compile Include="Views\SubViews\FeatureUserControl.xaml.cs">
       <DependentUpon>FeatureUserControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainPageMock.xaml">
+    <Compile Include="Views\SubViews\MainMenuControl.xaml.cs">
+      <DependentUpon>MainMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubViews\TopBarUserControl.xaml.cs">
+      <DependentUpon>TopBarUserControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\CategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CategoryListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -125,9 +154,17 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\FeatureUserControl.xaml">
+    <Page Include="Views\SubViews\FeatureUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SubViews\MainMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubViews\TopBarUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +186,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ASDAGeorgeApp_TemporaryKey.pfx" />
-    <None Include="icons\.DS_Store" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

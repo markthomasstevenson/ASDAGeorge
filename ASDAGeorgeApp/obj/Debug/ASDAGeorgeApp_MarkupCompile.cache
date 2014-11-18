@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\sham\Documents\GitHub\ASDAGeorge\ASDAGeorgeApp\obj\Debug\
+D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\obj\Debug\
 ASDAGeorgeApp
 none
 false
 DEBUG;TRACE
-C:\Users\sham\Documents\GitHub\ASDAGeorge\ASDAGeorgeApp\App.xaml
-3220356949
+D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\App.xaml
+8866208040
 
-16400223694
-15-1287620727
-MainPageMock.xaml;MainWindow.xaml;Views\FeatureUserControl.xaml;
+23-178590810
+15-1544312190
+Views\CategoryPage.xaml;Views\LandingPage.xaml;Views\ProductPage.xaml;Views\CategoryListPage.xaml;MainWindow.xaml;Views\SubViews\FeatureUserControl.xaml;Views\SubViews\MainMenuControl.xaml;Views\SubViews\TopBarUserControl.xaml;
 image\load.jpg
 False
 
