@@ -8,29 +8,29 @@
     <Grid>
         <!-- TOP LEVEL GRIDS -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="480*" />
+            <ColumnDefinition Width="223*" />
+            <ColumnDefinition Width="737*"/>
+            <ColumnDefinition Width="480*" />
         </Grid.ColumnDefinitions>
 
 
         <!-- LEFT PANEL -->
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0" Background="Black" Opacity="20">
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+
+            <!-- LEFT TOP PANEL -->
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                
+
                 <!-- GEORGE LOGO -->
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0" HorizontalAlignment="Right">
-                        <Image Height="30px" Source="..\icons\align14Yellow.png"></Image>
+                        <Image Height="30px" Source="..\icons\align2.png"></Image>
                     </Grid>
                     <Grid Grid.Column="1" Margin="10,10,0,0">
                         <Image Source="..\image\logo.png"></Image>
@@ -47,12 +47,67 @@
                 </Grid>
 
             </Grid>
-          
+
+            <!-- DESCRIPTION -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22" HorizontalAlignment="Center">
+                    Give your formal
+                    wardrobe a fresh update with this stunning floral
+                    bodycon dress.<LineBreak/><LineBreak/>
+                        Crafted using stretch fabric and stamped with bold print,
+                        this sophisticated piece will take you from work to the weekend in sensational style.
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <TextBlock  Foreground="White" FontSize="22" Text="bullet">
+                            <LineBreak/>
+                            - V-neck 
+                            <LineBreak/>
+                            - Back zip fastening
+                           <LineBreak/>
+                            - Sleeveless
+                             <LineBreak/>
+                            - Back vent
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
+                    Length: 40 inches / 103cm
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
+                        Fabric composition: 95%
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
+                        Polyester: 5% Elastane
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
 
         <!-- RIGHT PANEL -->
-        <Grid Grid.Column="2" >
+        <Grid Grid.Column="3" >
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="3*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="3*" />
                 <RowDefinition Height="*" />
@@ -69,8 +124,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="Gray">
-                    <Image Height="100px" Width="100px" Source="..\image\palet.png"></Image>
+                <Grid Grid.Column="1" Background="Black">
+                    <Image Height="150px" Width="200px" Source="..\image\palettewhite.png"></Image>
                 </Grid>
             </Grid>
             <Grid Grid.Row="3">
@@ -79,9 +134,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1" Background="BLack">
-                    <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="30" HorizontalAlignment="Center">
-                    Size
-                    </TextBlock>
+                    <Image Height="200px" Width="250px" Source="..\image\tapes.png"></Image>
                 </Grid>
             </Grid>
             <Grid Grid.Row="5">
@@ -90,9 +143,30 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1" Background="Black">
-                    <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="30" HorizontalAlignment="Center">
-                    QUANTITY
-                    </TextBlock>
+                    <Image Height="120px" Width="150px" Source="..\image\number1.png"></Image>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" Background="green">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+
+                        <Image Height="80px" Width="150px" Source="..\image\shoppingbag1.png"></Image>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
+                        BUY IT NOW
+                        </TextBlock>
+                    </Grid>
                 </Grid>
             </Grid>
 
@@ -101,15 +175,21 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Background="LightPink">
-                    <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
-                        WISHLIST
-                    </TextBlock>
-                </Grid>
-                <Grid Grid.Column="1" Background="green">
-                    <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
-                        BUY NOW
-                    </TextBlock>
+                <Grid Grid.Column="1" Background="LightPink">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <Image Height="80px" Width="150px" Source="..\image\heart.png"></Image>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
+                       WISHLIST
+                        </TextBlock>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

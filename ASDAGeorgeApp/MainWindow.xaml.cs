@@ -226,6 +226,91 @@ namespace ASDAGeorgeApp
             Canvas.SetLeft(element, point.X - element.Width / 2);
             Canvas.SetTop(element, point.Y - element.Width / 2);
         }
+
+        /// <summary>
+        /// Draws the product out if available
+        /// </summary>
+        /// <param name="skel">The skeleton to draw from</param>
+        private void DrawProduct(Skeleton skel)
+        {
+            if (Product != null)
+            {
+                /* Display product */
+                try
+                {
+                    DisplayProductOnUser(skel);
+                    DisplayInformationNextToUser(skel);
+                }
+                catch (Exception e)
+                {
+                    DisplayErrorOnUser(skel, e);
+                }
+            }
+
+            return;
+        }
+
+        /// <summary>
+        /// Display the Title and Price next to the user
+        /// </summary>
+        /// <param name="skel">The skeleton to put the price next to</param>
+        private void DisplayInformationNextToUser(Skeleton skel)
+        {
+            if (skel == null)
+                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
+
+            /* Find which shoulder is more to the right on the screen */
+            ColorImagePoint pointToUse = GetPointToUse(skel);
+
+            /* Put product text onto screen next to right shoulder */
+            // do shit TODO
+        }
+
+        private ColorImagePoint GetPointToUse(Skeleton skel)
+        {
+            /* Get the points of the right and left shoulders */
+            CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
+            ColorImagePoint rightShoulder = coordMapper.MapSkeletonPointToColorPoint(skel.Joints[JointType.ShoulderRight].Position, ColorImageFormat.RgbResolution640x480Fps30);
+            ColorImagePoint leftShoulder = coordMapper.MapSkeletonPointToColorPoint(skel.Joints[JointType.ShoulderLeft].Position, ColorImageFormat.RgbResolution640x480Fps30);
+
+            if (rightShoulder == null || leftShoulder == null)
+                throw new ArgumentNullException("Could not find one or both shoulders");
+
+            if (rightShoulder.X > leftShoulder.X)
+                return rightShoulder;
+            else
+                return leftShoulder;
+
+        }
+
+        private void DisplayErrorOnUser(Skeleton skel, Exception e)
+        {
+            if (skel == null)
+                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
+
+            ColorImagePoint pointToUse = GetPointToUse(skel);
+
+            PlaceTextOnUser(e.Message);
+        }
+
+        private void PlaceTextOnUser()
+        {
+
+        }
+
+        private void PlaceTextOnUser(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DisplayProductOnUser(Skeleton skel)
+        {
+            if (skel == null)
+                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
+
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         #region CodeBehind Functions
@@ -242,7 +327,7 @@ namespace ASDAGeorgeApp
                     skeletonFrame.CopySkeletonDataTo(skeletons);
                 }
             }
-
+            
             using (DrawingContext dc = this.drawingGroup.Open())
             {
                 /* Draw a transparent background to set the render size */
@@ -257,6 +342,8 @@ namespace ASDAGeorgeApp
                         if (skel.TrackingState == SkeletonTrackingState.Tracked)
                         {
                             this.DrawBonesAndJoints(skel, dc);
+
+                            DrawProduct(skel);
                         }
                         else if (skel.TrackingState == SkeletonTrackingState.PositionOnly)
                         {
