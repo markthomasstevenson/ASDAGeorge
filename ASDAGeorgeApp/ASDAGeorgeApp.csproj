@@ -96,6 +96,8 @@
     </ApplicationDefinition>
     <Compile Include="Interface\ISwitchable.cs" />
     <Compile Include="Models\KinectTextButton.cs" />
+    <Compile Include="ViewModels\LandingPageViewModel.cs" />
+    <Compile Include="ViewModels\ProductPageViewModel.cs" />
     <Compile Include="Views\CategoryPage.xaml.cs">
       <DependentUpon>CategoryPage.xaml</DependentUpon>
     </Compile>

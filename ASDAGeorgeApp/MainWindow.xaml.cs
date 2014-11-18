@@ -179,6 +179,23 @@ namespace ASDAGeorgeApp
 
         #endregion
 
+        #region ClothesRegion
+        private Item _Product;
+        public Item Product
+        {
+            get { return _Product; }
+            set
+            {
+                if (_Product != value)
+                {
+                    _Product = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        #endregion
+
         public MainWindow()
         {
             /* HACK : This keeps the splashscreen from disappearing by adding a second to the load time for the Initialisation */
@@ -197,6 +214,19 @@ namespace ASDAGeorgeApp
             var regionSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
         }
+
+        #region Clothes Function
+        /// <summary>
+        /// Sets the location of the Element given to the Point given
+        /// </summary>
+        /// <param name="element">The element to set the location of</param>
+        /// <param name="point">The location to be set to</param>
+        private void SetImagePosition(FrameworkElement element, ColorImagePoint point)
+        {
+            Canvas.SetLeft(element, point.X - element.Width / 2);
+            Canvas.SetTop(element, point.Y - element.Width / 2);
+        }
+        #endregion
 
         #region CodeBehind Functions
 
@@ -531,6 +561,17 @@ namespace ASDAGeorgeApp
 
         public void Navigate(UserControl nextPage)
         {
+            if (nextPage.GetType() == typeof(ProductPage))
+            {
+                Product = ((ProductPage)nextPage).Product;
+            }
+            else if (nextPage.GetType() == typeof(LandingPage))
+            {
+                Product = ((LandingPage)nextPage).CurrentProduct;
+            }
+            else
+                Product = null;
+
             this.kinectRegion.Content = nextPage;
         }
 

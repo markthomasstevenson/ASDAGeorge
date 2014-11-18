@@ -16,7 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ASDAGeorgeApp
+namespace ASDAGeorgeApp.Views
 {
     /// <summary>
     /// Interaction logic for CategoryListPage.xaml

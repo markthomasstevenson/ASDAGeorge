@@ -1,4 +1,5 @@
 ﻿using ASDAGeorgeApp.Models;
+using ASDAGeorgeApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,17 @@ namespace ASDAGeorgeApp.Views
         public LandingPage()
         {
             InitializeComponent();
+
+            DataContext = new LandingPageViewModel();
+        }
+
+        public Item CurrentProduct
+        {
+            get
+            {
+                LandingPageViewModel model = DataContext as LandingPageViewModel;
+                return model.CurrentProduct;
+            }
         }
 
         private void MainLogo_MouseDown(object sender, MouseButtonEventArgs e)
