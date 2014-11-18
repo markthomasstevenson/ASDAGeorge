@@ -1,0 +1,628 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Mark</Author>
+  <LastAuthor>Mark</LastAuthor>
+  <Created>2014-11-18T13:09:22Z</Created>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8220</WindowHeight>
+  <WindowWidth>19875</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>390</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="Currency"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="women">
+  <Table ss:ExpandedColumnCount="11" ss:ExpandedRowCount="52" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row>
+    <Cell><Data ss:Type="String">Approximate Knowledge Data Request</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Category</Data></Cell>
+    <Cell><Data ss:Type="String">Sub Category</Data></Cell>
+    <Cell><Data ss:Type="String">No.</Data></Cell>
+    <Cell><Data ss:Type="String">Product Image</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">GEM</Data></Cell>
+    <Cell><Data ss:Type="String">Price</Data></Cell>
+    <Cell><Data ss:Type="String">Product Details</Data></Cell>
+    <Cell><Data ss:Type="String">Size Variants</Data></Cell>
+    <Cell><Data ss:Type="String">Star Rating</Data></Cell>
+    <Cell><Data ss:Type="String">Del Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Womens</Data></Cell>
+    <Cell><Data ss:Type="String">Dresses</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240348687?nocache=1456746346</Data></Cell>
+    <Cell><Data ss:Type="String">Embellished Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM324694</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make a stunning addition to your formal wear this season with this lovely embellished dress. Featuring elegant jewel embellishment and light fabric, this figure friendly dress is sure to have you turning heads at all events.&#10;&#10;•  Back keyhole fastening&#10;&#10;Length: 37 Inches / 94 cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390020426?nocache=1452946070</Data></Cell>
+    <Cell><Data ss:Type="String">Lace V-Neck Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320652</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make an entrance with this flawless lace dress. Designed for high octane evening dressing, it comes with an always-flattering V-neckline, beautiful lace fabric and sheer sleeves for an added touch of elegance. What's more, this dress is fully lined to ensure comfort no matter how long the occasion. &#10;&#10;•  All-over lace design&#10;•  Short sleeves&#10;•  Fully lined&#10;•  Back zip fastening&#10;&#10;Length: 41 Inches / 104cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390019451?nocache=27536775</Data></Cell>
+    <Cell><Data ss:Type="String">Lace V-neck Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320651</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make an entrance with this flawless lace dress. Designed for high octane evening dressing, it comes with an always-flattering V-neckline, beautiful lace fabric and sheer sleeves for an added touch of elegance. What's more, this dress is fully lined to ensure comfort no matter how long the occasion. &#10;&#10;•  All-over lace design&#10;•  Short sleeves&#10;•  Fully lined&#10;&#10;Length: 42 Inches / 107cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390412993?nocache=102851681</Data></Cell>
+    <Cell><Data ss:Type="String">G21 Chiffon Slip Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM319108 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Add a wonderful pop of colour to your wardrobe with this trendy G21 chiffon slip dress. This minimalist, figure-friendly piece is anything but humble, and is perfect for making a loud and stylish statement this season. &#10;&#10;•  Sleeveless&#10;&#10;Length: 34½ Inches / 87½cm&#10;Mannequin height: 5’8”&#10;&#10;Cool and coordinated, G21 is your one-stop shop for today’s hottest trends. In carefully synchronised colourways, our expert edit of key shapes makes styling your new look a cinch.</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390379609?nocache=41081287</Data></Cell>
+    <Cell><Data ss:Type="String">Lace Panel Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318884</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Nothing is more flattering than a little black dress and this lace panel dress is a sensational take on a timeless classic. With intricate lace detailing, this stunning and eminently wearable piece is bound to become a stylish staple this season.&#10;&#10;•  Cropped sleeve&#10;&#10;Length: 34 Inches / 86½cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390378695?nocache=2023203317</Data></Cell>
+    <Cell><Data ss:Type="String">Polka Dot Funnel Neck Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318874 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Go bold and beautiful this season with this stunning polka dot funnel neck dress. The perfect fusion of elegance and a bold statement look, this ultra-trendy piece is bound to become your go-to for an instant fashion fix.&#10;&#10;•  Long sleeve&#10;&#10;Length: 34 Inches / 86cm  &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390379739?nocache=591083669</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Lace Panel Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318824</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">The perfect flatter and flaunt piece, this floral lace panel dress will have all eyes on you. With intricate lace detailing and a gorgeous floral print, you’ll be popping this feminine piece on again and again this season.&#10;&#10;•  Cropped sleeve&#10;&#10;Length: 34 Inches / 86½cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390378565?nocache=1434451465</Data></Cell>
+    <Cell><Data ss:Type="String">Funnel Neck Floral Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318823</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Go bold in blossoms in this stunning funnel neck floral dress this season. Featuring a striking and bright floral print and an elegant funnel neck, this fantastic piece will give you a flamboyant foundation for all occasions. &#10;&#10;•  Cropped sleeve&#10;&#10;Length: 34½ Inches / 87½cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390378954?nocache=2097263318</Data></Cell>
+    <Cell><Data ss:Type="String">Leopard Print Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318822</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Add a wildcard to your wardrobe with this stylish and striking leopard print dress. Crafted using stretch fabric, this stunning and figure-friendly piece will become your go-to for an instant fashion fix.&#10;&#10;•  Tie back fastening&#10;•  Cropped sleeve&#10;&#10;Length: 40 Inches / 102cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390378824?nocache=2108184877</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Print Dress</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318821 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Go bold in blossoms with this stunning floral print dress this season. Created using light fabric and stamped with an eye-catching and bright floral print, this comfy piece is guaranteed to become a favourite.&#10;&#10;•  Tie back fastening&#10;•  Cropped sleeve&#10;&#10;Length: 39 Inches / 99cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Skirts</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390173689?nocache=833663627</Data></Cell>
+    <Cell><Data ss:Type="String">Drape Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM324836</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make a sensational addition to your formal wardrobe with this stunning drape skirt. With graceful drape detailing, this piece will transform your outfits with an elegant and contemporary spin.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 31½ Inches / 80cm&#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390173290?nocache=639437815</Data></Cell>
+    <Cell><Data ss:Type="String">Ponte Pleat Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM322767 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Smart staples are a must-have in every wardrobe and you’ll be set with this stunning Ponte pleat skirt. This fashionable and versatile pick is perfect for completing your looks with a truly sophisticated spin.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 16½ Inches / 42cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390173559?nocache=1555066859</Data></Cell>
+    <Cell><Data ss:Type="String">A Line Jersey Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM322741 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Give your formal wardrobe a pretty spin with this lovely A line jersey skirt. This versatile piece will take you from your desk to the dance floor in style this season.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 26 Inches / 66cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390173429?nocache=633342465</Data></Cell>
+    <Cell><Data ss:Type="String">A Line Patterned Jersey Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM322730 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Give your formal wardrobe a pretty update with this A line patterned jersey skirt. This wonderful piece is the ultimate work-to-weekend pick that you’ll be mixing and matching with time and again.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 26 Inches / 66cm &#10;Mannequin height: 5’8</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390173818?nocache=2126155392</Data></Cell>
+    <Cell><Data ss:Type="String">Mock Wrap Front Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM322707</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Equally flattering and sophisticated, this stunning mock wrap front skirt is bound to become a favourite. Whether you’re heading to work or out with friends, this versatile piece will have you oozing confidence this season.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 23½ Inches / 60cm &#10;Mannequin height: 5’8</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390172927?nocache=456414480</Data></Cell>
+    <Cell><Data ss:Type="String">Scuba Patterned Pencil Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM322703 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Transform your formal wardrobe with this stunning scuba patterned pencil skirt. This sensational piece will hug your curves in all the right places and with a pop of colour, it will have you turning heads at all events this season.&#10;&#10;•  Back vent&#10;•  Elasticated waistband&#10;&#10;Length: 25½ Inches / 65cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240848408?nocache=1345462343</Data></Cell>
+    <Cell><Data ss:Type="String">Flippy Hem Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM319470 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">A lovely light skirt to take you to the dance floor this weekend. It's sure to hit all the key style notes with the diagonal cut. &#10;&#10;•  Elasticated waist</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390348292?nocache=1760677811</Data></Cell>
+    <Cell><Data ss:Type="String">Stripe Pencil Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318442 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">The ultimate work-to-weekend staple, this stripe pencil skirt is a wonderful addition to any wardrobe. This bright piece will hug your curves and ensure all eyes are on you this season.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 27½ Inches / 70cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390348681?nocache=1566675782</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Skater Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318397 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">If you’re a floral fan, you’re sure to adore this delightful floral skater skirt. This versatile piece is perfect for adding a bold and on-trend print to your outfits this season.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 16½ Inches / 42cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390348421?nocache=864713154</Data></Cell>
+    <Cell><Data ss:Type="String">Pencil Skirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318396 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">The ultimate work-to-weekend staple, this pencil skirt is a wonderful addition to any wardrobe. This bright piece will hug your curves and ensure all eyes are on you this season.&#10;&#10;•  Elasticated waistband&#10;&#10;Length: 27½ Inches / 70cm &#10;Mannequin height: 5’8”</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Tops</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390046334?nocache=1598324649</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Blouse</Data></Cell>
+    <Cell><Data ss:Type="String">GEM321389 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Infuse a summer spin into your formal wardrobe with this flawless floral blouse. Created with light fabric and adorned with an eye-catching and stunning floral print, you’ll be wearing this from work to the weekend.&#10;&#10;•  Button through fastening&#10;•  Long sleeve&#10;•  Dipped hem</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390601113?nocache=371465775</Data></Cell>
+    <Cell><Data ss:Type="String">Fox and Floral Print Top</Data></Cell>
+    <Cell><Data ss:Type="String">GEM321328 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Ace that fantastical style with this gorgeous fox and floral print top. This stunning top combines a pretty print with a relaxed cut, ensuring you’ll feel comfy and beautiful time and again with this piece.&#10;&#10;•  Dipped hem&#10;•  Short sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390169712?nocache=1273836059</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Crochet Kimono</Data></Cell>
+    <Cell><Data ss:Type="String">GEM321275 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Pretty and a fabulously feminine cover-up, this beautiful floral crochet kimono is a stylish must-have. This year-round piece is perfect for acing that on-trend layered look.&#10;&#10;•  Open front&#10;•  Cropped sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">8-10, 12-14, 16-18,20-22</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390169675?nocache=204783418</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Crochet Kimono</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320941 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Pretty and a fabulously feminine cover-up, this beautiful floral crochet kimono is a stylish must-have. This year-round piece is perfect for acing that on-trend layered look.&#10;&#10;•  Open front&#10;•  Cropped sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">8-10, 12-14, 16-18,20-23</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240693473?nocache=1694538466</Data></Cell>
+    <Cell><Data ss:Type="String">Embellished Peter Pan Collar Blouse</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320656 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Incredibly stylish and sweet, this embellished Peter Pan collar blouse is a beautiful must-have this season. Whether you’re heading to work or out with friends, the sweet embellishment and trendy collar are sure to have you turning heads at all events. &#10;&#10;•  Back keyhole fastening &#10;•  Sleeveless&#10;•  Dipped hem&#10;•  Darting to the bust</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240693343?nocache=1703803458</Data></Cell>
+    <Cell><Data ss:Type="String">Embellished Peter Pan Collar Blouse</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320655 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Incredibly stylish and sweet, this embellished Peter Pan collar blouse is a beautiful must-have this season. Whether you’re heading to work or out with friends, the sweet embellishment and trendy collar are sure to have you turning heads at all events. &#10;&#10;•  Back keyhole fastening &#10;•  Sleeveless&#10;•  Dipped hem&#10;•  Darting to the bust</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240693213?nocache=1332069355</Data></Cell>
+    <Cell><Data ss:Type="String">Embellished Peter Pan Collar Blouse</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320654</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Incredibly stylish and sweet, this embellished Peter Pan collar blouse is a beautiful must-have this season. Whether you’re heading to work or out with friends, the sweet embellishment and trendy collar are sure to have you turning heads at all events. &#10;&#10;•  Back keyhole fastening &#10;•  Sleeveless&#10;•  Dipped hem&#10;•  Darting to the bust</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390436012?nocache=1596121224</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Vest</Data></Cell>
+    <Cell><Data ss:Type="String">GEM319356 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Ace that work-to-weekend style with this gorgeous floral vest. This sophisticated and bold piece will have you turning heads at all events, while the versatile design will take you effortlessly from casual to formal time and again this season. &#10;&#10;•  V-neck</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390435664?nocache=1271385316</Data></Cell>
+    <Cell><Data ss:Type="String">V-neck Vest</Data></Cell>
+    <Cell><Data ss:Type="String">GEM319301 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">A fabulous new staple, this V-neck vest is a great addition to your wardrobe this season. This versatile piece can take you from the boardroom to the dance floor and will ensure you look fabulous at all times.</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240989200?nocache=842512301</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Print Sleeveless Vest</Data></Cell>
+    <Cell><Data ss:Type="String">GEM319097 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">The peplum reigns supreme this season, and it's not hard to see why - it's easy, stylish and designed to flatter every figure. This sleeveless vest is the chicest way to wear it, and will look great from smart days in the office to nights out. &#10;&#10;•  Sleeveless&#10;•  Peplum hem</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Coats</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390265698?nocache=189926423</Data></Cell>
+    <Cell><Data ss:Type="String">Peplum Blazer</Data></Cell>
+    <Cell><Data ss:Type="String">GEM317481 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Incredibly stylish and sophisticated, this stunning peplum blazer is a fabulous addition to your wardrobe. A year-round masterpiece, this piece is perfect for completing your formal looks with a trendy twist.&#10;&#10;•  Zip through fastening&#10;•  Long sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390107479?nocache=96356167</Data></Cell>
+    <Cell><Data ss:Type="String">Moda Scuba Floral Blazer</Data></Cell>
+    <Cell><Data ss:Type="String">GEM315668</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Tap into the structured trend with this sleek, elegant scuba fabric blazer from Moda. The open front means it's easy to layer and flattering too, while the floral print makes it truly elegant. &#10;&#10;•  All-over print&#10;•  Scuba fabric&#10;•  Open front&#10;&#10;With a relaxed cut that flatters grown-up curves and bold fabrics that spell confidence, the Moda collection injects personality into your look. Fluid pieces, rich colours and feminine details combine to create an organically chic capsule collection. So make life less ordinary with exciting, elegant clothes that put you centre stage.</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390107349?nocache=239516926</Data></Cell>
+    <Cell><Data ss:Type="String">Lace Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM315665 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Give your formal outfits a stylish spin with this lovely lace jacket. Whether you’re heading to work or out with friends, you’ll be completing your looks with this stunning piece. Team with one of our camisole vests to complete the look.&#10;&#10;•  Long sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240628468?nocache=983505841</Data></Cell>
+    <Cell><Data ss:Type="String">Teddy Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313991</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">A flawless fusion of comfort and style, this is the perfect winter coat that you’ve been searching for. Created using soft fabric and with a stand-out design, this piece can be worn anywhere, from work to a night out with friends, you’ll be completing every outfit with this prominent piece. &#10;&#10;•  Popper fastening&#10;•  Twin front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240502539?nocache=315288641</Data></Cell>
+    <Cell><Data ss:Type="String">Leather Look Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313961 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">This is that indispensable jacket that you’ve been searching for, versatile and cool you’ll be completing every outfit with a trendy edge with this leather look piece. This prominent piece is an eminently wearable cover-up that you’ll fall in love with this season. &#10;&#10;•  Zip through fastening&#10;•  Twin front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240437503?nocache=857957260</Data></Cell>
+    <Cell><Data ss:Type="String">Teddy Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313817</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">A flawless fusion of comfort and style, this is the perfect winter coat that you’ve been searching for. Created using soft fabric and with a stand-out design, this piece can be worn anywhere, from work to a night out with friends, you’ll be completing every outfit with this prominent piece. &#10;&#10;•  Popper fastening&#10;•  Twin front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240966959?nocache=338939377</Data></Cell>
+    <Cell><Data ss:Type="String">Barbara Hulanicki Animal Wrap Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313783 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">The last word in animal print dressing, this wrap jacket from legendary designer Barbara Hulanicki recalls all the elegance and style of the 70s. The cinched-in waist will give you a chic hourglass silhouette while the oversized lapels are so on-trend this season. You'll be wearing this piece round the clock. &#10;&#10;•  Long sleeves&#10;•  Open front&#10;•  Animal-print lapel</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240954529?nocache=77808452</Data></Cell>
+    <Cell><Data ss:Type="String">Monochrome Blazer</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313394 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Master the monochrome trend this season with this fantastically fashionable blazer. The ideal investment to take you from work to the weekend, you’ll be layering up in style whatever the weather.&#10;&#10;•  Open front</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240954390?nocache=64573476</Data></Cell>
+    <Cell><Data ss:Type="String">Textured Blazer</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313223</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Look and feel special this season with this sophisticated textured blazer. The ultimate work-to-weekend piece, you’ll be using this blazer to transform your outfits with a pop of classic character.&#10;&#10;•  Open front&#10;•  ¾ sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240962395?nocache=1462419053</Data></Cell>
+    <Cell><Data ss:Type="String">Floral Animal Waffle Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313194 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bring some pattern into your tailoring with this super on-trend jacket. Crafted with a flattering open front, it's easy to throw on over all manner of outfits, and will feel just as good as it looks thanks to the fine waffle-textured fabric. &#10;&#10;•  Open front&#10;•  Long sleeves&#10;•  All-over print</Data></Cell>
+    <Cell><Data ss:Type="String">6,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Jeans</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390499406?nocache=1133299368</Data></Cell>
+    <Cell><Data ss:Type="String">Acid Wash Skinny Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320213 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Rock that on-trend acid wash style this season with these cool skinny jeans. The perfect staple that will give any outfit a ton of attitude, you’ll love transforming your look with these edgy jeans this winter.&#10;&#10;•  Zip and button fly fastening&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">8 12 14 18 20 6 Short 8 Short 10 Short 12 Short 14 Short 16 Short 18 Short 20 Short 22 Short 6 Regular 10 Regular 16 Regular 22 Regular 24 Regular 8 Long 10 Long 12 Long 14 Long 16 Long 18 Long 20 Long 22 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390499130?nocache=1576747130</Data></Cell>
+    <Cell><Data ss:Type="String">Skinny Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320164 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in an eminently wearable new staple with these great skinny jeans. These are the perfect pick for a versatile new key that you’ll be dressing up and down again and again this season.&#10;&#10;•  Twin front and back pockets&#10;•  Zip and button fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">8 12 14 18 20 6 Short 8 Short 10 Short 12 Short 14 Short 16 Short 18 Short 20 Short 22 Short 6 Regular 10 Regular 16 Regular 22 Regular 24 Regular 8 Long 10 Long 12 Long 14 Long 16 Long 18 Long 20 Long 22 Long</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390499673?nocache=624633875</Data></Cell>
+    <Cell><Data ss:Type="String">Distressed Skinny Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320128 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Mix up your casual wardrobe with these trendy distressed skinny jeans. Perfect for acing that authentic and laidback look, these jeans will demand attention whether you’re heading out with friends or visiting family. &#10;&#10;•  Zip and button fly fastening&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell><Data ss:Type="String">8 12 14 18 20 6 Short 8 Short 10 Short 12 Short 14 Short 16 Short 18 Short 20 Short 22 Short 6 Regular 10 Regular 16 Regular 22 Regular 24 Regular 8 Long 10 Long 12 Long 14 Long 16 Long 18 Long 20 Long 22 Long</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390498867?nocache=988895681</Data></Cell>
+    <Cell><Data ss:Type="String">Skinny Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM320127 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in an eminently wearable new staple with these great skinny jeans. These are the perfect pick for a versatile key piece that you’ll be dressing up and down again and again this season.&#10;&#10;•  Twin front and back pockets&#10;•  Zip and button fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">8 12 14 18 20 6 Short 8 Short 10 Short 12 Short 14 Short 16 Short 18 Short 20 Short 22 Short 6 Regular 10 Regular 16 Regular 22 Regular 24 Regular 8 Long 10 Long 12 Long 14 Long 16 Long 18 Long 20 Long 22 Long</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390334172?nocache=1336925603</Data></Cell>
+    <Cell><Data ss:Type="String">Wonderfit Cropped Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318298 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in a smart new staple this season with this amazing Wonderfit cropped jeans. With fabric that alters size with you and stretches to fit multiple sizes, these are a fabulous addition to any wardrobe.&#10;&#10;•  Zip and button fly fastening&#10;•  Twin back pockets&#10;•  Twin front mock pockets</Data></Cell>
+    <Cell><Data ss:Type="String">XS,S,M,L,XL,XXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390334110?nocache=1716273297</Data></Cell>
+    <Cell><Data ss:Type="String">Wonderfit Cropped Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318294 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in a smart new staple this season with this amazing Wonderfit cropped jeans. With fabric that alters size with you and stretches to fit multiple sizes, these are a fabulous addition to any wardrobe.&#10;&#10;•  Zip and button fly fastening&#10;•  Twin back pockets&#10;•  Twin front mock pockets</Data></Cell>
+    <Cell><Data ss:Type="String">XS,S,M,L,XL,XXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390130224?nocache=958401503</Data></Cell>
+    <Cell><Data ss:Type="String">Wonderfit Skinny Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM316241 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Exactly what it says on the tin, these skinny jeans have been tailored to ensure they fit you wonderfully. Crafted using stretch fabric these jeans alter size with you and will hug your curves in all the right places, ensuring that even when you’re dressed casually you look show-stoppingly good.&#10;&#10;•  Zip and button fly fastening&#10;•  Twin back pockets&#10;•  Mock front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">XS,S,M,L,XL,XXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390108551?nocache=389935210</Data></Cell>
+    <Cell><Data ss:Type="String">Acid Wash Jeggings</Data></Cell>
+    <Cell><Data ss:Type="String">GEM315707 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Flatter your figure and stay comfortable every day with our essential jeggings. The acid wash style is big this season so they make the ideal on-trend pair of bottoms for every fashionista.&#10;&#10;•  Elastic waist</Data></Cell>
+    <Cell><Data ss:Type="String">6,4,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390108674?nocache=1395216026</Data></Cell>
+    <Cell><Data ss:Type="String">Acid Wash Jeggings</Data></Cell>
+    <Cell><Data ss:Type="String">GEM315700 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Flatter your figure and stay comfortable every day with our essential jeggings. The acid wash style is big this season so they make the ideal on-trend pair of bottoms for every fashionista.&#10;&#10;•  Elastic waist</Data></Cell>
+    <Cell><Data ss:Type="String">6,4,8,10,12,14,16,18,20,22,24,26,28</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054390108674?nocache=1395216026</Data></Cell>
+    <Cell><Data ss:Type="String">Fashion Snake Print Jeggings</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313933 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Slip into a sassy new staple with these fashion snake print jeggings this season. These trend-setting jeggings are guaranteed to have you turning heads and with an elasticated waistband, you’ll be kept comfy all day. &#10;&#10;•  Twin back pockets&#10;•  Elasticated waistband</Data></Cell>
+    <Cell><Data ss:Type="String">8 12 14 18 20 6 Short 8 Short 10 Short 12 Short 14 Short 16 Short 18 Short 20 Short 22 Short 6 Regular 10 Regular 16 Regular 22 Regular 24 Regular 8 Long 10 Long 12 Long 14 Long 16 Long 18 Long 20 Long 22 Long</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

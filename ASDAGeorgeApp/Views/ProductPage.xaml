@@ -16,7 +16,7 @@
 
 
         <!-- LEFT PANEL -->
-        <Grid Grid.Column="0" Background="Black" Opacity="20">
+        <Grid Grid.Column="0" Background="{StaticResource BackgroundBlack}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="3*" />

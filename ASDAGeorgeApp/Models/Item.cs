@@ -64,15 +64,57 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
-        private List<DeliveryOptions> _DeliveryOptions;
-        public List<DeliveryOptions> DeliveryOptions
+        private string _DeliveryMethods;
+        public string DeliveryMethods
         {
-            get { return _DeliveryOptions; }
+            get { return _DeliveryMethods; }
             set
             {
-                if (_DeliveryOptions != value)
+                if (_DeliveryMethods != value)
                 {
-                    _DeliveryOptions = value;
+                    _DeliveryMethods = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private string _ProductImage;
+        public string ProductImage
+        {
+            get { return _ProductImage; }
+            set
+            {
+                if (_ProductImage != value)
+                {
+                    _ProductImage = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private string _SizeVariants;
+        public string SizeVariants
+        {
+            get { return _SizeVariants; }
+            set
+            {
+                if (_SizeVariants != value)
+                {
+                    _SizeVariants = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private double _StarRating;
+        public double StarRating
+        {
+            get { return _StarRating; }
+            set
+            {
+                if (_StarRating != value)
+                {
+                    _StarRating = value;
                     NotifyPropertyChanged();
                 }
             }

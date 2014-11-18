@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASDAGeorgeApp.Models
 {
-    public class DeliveryOptions : Model
+    public class SubCategory : Model
     {
     }
 }

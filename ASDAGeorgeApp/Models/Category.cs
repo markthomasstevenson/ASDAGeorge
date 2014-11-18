@@ -8,6 +8,14 @@ namespace ASDAGeorgeApp.Models
 {
     public class Category : Model
     {
+        public Category(string title, List<SubCategory> subCategories)
+        {
+            Title = title;
+            SubCategories = subCategories;
+            int rand = new Random().Next(subCategories.Count - 1);
+            int newRand = new Random().Next(subCategories[rand].Products.Count - 1);
+        }
+
         private string _Title;
         public string Title
         {
@@ -36,8 +44,8 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
-        private List<Category> _SubCategories;
-        public List<Category> SubCategories
+        private List<SubCategory> _SubCategories;
+        public List<SubCategory> SubCategories
         {
             get { return _SubCategories; }
             set
@@ -59,20 +67,6 @@ namespace ASDAGeorgeApp.Models
                 if (_SamplePicture != value)
                 {
                     _SamplePicture = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
-        private string _TagLine;
-        public string TagLine
-        {
-            get { return _TagLine; }
-            set
-            {
-                if (_TagLine != value)
-                {
-                    _TagLine = value;
                     NotifyPropertyChanged();
                 }
             }
@@ -115,6 +109,20 @@ namespace ASDAGeorgeApp.Models
                 if (_Hidden != value)
                 {
                     _Hidden = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private List<Item> _Products;
+        public List<Item> Products
+        {
+            get { return _Products; }
+            set
+            {
+                if (_Products != value)
+                {
+                    _Products = value;
                     NotifyPropertyChanged();
                 }
             }

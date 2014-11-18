@@ -194,6 +194,19 @@ namespace ASDAGeorgeApp
             }
         }
 
+        private int _ProductTextSpacing;
+        public int ProductTextSpacing
+        {
+            get { return _ProductTextSpacing; }
+            set
+            {
+                if(_ProductTextSpacing != value)
+                {
+                    _ProductTextSpacing = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
         #endregion
 
         public MainWindow()
@@ -290,17 +303,26 @@ namespace ASDAGeorgeApp
 
             ColorImagePoint pointToUse = GetPointToUse(skel);
 
-            PlaceTextOnUser(e.Message);
+            PlaceTextOnUser(pointToUse, e.Message);
         }
 
-        private void PlaceTextOnUser()
+        private void PlaceTextOnUser(ColorImagePoint pointToUse, string p)
         {
+            pointToUse.X += ProductTextSpacing;
 
+            TextBlock floating = new TextBlock();
+            floating.Text = p;
+            SetImagePosition(floating, pointToUse);
         }
 
-        private void PlaceTextOnUser(string p)
+        private void PlaceTextOnUser(ColorImagePoint pointToUse)
         {
-            throw new NotImplementedException();
+            double xCoord = pointToUse.X;
+            xCoord = xCoord + ProductTextSpacing;
+
+            TextBlock floating = new TextBlock();
+            floating.Text = Product.Title + "£" + Product.Price;
+            SetImagePosition(floating, pointToUse);
         }
 
         private void DisplayProductOnUser(Skeleton skel)

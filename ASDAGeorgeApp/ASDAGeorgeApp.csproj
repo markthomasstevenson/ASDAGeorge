@@ -95,7 +95,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Interface\ISwitchable.cs" />
+    <Compile Include="Models\FileReader.cs" />
     <Compile Include="Models\KinectTextButton.cs" />
+    <Compile Include="Models\SubCategory.cs" />
     <Compile Include="ViewModels\LandingPageViewModel.cs" />
     <Compile Include="ViewModels\ProductPageViewModel.cs" />
     <Compile Include="Views\CategoryPage.xaml.cs">
@@ -111,7 +113,6 @@
       <DependentUpon>CategoryListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\DeliveryOptions.cs" />
     <Compile Include="Models\Featured.cs" />
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\Item.cs" />
@@ -663,6 +664,12 @@
     <Resource Include="image\tickled.jpg" />
     <Resource Include="image\winter.jpg" />
     <Resource Include="image\workwear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\men.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\women.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

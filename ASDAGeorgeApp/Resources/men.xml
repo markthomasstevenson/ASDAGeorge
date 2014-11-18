@@ -1,0 +1,628 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Mark</Author>
+  <LastAuthor>Mark</LastAuthor>
+  <Created>2014-11-18T12:55:27Z</Created>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8505</WindowHeight>
+  <WindowWidth>20115</WindowWidth>
+  <WindowTopX>240</WindowTopX>
+  <WindowTopY>105</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="Currency"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="men">
+  <Table ss:ExpandedColumnCount="11" ss:ExpandedRowCount="52" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row>
+    <Cell><Data ss:Type="String">Approximate Knowledge Data Request</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Category</Data></Cell>
+    <Cell><Data ss:Type="String">Sub Category</Data></Cell>
+    <Cell><Data ss:Type="String">No.</Data></Cell>
+    <Cell><Data ss:Type="String">Product Image</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">GEM</Data></Cell>
+    <Cell><Data ss:Type="String">Price</Data></Cell>
+    <Cell><Data ss:Type="String">Product Details</Data></Cell>
+    <Cell><Data ss:Type="String">Size Variants</Data></Cell>
+    <Cell><Data ss:Type="String">Star Rating</Data></Cell>
+    <Cell><Data ss:Type="String">Del Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Mens</Data></Cell>
+    <Cell><Data ss:Type="String">Coats</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240439446?nocache=1721328045</Data></Cell>
+    <Cell><Data ss:Type="String">Hooded Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311516 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Be prepared for whatever the weather brings this season with this stylish and practical hooded coat. Created using light, shower resistant material, you’ll be kept dry and comfy when out and about. &#10;&#10;• Zip through fastening &#10;• Twin front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240282370?nocache=475627167</Data></Cell>
+    <Cell><Data ss:Type="String">Zip Through Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311404 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Get your new season wardrobe ready with this cool zip through jacket. Created using thick fabric and with a fleece hood lining, this piece will keep you cosy and on-trend this season.&#10;&#10;•  Zip and popper fastening&#10;•  Twin front pockets&#10;•  1 inner pocket</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240439385?nocache=1572920418</Data></Cell>
+    <Cell><Data ss:Type="String">Hooded Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311355</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Be prepared for whatever the weather brings this season with this stylish and practical hooded coat. Created using light, shower resistant material, you’ll be kept dry and comfy when out and about. &#10;&#10;•  Zip through fastening &#10;•  Twin front pockets</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240201845?nocache=931735671</Data></Cell>
+    <Cell><Data ss:Type="String">Padded Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311354 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">This padded jacket is warm, versatile and a winter essential. Lightweight enough to layer up on your days into work but insulating enough for walks at the weekend,l the striking design comes with zipped pockets to keep your valuables secure and a high collar to banish the chill. &#10;&#10;•  Zip front fastening</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240379247?nocache=774168790</Data></Cell>
+    <Cell><Data ss:Type="String">Quilted Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311328 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">An essential cool cover-up, this quilted jacket is a great addition to your new season wardrobe. Created with warm fabric and cool contrast sleeves, you’ll be wearing this piece again and again during the cooler months.&#10;&#10;•  Twin front pockets&#10;•  Zip through fastening</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240475536?nocache=353627878</Data></Cell>
+    <Cell><Data ss:Type="String">Wax Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311314 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">38</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">A cool cover-up for the cold weather, this wax jacket is a great addition to your wardrobe. With 4 front pockets and padding, this cosy and practical jacket is bound to become your go-to for some extra warmth this season.&#10;&#10;•  4 front pockets&#10;•  Popper and zip through fastening</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240201401?nocache=2013846594</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Pea Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311277</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">This pea coat from Boston Crew needs a place in every wardrobe. It's made from wool-rich fabric for a long-lasting quality and smooth finish, and comes fully lined for extra comfort. &#10;&#10;•  Button front fastening&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240201906?nocache=1627460943</Data></Cell>
+    <Cell><Data ss:Type="String">Padded Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311269</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">This padded jacket is warm, versatile and a winter essential. Lightweight enough to layer up on your days into work but insulating enough for walks at the weekend,l the striking design comes with zipped pockets to keep your valuables secure and a high collar to banish the chill. &#10;&#10;•  Zip front fastening</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240817411?nocache=1275526161</Data></Cell>
+    <Cell><Data ss:Type="String">Padded Parka Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM309731</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make a smart addition to your winter wardrobe with this great padded parka coat. With a fleece panel inner, this cosy piece has a versatile and minimalist aesthetic to ensure you can wear this coat again and again with all outfits. &#10;&#10;•  5 front pockets&#10;•  Zip and button through fastening&#10;•  Detachable faux fur hood trim</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065818228?nocache=1310118350</Data></Cell>
+    <Cell><Data ss:Type="String">Hooded Coat</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308860</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">This hooded coat combines practicality and style flawlessly and will be a great addition to your wardrobe. Whether you’re nipping out or having a day of adventure, this piece has been created with shower resistant fabric and a fleece inner to ensure you’re kept cosy and dry whatever the weather. &#10;&#10;•  Zip through and popper fastening&#10;•  3 pockets</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Jeans</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240796761?nocache=1058300796</Data></Cell>
+    <Cell><Data ss:Type="String">Belted Bootcut Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM318182</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Rock that rugged look this season with these classic belted bootcut jeans. Fantastically versatile, these are sure to become the foundation to your casual outfits and will definitely have you acing that laidback style. &#10;&#10;•  Twin front and back pockets&#10;•  Button and zip fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240798994?nocache=687045164</Data></Cell>
+    <Cell><Data ss:Type="String">Bootcut Rinse Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM317612</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Made from cotton-rich fabric and in a dark wash, these jeans will do wonders for your looks from season to season. Featuring several pockets and in a bootcut style, these jeans are ready to comfort you day in day out.&#10;&#10;• Zip and button fastening</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240796341?nocache=162194516</Data></Cell>
+    <Cell><Data ss:Type="String">Belted Dark Wash Slim Fit Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM317611 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in a great new staple with these belted dark wash slim fit jeans this winter. Created to become your go-to versatile pick, you’ll be completing your outfits with these trendy jeans again and again this season.&#10;&#10;•  Twin front and back pockets&#10;•  Button and zip fly fastening&#10;•  Adjustable turn-up hems</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240466404?nocache=1987324421</Data></Cell>
+    <Cell><Data ss:Type="String">Rocky Slim Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311127 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Cut slim for a flattering and classic silhouette, this pair of mid blue jeans is all you'll need for your new season wardrobe. They're finished with stylish turn-ups and vintage detailing across the legs for a worn-in, authentic look. &#10;&#10;•  Pockets to the front and back</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240466251?nocache=656900303</Data></Cell>
+    <Cell><Data ss:Type="String">Slim Fit Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311126 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">It's safe to say these will be your go-to-pair of jeans. The slim-fit will flatter you whilst keeping you comfortable throughout the day. They're smart-casual perfection for a range of stylish looks. &#10;&#10;•  Zip and button fastening &#10;•  Pockets</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240466107?nocache=715706757</Data></Cell>
+    <Cell><Data ss:Type="String">Straight Leg Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311125 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Update your casual wardrobe with these straight leg jeans. The ultimate versatile piece, these are bound to become the foundation for your outfits this season.&#10;&#10;•  Twin front and back pockets&#10;•  Button fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240465957?nocache=1427910296</Data></Cell>
+    <Cell><Data ss:Type="String">Slimfit Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311124</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in a cool new staple this season with these slimfit jeans. Designed to be a versatile piece, these jeans are super easy to dress up or down and are bound to be worn again and again.&#10;&#10;•  Twin front and back pockets&#10;•  Button and zip fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240465803?nocache=338631090</Data></Cell>
+    <Cell><Data ss:Type="String">Straight Leg Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311123 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Update your casual wardrobe with these straight leg jeans. The ultimate versatile piece, these are bound to become the foundation for your outfits this season.&#10;&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240412906?nocache=1952621595</Data></Cell>
+    <Cell><Data ss:Type="String">Light Wash Belted Bootcut Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311107 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Stock up your denim collection with these easy, effortless bootcut jeans. The light wash makes them ideal for the weekend, while the detachable belt adds extra value to this classic pair. &#10;&#10;•  Detachable belt&#10;•  Pockets to the front and back</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240408022?nocache=1093683819</Data></Cell>
+    <Cell><Data ss:Type="String">Straight Leg Jeans</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311106</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Add a great new staple to your wardrobe with these straight leg jeans. These versatile jeans are bound to become the key to your casual outfits this season.&#10;&#10;•  Twin front and back pockets&#10;•  Zip and button fly fastening</Data></Cell>
+    <Cell><Data ss:Type="String">32 Short34 Short36 Short38 Short30 Regular32 Regular34 Regular36 Regular38 Regular40 Regular42 Regular32 Long34 Long36 Long38</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Shirts</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240957902?nocache=1668637136</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter 2 Pack Slim Fit Shirts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM313536 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Very smart and versatile, this Tailor &amp; Cutter 2 pack of slim fit shirts is a great investment. The ultimate work-to-weekend pack, you’ll be able to mix and match to suit the occasion again and again with these.&#10;&#10;•  Long sleeve&#10;•  Button through fastening</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240939366?nocache=1194938348</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Stripe Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM312453 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Add a stylish twist to your collection with this Boston Crew stripe shirt. Crafted using 100% cotton, this piece is a comfy and on-trend versatile staple that you’ll be wearing again and again.&#10;&#10;•  Long sleeve&#10;•  Button through fastening&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240684464?nocache=1372572902</Data></Cell>
+    <Cell><Data ss:Type="String">Check Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM312168 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make a bold style statement this season with this striking check shirt. Created using 100% cotton, this comfy piece is ideal for topping off your casual outfits with a trendy twist.&#10;&#10;•  Rhinestone buttons&#10;•  Button through fastening&#10;•  Twin chest pockets&#10;•  Long sleeve</Data></Cell>
+    <Cell><Data ss:Type="String">6,,4,8,10,12,14,16,18,20.22.24</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240646646?nocache=1077207849</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311551 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Make a dapper addition to your wardrobe with this Boston Crew shirt. This versatile 100% cotton piece is a great investment that will take you from work to the weekend in style and comfort this season. &#10;&#10;•  Single chest pocket&#10;•  Long sleeve&#10;•  Button through fastening&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240646523?nocache=1378359375</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Oxford Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311540 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Give your casual wardrobe a formal spin with this stylish Boston Crew Oxford shirt. Ideal for giving your outfits a suave touch, this 100% cotton piece will keep you comfy and on-trend this season.&#10;&#10;•  Single chest pocket&#10;•  Button through fastening&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240646288?nocache=1605962880</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Oxford Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311539</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Every wardrobe needs an Oxford shirt, and this version from Boston Crew is a modern classic. Made from 100% cotton, it's finished with a button-down collar and smart chest pocket. &#10;&#10;•  Button through fastening&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240337926?nocache=526558642</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Fine Stripe Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311514</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Boston Crew has created the shirt every man needs in his formal wardrobe with this fine stripe shirt. The ideal piece for completing your looks with a touch of colour and character, you’ll be wearing this shirt for all events this season. &#10;&#10;•  Long sleeve&#10;•  Button through fastening &#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240293062?nocache=124895338</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Check Shirt</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311493 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Check shirts are a time-enduring style that are always on-trend and with this Boston Crew piece you’ll be acing that laidback look. Created using 100% cotton, you’ll love completing your outfits with this comfy shirt.&#10;&#10;•  Button through fastening&#10;•  Single chest pocket&#10;•  Long sleeve&#10;&#10;Our Boston Crew collection offers a stylish selection of chinos, jeans and shorts to coordinate with understated shirts, t-shirts, knitwear and jackets, with a level of detailing you'd expect from a premium label.</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240438890?nocache=1980294708</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Check and Plain Shirt and Tie Set</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311478 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bulk up your formal wardrobe with this great Tailor &amp; Cutter check and plain shirt and tie set. With various designs, you’ll be able to mix and match this 3 piece set whether you’re heading to work or on a night out with friends.&#10;&#10;•  Long sleeve&#10;•  Button through fastening</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240438890?nocache=846720491</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Check and Plain Shirt and Tie Set</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311478 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bulk up your formal wardrobe with this great Tailor &amp; Cutter check and plain shirt and tie set. With various designs, you’ll be able to mix and match this 3 piece set whether you’re heading to work or on a night out with friends.&#10;&#10;•  Long sleeve&#10;•  Button through fastening</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Suits</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240445553?nocache=360435896</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Check Shirt and Tie Set</Data></Cell>
+    <Cell><Data ss:Type="String">GEM311280 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Step up your formal style with this suave Tailor &amp; Cutter check shirt and tie set. The ultimate work-to-weekend set, you’ll be mixing and matching them time and again.&#10;&#10;•  Button through fastening&#10;•  Long sleeve</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240457471?nocache=514748609</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Slim Fit Trousers</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310196</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Step-up your smart style this season with these great Tailor &amp; Cutter slim fit trousers. Tailored to be your versatile go-to from work to the weekend, these trousers have been crafted using light and comfortable fabric. &#10;&#10;•  Button and zip fly fastening&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30 Short 32 Short 34 Short 36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 28 Regular 30 Regular 32 Regular 34 Regular 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 30 Long 32 Long 34 Long 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240456924?nocache=1054430511</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Suit Trousers</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310195 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Invest in a smart new staple with these Tailor &amp; Cutter suit trousers. Whether you’re heading to work or out with friends you’ll be looking suave in these polished trousers.&#10;&#10;•  Hook and eye zip fly fastening&#10;•  Twin front and back pocket</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30 Short 32 Short 34 Short 36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 28 Regular 30 Regular 32 Regular 34 Regular 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 30 Long 32 Long 34 Long 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240456405?nocache=400900156</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310195 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Step up your style this season with this smart Tailor &amp; Cutter suit jacket. Ideal for completing your formal looks, you’ll be polishing up instantly with this new staple.&#10;&#10;•  Button fastening&#10;•  2 inner pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240456122?nocache=1462056727</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Herringbone Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310193</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">You'll always look your dapper best with this herringbone blazer from Tailor &amp; Cutter. The textured fabric gives this piece a gentlemanly, timeless air that's perfect for events and days in the office alike. &#10;&#10;•  Button fastening &#10;•  Mock front pockets &#10;•  Inner compartments</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240455910?nocache=1759401997</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310192 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Smart and stylish, this Tailor &amp; Cutter suit jacket is a great addition to your wardrobe. Perfect for a adding a classic twist to your formal outfits, this piece will see you through work to the weekend again and again.&#10;&#10;•  3 front mock pockets&#10;•  3 Inner pockets&#10;•  Button fastening</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240455705?nocache=1091001666</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Slim Fit Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310191 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Transform your formal wardrobe with this super-smart Tailor &amp; Cutter slim fit suit jacket. With a classic tailored aesthetic, this piece is perfect for completing your polished looks with a dapper twist.&#10;&#10;•  3 mock front pockets&#10;•  3 inner pockets&#10;•  Button fastening</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240451752?nocache=1178562187</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Slim Fit Suit Trousers</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310185 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Smart and stylish, these Tailor &amp; Cutter slim fit suit trousers are a great addition to your formal wardrobe. Designed to be a staple, you’ll be wearing these trousers time and time again.&#10;&#10;•  Hook and eye zip fly fastening&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30 Short 32 Short 34 Short 36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 28 Regular 30 Regular 32 Regular 34 Regular 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 30 Long 32 Long 34 Long 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240447908?nocache=1010533691</Data></Cell>
+    <Cell><Data ss:Type="String">Regular Fit Tailor &amp; Cutter Textured Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310172</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Smarten up your formal wear with this regular fit Tailor &amp; Cutter textured suit jacket. The ultimate work-to-weekend piece, you’ll be wearing this staple again and again.&#10;&#10;•  Single chest pocket and twin front mock pockets&#10;•  Button through fastening&#10;•  Inner pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240447694_C?nocache=771785965</Data></Cell>
+    <Cell><Data ss:Type="String">Tailor &amp; Cutter Wide Pinstripe Suit Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">GEM310171 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Master that smart and suave look with this great Tailor &amp; Cutter wide pinstripe suit jacket. This formal piece is bound to become your go-to for completing your polished looks in style this festive season.&#10;&#10;•  Button through fastening&#10;•  Twin front mock pockets&#10;•  Single chest pocket&#10;•  2 inner pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Short 38 Short 40 Short 42 Short 44 Short 46 Short 36 Regular 38 Regular 40 Regular 42 Regular 44 Regular 46 Regular 48 Regular 48 Regular 36 Long 38 Long 40 Long 42 Long 44 Long 46 Long 48 Long&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Shorts</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065681785?nocache=983669813</Data></Cell>
+    <Cell><Data ss:Type="String">South Dean Street Camouflage Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308801 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Freshen up your weekend wear with some authentic cool, courtesy of these South Dean Street camo shorts. The relaxed cargo style features enough pockets for everything you need on a day out. &#10;&#10;•  Pockets to the front and back&#10;&#10;Our South Dean Street collection is a fresh rugged range, heavily influenced by authentic vintage casual wear, following the latest trends in style, fashion and colour.</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Regular 36 Regular 40 Regular 40 Regular 42 Regular 42 Regular 30 Waist 30 Waist 32 Waist 32 Waist 34 Waist 34 Waist 38 Waist 38 Waist&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240761448?nocache=1605495981</Data></Cell>
+    <Cell><Data ss:Type="String">Denim Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308779</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">These shorts are perfect for a cool and casual look. The drawstring waist provides the best in comfort, while the cargo pockets are great to fit in all your essentials when on the go. &#10;&#10;•  Multiple pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Regular 36 Regular 40 Regular 40 Regular 42 Regular 42 Regular 30 Waist 30 Waist 32 Waist 32 Waist 34 Waist 34 Waist 38 Waist 38 Waist&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240175528?nocache=1659092940</Data></Cell>
+    <Cell><Data ss:Type="String">Belted Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308670 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">A comfy classic, these belted cargo shorts are a must-have for summer. Created using cotton rich fabric, these versatile shorts will keep you cool this season and are a great new staple for your casual outfits.&#10;&#10;•  Zip and button fly fastening&#10;•  6 Pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Regular 36 Regular 40 Regular 40 Regular 42 Regular 42 Regular 30 Waist 30 Waist 32 Waist 32 Waist 34 Waist 34 Waist 38 Waist 38 Waist&#10;</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240656515?nocache=132633907</Data></Cell>
+    <Cell><Data ss:Type="String">Jersey Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308255</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Whether you fancy going for a jog or just relaxing at home, these jersey shorts are a comfortable option. The plain design are super-soft and loose with an drawstring waist so you can slip them on and off easily.&#10;&#10;•  Drawstring waist</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240656447?nocache=1810194544</Data></Cell>
+    <Cell><Data ss:Type="String">Jersey Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM308254 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Bulk-up your loungewear this season with these super comfy jersey shorts. Created using soft and lightweight material, you’re sure to be kept cosy while you relax.&#10;&#10;•  Drawstring waist</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065946525?nocache=1097026865</Data></Cell>
+    <Cell><Data ss:Type="String">Boston Crew Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM307592 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">These Boston Crew cargo shorts are perfect for the upcoming season. They’ll become a staple for your summer wardrobe, with their comfy 100% cotton fabric and plenty of practical pockets&#10;&#10;•  Zip and button fly fastening&#10;•  6 Pockets</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Regular 36 Regular 40 Regular 40 Regular 42 Regular 42 Regular 30 Waist 30 Waist 32 Waist 32 Waist 34 Waist 34 Waist 38 Waist 38 Waist&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240146085?nocache=633997098</Data></Cell>
+    <Cell><Data ss:Type="String">Pull-on Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM306008 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Say hello to summer with these stylish pull-on shorts, they're guaranteed to become a staple in your wardrobe. Created with light material and a featuring drawstring waist, you’ll be comfy all season. &#10;&#10;•  Drawstring waist&#10;•  Twin front and back pockets</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065581498?nocache=1349684134</Data></Cell>
+    <Cell><Data ss:Type="String">Check Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM305944 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Stay relaxed during the warm weather in our cotton cargo shorts. The all-over check print is topped off with several pockets and belt loops so you can style them as you like.&#10;&#10;•  Button fastenings</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">36 Regular 36 Regular 40 Regular 40 Regular 42 Regular 42 Regular 30 Waist 30 Waist 32 Waist 32 Waist 34 Waist 34 Waist 38 Waist 38 Waist&#10;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065897384?nocache=1311389487</Data></Cell>
+    <Cell><Data ss:Type="String">Oxford Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM305782 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Top up your holiday wardrobe with these Oxford cotton shorts. The casual design features cargo pockets and contrast drawstring ties for the perfect laid-back look. &#10;&#10;•  Oversized side pockets&#10;•  Drawstring waist</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="String">No Review</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054065750283?nocache=1008357759</Data></Cell>
+    <Cell><Data ss:Type="String">Check Cargo Shorts</Data></Cell>
+    <Cell><Data ss:Type="String">GEM305312 </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Stay relaxed during the warm weather in our cotton cargo shorts. The all-over check print is topped off with several pockets and belt loops so you can style them as you like.&#10;&#10;•  Button fastenings</Data></Cell>
+    <Cell><Data ss:Type="String">S,M,L,XL,XXL,XXXL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
