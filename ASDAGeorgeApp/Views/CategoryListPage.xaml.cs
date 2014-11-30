@@ -35,7 +35,7 @@ namespace ASDAGeorgeApp.Views
 
         private void KinectTileButton_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new ProductPage());
+            Switcher.Switch(new CategoryPage());
         }
     }
 }

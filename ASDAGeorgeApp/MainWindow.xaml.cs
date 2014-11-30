@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -214,6 +215,10 @@ namespace ASDAGeorgeApp
             /* HACK : This keeps the splashscreen from disappearing by adding a second to the load time for the Initialisation */
             // Thread.Sleep(5000);
             InitializeComponent();
+            Collector.LoadInformation();
+
+            ProductTextSpacing = 20;
+
             Switcher.pageSwitcher = this;
             Switcher.Switch(new LandingPage());
 
@@ -236,27 +241,29 @@ namespace ASDAGeorgeApp
         /// <param name="point">The location to be set to</param>
         private void SetImagePosition(FrameworkElement element, ColorImagePoint point)
         {
-            Canvas.SetLeft(element, point.X - element.Width / 2);
-            Canvas.SetTop(element, point.Y - element.Width / 2);
+            InkCanvas.SetLeft(element, point.X - element.Width / 2);
+            InkCanvas.SetTop(element, point.Y - element.Width / 2);
+            MessageBox.Show(Canvas.GetLeft(element).ToString());
+            MessageBox.Show(Canvas.GetTop(element).ToString());
         }
 
         /// <summary>
         /// Draws the product out if available
         /// </summary>
         /// <param name="skel">The skeleton to draw from</param>
-        private void DrawProduct(Skeleton skel)
+        private void DrawProduct(Skeleton skel, DrawingContext dc)
         {
             if (Product != null)
             {
                 /* Display product */
                 try
                 {
-                    DisplayProductOnUser(skel);
-                    DisplayInformationNextToUser(skel);
+                    DisplayProductOnUser(skel, dc);
+                    DisplayInformationNextToUser(skel, dc);
                 }
                 catch (Exception e)
                 {
-                    DisplayErrorOnUser(skel, e);
+                    DisplayErrorOnUser(skel, dc, e);
                 }
             }
 
@@ -267,7 +274,7 @@ namespace ASDAGeorgeApp
         /// Display the Title and Price next to the user
         /// </summary>
         /// <param name="skel">The skeleton to put the price next to</param>
-        private void DisplayInformationNextToUser(Skeleton skel)
+        private void DisplayInformationNextToUser(Skeleton skel, DrawingContext dc)
         {
             if (skel == null)
                 throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
@@ -277,6 +284,28 @@ namespace ASDAGeorgeApp
 
             /* Put product text onto screen next to right shoulder */
             // do shit TODO
+        }
+
+        private double GetDepthPointToUse(Skeleton skel)
+        {
+            /* Get the points of the right and left shoulders */
+            CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
+            DepthImagePoint rightShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint rightElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+
+            if (rightShoulder == null || leftShoulder == null)
+                throw new ArgumentNullException("Could not find one or both shoulders");
+            
+            if (rightShoulder.X > leftShoulder.X)
+            {
+                return (rightShoulder.X - leftShoulder.X) * 1.5;
+            }
+            else
+            {
+                return (leftShoulder.X - rightShoulder.X) * 1.5;
+            }
         }
 
         private ColorImagePoint GetPointToUse(Skeleton skel)
@@ -293,29 +322,28 @@ namespace ASDAGeorgeApp
                 return rightShoulder;
             else
                 return leftShoulder;
-
         }
 
-        private void DisplayErrorOnUser(Skeleton skel, Exception e)
+        private void DisplayErrorOnUser(Skeleton skel, DrawingContext dc, Exception e)
         {
             if (skel == null)
                 throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
 
             ColorImagePoint pointToUse = GetPointToUse(skel);
 
-            PlaceTextOnUser(pointToUse, e.Message);
+            PlaceTextOnUser(pointToUse, dc, e.Message);
         }
 
-        private void PlaceTextOnUser(ColorImagePoint pointToUse, string p)
+        private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc, string p)
         {
             pointToUse.X += ProductTextSpacing;
 
-            TextBlock floating = new TextBlock();
-            floating.Text = p;
-            SetImagePosition(floating, pointToUse);
+            Point point = new Point(pointToUse.X, pointToUse.Y);
+
+            dc.DrawText(new FormattedText(p, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
         }
 
-        private void PlaceTextOnUser(ColorImagePoint pointToUse)
+        private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc)
         {
             double xCoord = pointToUse.X;
             xCoord = xCoord + ProductTextSpacing;
@@ -325,12 +353,31 @@ namespace ASDAGeorgeApp
             SetImagePosition(floating, pointToUse);
         }
 
-        private void DisplayProductOnUser(Skeleton skel)
+        private void DisplayProductOnUser(Skeleton skel, DrawingContext dc)
         {
             if (skel == null)
                 throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
 
-            throw new NotImplementedException();
+            /* Get the coords of the body */
+            CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
+            DepthImagePoint centerShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderCenter].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint rightShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint rightElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint rightHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint rightKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+
+            double width = GetDepthPointToUse(skel);
+            double x = centerShoulder.X - (width / 2);
+            double y = centerShoulder.Y + ((leftShoulder.Y - centerShoulder.Y) / 2);
+            double height = (rightHip.Y - y) * 1.3;
+
+            ImageSource image = new BitmapImage(new Uri(@"D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\image\marvel_tee_psd.png"));
+
+            dc.DrawImage(image, new Rect(x, y, width, height));
         }
 
         #endregion
@@ -359,22 +406,14 @@ namespace ASDAGeorgeApp
                 {
                     foreach (Skeleton skel in skeletons)
                     {
-                        RenderClippedEdges(skel, dc);
+                        // RenderClippedEdges(skel, dc);
 
                         if (skel.TrackingState == SkeletonTrackingState.Tracked)
                         {
                             this.DrawBonesAndJoints(skel, dc);
 
-                            DrawProduct(skel);
-                        }
-                        else if (skel.TrackingState == SkeletonTrackingState.PositionOnly)
-                        {
-                            dc.DrawEllipse(
-                            this.centerPointBrush,
-                            null,
-                            this.SkeletonPointToScreen(skel.Position),
-                            BodyCenterThickness,
-                            BodyCenterThickness);
+                            DrawProduct(skel, dc);
+                            break;
                         }
                     }
                 }
@@ -393,8 +432,13 @@ namespace ASDAGeorgeApp
         {
             /* Convert point to depth space.
                We are not using depth directly, but we do want the points in our 640x480 output resolution. */
-            DepthImagePoint depthPoint = this.sensorChooser.Kinect.CoordinateMapper.MapSkeletonPointToDepthPoint(skelpoint, DepthImageFormat.Resolution640x480Fps30);
-            return new Point(depthPoint.X, depthPoint.Y + 25);
+            try
+            {
+                DepthImagePoint depthPoint = this.sensorChooser.Kinect.CoordinateMapper.MapSkeletonPointToDepthPoint(skelpoint, DepthImageFormat.Resolution640x480Fps30);
+                return new Point(depthPoint.X, depthPoint.Y);
+            }
+            catch(Exception e)
+            { return new Point(0, 0); }
         }
 
         /// <summary>
@@ -586,17 +630,8 @@ namespace ASDAGeorgeApp
             {
                 try
                 {
-                    var parameters = new TransformSmoothParameters
-                    {
-                        Smoothing = 0.1f,
-                        Correction = 0.0f,
-                        Prediction = 0.1f,
-                        JitterRadius = 0.2f,
-                        MaxDeviationRadius = 0.1f
-                    };
-
                     /* Turn on the streams to receive frames */
-                    args.NewSensor.SkeletonStream.Enable(parameters);
+                    args.NewSensor.SkeletonStream.Enable();
                     args.NewSensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
                     args.NewSensor.DepthStream.Enable(DepthImageFormat.Resolution640x480Fps30);
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ namespace ASDAGeorgeApp.Models
 {
     public class Category : Model
     {
-        public Category(string title, List<SubCategory> subCategories)
+        public Category(string title, ObservableCollection<SubCategory> subCategories = null)
         {
             Title = title;
+            if (subCategories == null)
+                subCategories = new ObservableCollection<SubCategory>();
             SubCategories = subCategories;
-            int rand = new Random().Next(subCategories.Count - 1);
-            int newRand = new Random().Next(subCategories[rand].Products.Count - 1);
         }
 
         private string _Title;
@@ -44,8 +45,8 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
-        private List<SubCategory> _SubCategories;
-        public List<SubCategory> SubCategories
+        private ObservableCollection<SubCategory> _SubCategories;
+        public ObservableCollection<SubCategory> SubCategories
         {
             get { return _SubCategories; }
             set
@@ -54,6 +55,9 @@ namespace ASDAGeorgeApp.Models
                 {
                     _SubCategories = value;
                     NotifyPropertyChanged();
+                    int rand = new Random().Next(_SubCategories.Count - 1);
+                    int newRand = new Random().Next(_SubCategories[rand].Products.Count - 1);
+                    SamplePicture = _SubCategories[rand].Products[newRand].ProductImage;
                 }
             }
         }
@@ -72,8 +76,8 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
-        private List<Filter> _Filters;
-        public List<Filter> Filters
+        private ObservableCollection<Filter> _Filters;
+        public ObservableCollection<Filter> Filters
         {
             get { return _Filters; }
             set
@@ -114,18 +118,25 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
-        private List<Item> _Products;
-        public List<Item> Products
+        public ObservableCollection<Item> Products
         {
-            get { return _Products; }
-            set
+            get { return GetAllProducts(); }
+        }
+
+        private ObservableCollection<Item> GetAllProducts()
+        {
+            ObservableCollection<Item> result = new ObservableCollection<Item>();
+            if (SubCategories == null || SubCategories.Count < 1)
+                return result;
+
+            foreach(SubCategory subCat in SubCategories)
             {
-                if (_Products != value)
+                foreach(Item item in subCat.Products)
                 {
-                    _Products = value;
-                    NotifyPropertyChanged();
+                    result.Add(item);
                 }
             }
+            return result;
         }
     }
 }

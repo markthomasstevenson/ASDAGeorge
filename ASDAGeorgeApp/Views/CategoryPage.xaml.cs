@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASDAGeorgeApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace ASDAGeorgeApp.Views
 
         private void KinectTileButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Switcher.Switch(new ProductPage());
         }
     }
 }

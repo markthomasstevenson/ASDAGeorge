@@ -1,11 +1,15 @@
 ﻿<UserControl x:Class="ASDAGeorgeApp.Views.LandingPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ASDAGeorgeApp" 
+             xmlns:uc="clr-namespace:ASDAGeorgeApp.Views.SubViews"
+             xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1400">
-    <Grid>
+    <Grid model:KinectTextButton.Click="Grid_Click">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="3*" />
@@ -16,14 +20,16 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid Name="MainLogo" Grid.Row="0" Margin="40,0,40,0" MouseDown="MainLogo_MouseDown">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="3*" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Height="25px" HorizontalAlignment="Left" Source="..\icons/align14Yellow.png"/>
-                <Image Grid.Column="1" Height="50px" Margin="0,15,0,0" Source="..\image\logo.png"/>
-            </Grid>
+            <model:KinectTextButton Grid.Row="0">
+                <Grid Name="MainLogo" Margin="40,0,40,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Height="25px" HorizontalAlignment="Left" Source="..\icons/align14Yellow.png"/>
+                    <Image Grid.Column="1" Height="50px" Margin="0,15,0,0" Source="..\image\logo.png"/>
+                </Grid>
+            </model:KinectTextButton>
         </Grid>
     </Grid>
 </UserControl>

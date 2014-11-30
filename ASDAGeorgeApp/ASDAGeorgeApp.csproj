@@ -95,6 +95,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Interface\ISwitchable.cs" />
+    <Compile Include="Models\Collector.cs" />
     <Compile Include="Models\FileReader.cs" />
     <Compile Include="Models\KinectTextButton.cs" />
     <Compile Include="Models\SubCategory.cs" />
@@ -666,10 +667,15 @@
     <Resource Include="image\workwear.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\men.xml" />
+    <Resource Include="image\marvel_tee_psd.png" />
+    <Content Include="Resources\men.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\women.xml" />
+    <Content Include="Resources\women.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

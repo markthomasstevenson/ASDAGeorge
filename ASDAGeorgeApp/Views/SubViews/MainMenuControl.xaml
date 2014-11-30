@@ -19,12 +19,14 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Grid Name="MainLogo" Grid.Row="0" Margin="40,40,40,40" MouseDown="MainLogo_MouseDown">
-            <Image Height="25px" HorizontalAlignment="Left" 
-                       Source="..\..\icons\align14Yellow.png"/>
-            <Image Height="50px" Margin="0,15,0,0" 
-                       Source="..\..\image\logo.png"/>
-        </Grid>
+        <model:KinectTextButton>
+            <Grid Name="MainLogo" Grid.Row="0" Margin="40,40,40,40">
+                <Image Height="25px" HorizontalAlignment="Left" 
+                           Source="..\..\icons\align14Yellow.png"/>
+                <Image Height="50px" Margin="0,15,0,0" 
+                           Source="..\..\image\logo.png"/>
+            </Grid>
+        </model:KinectTextButton>
 
         <Grid Grid.Row="1" Background="{StaticResource BackgroundGray}">
             <Grid.ColumnDefinitions>
@@ -41,9 +43,7 @@
 
         <Grid Grid.Row="2">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Home &amp; Garden" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Home &amp; Garden" />
             </model:KinectTextButton>
         </Grid>
 
@@ -56,9 +56,7 @@
 
             <Grid Grid.Column="1">
                 <model:KinectTextButton>
-                    <model:KinectTextButton.Content>
-                        <TextBlock Text="Womens" />
-                    </model:KinectTextButton.Content>
+                    <TextBlock Text="Womens" />
                 </model:KinectTextButton>
                 <Border Grid.Column="1" Style="{StaticResource Underline}"/>
             </Grid>
@@ -66,41 +64,31 @@
 
         <Grid Grid.Row="4">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Mens" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Mens" />
             </model:KinectTextButton>
         </Grid>
 
         <Grid Grid.Row="5">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Boys" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Boys" />
             </model:KinectTextButton>
         </Grid>
 
         <Grid Grid.Row="6">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Girls" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Girls" />
             </model:KinectTextButton>
         </Grid>
 
         <Grid Grid.Row="7">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Baby" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Baby" />
             </model:KinectTextButton>
         </Grid>
 
         <Grid Grid.Row="8">
             <model:KinectTextButton>
-                <model:KinectTextButton.Content>
-                    <TextBlock Text="Trends" />
-                </model:KinectTextButton.Content>
+                <TextBlock Text="Trends" />
             </model:KinectTextButton>
         </Grid>
     </Grid>

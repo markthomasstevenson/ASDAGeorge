@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace ASDAGeorgeApp.Models
 {
-    public abstract class Item : Model
+    public class Item : Model
     {
+        public Item(string title)
+        {
+            Title = title;
+        }
+
+        public Item(string title, double price)
+        {
+            Title = title;
+            Price = price;
+        }
+
         private string _Title;
         public string Title
         {

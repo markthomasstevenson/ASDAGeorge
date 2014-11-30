@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="5315072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="13819392">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kKol0mhSCalJ64K4umVgR3Y/AVGtdLaiSLBkik4Ce9A=</dsig:DigestValue>
+        <dsig:DigestValue>02wETvg5Pol4M8AgeFruSWgP/tnnN/USpYIANDHZAQ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,7 +66,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ANGxzrf6mXnEBHM56kRo3F8BOf+zCT950wIzEfE1c1o=</dsig:DigestValue>
+        <dsig:DigestValue>w57M4VXkfggebQxXPrb3Fw2wYk3opaQHZTWI0Ok9JYc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,7 +78,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0F5+VUCaMHvDkMI0XRHNMok90NV3B2lnlX8Kh+kAV1w=</dsig:DigestValue>
+        <dsig:DigestValue>G++NAnaYeBeCzwXOTZY1ZAqIaK31qMBtTXOixNq/urQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -101,6 +101,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\men.xml" size="68588" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1V+ctooGaE8qi1ootH+GbkZ9XDpdFwvaEr030UDX/7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\women.xml" size="66480" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XABDdQc3BR/fEyzpWhpqjyn+fLb/zJr8WDD4fP/Z9Dc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

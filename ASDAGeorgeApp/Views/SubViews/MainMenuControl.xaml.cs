@@ -26,15 +26,19 @@ namespace ASDAGeorgeApp.Views.SubViews
             InitializeComponent();
         }
 
-        private void MainLogo_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Switcher.Switch(new LandingPage());
-        }
-
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            KinectTextButton newButton = e.OriginalSource as KinectTextButton;
-            MessageBox.Show("Lol Lol Lol. You clicked " + ((TextBlock)newButton.Content).Text.ToString());
+            try
+            {
+                KinectTextButton newButton = e.OriginalSource as KinectTextButton;
+                Grid newGrid = (Grid)newButton.Content;
+                Switcher.Switch(new LandingPage());
+            }
+            catch
+            {
+                KinectTextButton newButton = e.OriginalSource as KinectTextButton;
+                MessageBox.Show("Lol Lol Lol. You clicked " + ((TextBlock)newButton.Content).Text.ToString());
+            }
         }
     }
 }

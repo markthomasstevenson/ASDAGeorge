@@ -42,7 +42,7 @@ namespace ASDAGeorgeApp.Views
             throw new NotImplementedException();
         }
 
-        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        private void KinectTextButton_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new CategoryListPage());
         }
