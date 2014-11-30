@@ -9,9 +9,15 @@ namespace ASDAGeorgeApp.Models
 {
     public class SubCategory : Model
     {
+        public SubCategory()
+        {
+            Products = new ObservableCollection<Item>();
+        }
+
         public SubCategory(string title)
         {
             Title = title;
+            Products = new ObservableCollection<Item>();
         }
 
         private string _Title;

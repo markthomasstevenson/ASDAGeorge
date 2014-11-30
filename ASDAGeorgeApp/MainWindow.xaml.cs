@@ -282,8 +282,7 @@ namespace ASDAGeorgeApp
             /* Find which shoulder is more to the right on the screen */
             ColorImagePoint pointToUse = GetPointToUse(skel);
 
-            /* Put product text onto screen next to right shoulder */
-            // do shit TODO
+            PlaceTextOnUser(pointToUse, dc);
         }
 
         private double GetDepthPointToUse(Skeleton skel)
@@ -345,12 +344,13 @@ namespace ASDAGeorgeApp
 
         private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc)
         {
-            double xCoord = pointToUse.X;
-            xCoord = xCoord + ProductTextSpacing;
+            pointToUse.X += ProductTextSpacing;
+            Point point = new Point(pointToUse.X, pointToUse.Y);
 
-            TextBlock floating = new TextBlock();
-            floating.Text = Product.Title + "£" + Product.Price;
-            SetImagePosition(floating, pointToUse);
+            dc.DrawText(new FormattedText(Product.Title, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
+
+            point.Y += 20;
+            dc.DrawText(new FormattedText("£" + Product.Price.ToString(), CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
         }
 
         private void DisplayProductOnUser(Skeleton skel, DrawingContext dc)
@@ -373,10 +373,9 @@ namespace ASDAGeorgeApp
             double width = GetDepthPointToUse(skel);
             double x = centerShoulder.X - (width / 2);
             double y = centerShoulder.Y + ((leftShoulder.Y - centerShoulder.Y) / 2);
-            double height = (rightHip.Y - y) * 1.3;
+            double height = (rightHip.Y - y) * 1.4;
 
             ImageSource image = new BitmapImage(new Uri(@"D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\image\marvel_tee_psd.png"));
-
             dc.DrawImage(image, new Rect(x, y, width, height));
         }
 
@@ -410,7 +409,7 @@ namespace ASDAGeorgeApp
 
                         if (skel.TrackingState == SkeletonTrackingState.Tracked)
                         {
-                            this.DrawBonesAndJoints(skel, dc);
+                            //this.DrawBonesAndJoints(skel, dc);
 
                             DrawProduct(skel, dc);
                             break;

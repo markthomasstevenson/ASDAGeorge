@@ -9,6 +9,11 @@ namespace ASDAGeorgeApp.Models
 {
     public class Category : Model
     {
+        public Category()
+        {
+            SubCategories = new ObservableCollection<SubCategory>();
+        }
+
         public Category(string title, ObservableCollection<SubCategory> subCategories = null)
         {
             Title = title;
@@ -55,9 +60,12 @@ namespace ASDAGeorgeApp.Models
                 {
                     _SubCategories = value;
                     NotifyPropertyChanged();
-                    int rand = new Random().Next(_SubCategories.Count - 1);
-                    int newRand = new Random().Next(_SubCategories[rand].Products.Count - 1);
-                    SamplePicture = _SubCategories[rand].Products[newRand].ProductImage;
+                    if (_SubCategories.Count > 0)
+                    {
+                        int rand = new Random().Next(_SubCategories.Count - 1);
+                        int newRand = new Random().Next(_SubCategories[rand].Products.Count - 1);
+                        SamplePicture = _SubCategories[rand].Products[newRand].ProductImage;
+                    }
                 }
             }
         }

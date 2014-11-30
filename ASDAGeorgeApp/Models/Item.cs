@@ -8,6 +8,11 @@ namespace ASDAGeorgeApp.Models
 {
     public class Item : Model
     {
+        public Item()
+        {
+
+        }
+
         public Item(string title)
         {
             Title = title;

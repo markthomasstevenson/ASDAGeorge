@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -20,122 +22,110 @@ namespace ASDAGeorgeApp.Models
         {
             List<KeyValuePair<FileChooser, string>> fileList = new List<KeyValuePair<FileChooser,string>>();
             
-            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.WomenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/women.xml"));
-            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.MenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/men.xml"));
+            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.WomenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/women.csv"));
+            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.MenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/men.csv"));
 
             return fileList;
-        }
-
-        public static ObservableCollection<Category> ReadFile(FileChooser file)
-        {
-            string fileString = ReturnFiles()[(int)file].Value;
-            XDocument doc = XDocument.Load(fileString);
-            //return LoadXMLFromFile(doc.Descendants("table").Elements("row"));
-            return new ObservableCollection<Category>();
         }
 
         public static ObservableCollection<Category> ReadAllFiles()
         {
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
-            ObservableCollection<Category> currCat = new ObservableCollection<Category>();
 
             List<KeyValuePair<FileChooser, string>> files = ReturnFiles();
+
             foreach(KeyValuePair<FileChooser, string> file in files)
-            {
-                XDocument doc = XDocument.Load(file.Value);
-                IEnumerable<XElement> enumer = doc.Descendants("Workbook");
-                IEnumerable<XElement> enum1 = enumer.Elements("Worksheet");
-                IEnumerable<XElement> enum2 = enum1.Elements("Table");
-                IEnumerable<XElement> enum3 = enum2.Elements("Row");
-                currCat = LoadXMLFromFile(enum3);
-                
-                foreach(Category cat in currCat)
-                {
-                    categories.Add(cat);
-                }
-            }
+                if(File.Exists(file.Value))
+                    categories.Add( GetCategoryFromFile(file.Value) );
 
             return categories;
         }
 
-        private static ObservableCollection<Category> LoadXMLFromFile(IEnumerable<XElement> enumerable)
+        private static Category GetCategoryFromFile(string fileName)
         {
-            /* Create list of children */
-            ObservableCollection<Category> categories = new ObservableCollection<Category>();
+            /* Get all lines in the file */
+            string[] fileText = File.ReadAllLines(fileName);
 
-            Category currCat = null;
-            SubCategory currSub = null;
-            Item currItem = null;
+            Category newCat = new Category();
+            SubCategory currentSub = null;
+            Item currentProd = null;
 
-            foreach (XElement x in enumerable)
+            /* go through all lines, skipping the first 2 */
+            for(int i = 2; i <= fileText.Length; i++)
             {
-                int cat = 0;
-                int subCat = 1;
-                int image = 3;
-                int title = 4;
-                int price = 6;
-                int desc = 7;
-                int size = 8;
-                int review = 9;
-                int delivery = 10;
-
-                /* Skip row if not data */
-                List<XElement> data = x.Elements("data").ToList();
-                if( data[0].Value == "Category" ||
-                    data[0].Value == "Approximate Knowledge Data Request")
-                    continue;
-
-                string ssIndex;
-                if(x.Element("cell").Attribute("ss:Index") == null)
-                    ssIndex = "";
-                else
-                    ssIndex = x.Element("cell").Attribute("ss:Index").Value;
-
-                if (ssIndex == "")
+                if(i == fileText.Length)
                 {
-                    if(currCat != null)
+                    newCat.SubCategories.Add(currentSub);
+                    break;
+                }
+
+                string[] thisLine = fileText[i].Split(new char[] { '|' });
+
+                /* If the cat title isn't blank */
+                if( thisLine[0] != "" )
+                    newCat.Title = thisLine[0];
+
+                /* If the subcategory title isn't blank */
+                if (thisLine[1] != "")
+                {
+                    if (currentSub != null)
+                        newCat.SubCategories.Add(currentSub);
+
+                    currentSub = new SubCategory(thisLine[1]);
+                }
+
+                currentProd = new Item();
+
+                /* Get Image */
+                currentProd.ProductImage = System.AppDomain.CurrentDomain.BaseDirectory + thisLine[3];
+
+                /* Get Title */
+                currentProd.Title = thisLine[4];
+
+                /* Get Price */
+                currentProd.Price = double.Parse(Regex.Replace(thisLine[6], @"[^\u0000-\u007F]", string.Empty));
+
+                /* Get first bit of description */
+                currentProd.Description = thisLine[7].Replace("\"", "");
+
+                for(i = i+1; i <= fileText.Length; i++)
+                {
+                    thisLine = fileText[i].Split(new char[] { '|' });
+                    
+                    /* Add next description */
+                    currentProd.Description += Regex.Replace(thisLine[0], @"[^\u0000-\u007F]", string.Empty);
+                    
+                    /* if end of description */
+                    if (thisLine.Length > 1)
                     {
-                        currSub.Products.Add(currItem);
-                        currCat.SubCategories.Add(currSub);
-                        categories.Add(currCat);
-                    }
-                    currCat = new Category(data[cat].Value);
-                    currSub = new SubCategory(data[subCat].Value);
-                    currItem = new Item(data[title].Value);
-                }
-                else if(ssIndex == "2")
-                {
-                    subCat--; image--; title--; price--; desc--; size--; review--; delivery--;
-                    if(currSub != null)
-                    {
-                        currSub.Products.Add(currItem);
-                        currCat.SubCategories.Add(currSub);
-                    }
-                    currSub = new SubCategory(data[subCat].Value);
-                    currItem = new Item(data[title].Value);
-                }
-                else if(ssIndex == "3")
-                {
-                    image -= 2; title -= 2; price -= 2; desc -= 2; size -= 2; review -= 2; delivery -= 2;
-                    if (currItem != null)
-                        currSub.Products.Add(currItem);
-                    currItem = new Item(data[title].Value);
-                }
+                        /* Add size variants */
+                        currentProd.SizeVariants = thisLine[1];
 
-                currItem.Price = int.Parse(data[price].Value);
-                currItem.Description = data[desc].Value;
-                currItem.SizeVariants = data[size].Value;
-                int reviewData;
-                if (data[review].Value == "No Review")
-                    reviewData = -1;
-                else
-                    reviewData = int.Parse(data[review].Value);
-                currItem.StarRating = reviewData;
-                currItem.DeliveryMethods = data[delivery].Value;
+                        /* Add star rating */
+                        currentProd.StarRating = thisLine[2] == "No Review" ? 0 : double.Parse(thisLine[2]);
+
+                        /* Add first bit of delivery methods */
+                        currentProd.DeliveryMethods = Regex.Replace(thisLine[3], @"[^\u0000-\u007F]", string.Empty).Replace("\"", "");
+
+                        for (i = i + 1; i <= fileText.Length; i++)
+                        {
+                            thisLine = fileText[i].Split(new char[] { '|' });
+                            
+                            /* Add next bit of delivery methods */
+                            currentProd.DeliveryMethods += Regex.Replace(thisLine[0], @"[^\u0000-\u007F]", string.Empty);
+
+                            if (thisLine[0].Contains("\""))
+                            {
+                                currentSub.Products.Add(currentProd);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
             }
 
-            /* Return the list */
-            return categories;
+            return newCat;
         }
     }
 }
