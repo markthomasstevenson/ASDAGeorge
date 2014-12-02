@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="ASDAGeorgeApp.Views.SubCategoryPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ASDAGeorgeApp" 
+             xmlns:uc="clr-namespace:ASDAGeorgeApp.Views.SubViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="{StaticResource BackgroundBlack}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <model:KinectTextButton Grid.Column="0" Click="BackButton_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Height="100px" Margin="50,15,0,0" Source="..\image\logo.png"/>
+                    <Image Grid.Column="1" Height="100px" Margin="25 15" Source="..\icons\back_icon.png" />
+                    <TextBlock Grid.Column="2" x:Name="backText" />
+                </Grid>
+            </model:KinectTextButton>
+            <uc:TopBarUserControl Grid.Column="1" />
+        </Grid>
+
+        <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}"
+                                           k:KinectTileButton.Click="KinectTileButton_Click">
+            <WrapPanel VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
+                <k:KinectTileButton Height="auto" Width="500" Label="One">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="../image/coat.jpg" />
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Height="auto" Width="500" Label="One">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="../image/coat.jpg" />
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Height="auto" Width="500" Label="One">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="../image/coat.jpg" />
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Height="auto" Width="500" Label="One">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="../image/coat.jpg" />
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+            </WrapPanel>
+        </k:KinectScrollViewer>
+    </Grid>
+</UserControl>

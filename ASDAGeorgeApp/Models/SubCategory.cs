@@ -34,6 +34,20 @@ namespace ASDAGeorgeApp.Models
             }
         }
 
+        private string _Parent;
+        public string Parent
+        {
+            get { return _Parent; }
+            set
+            {
+                if (_Parent != value)
+                {
+                    _Parent = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         private ObservableCollection<Item> _Products;
         public ObservableCollection<Item> Products
         {

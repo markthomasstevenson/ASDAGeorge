@@ -8,8 +8,8 @@
              xmlns:uc="clr-namespace:ASDAGeorgeApp.Views.SubViews"
              xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1400">
-    <Grid model:KinectTextButton.Click="Grid_Click">
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid model:KinectTextButton.Click="Grid_Click" Margin="40">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="3*" />
@@ -21,14 +21,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <model:KinectTextButton Grid.Row="0">
-                <Grid Name="MainLogo" Margin="40,0,40,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Height="25px" HorizontalAlignment="Left" Source="..\icons/align14Yellow.png"/>
-                    <Image Grid.Column="1" Height="50px" Margin="0,15,0,0" Source="..\image\logo.png"/>
-                </Grid>
+                <Image Grid.Column="1" Height="80px" Margin="0,15,0,0" Source="..\image\logo.png"/>
             </model:KinectTextButton>
         </Grid>
     </Grid>

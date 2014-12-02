@@ -3,6 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:k="http://schemas.microsoft.com/kinect/2013"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
             xmlns:local="clr-namespace:ASDAGeorgeApp" 
             xmlns:uc="clr-namespace:ASDAGeorgeApp.Views.SubViews"
@@ -13,9 +14,79 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
-        
-        <Grid Grid.Column="0">
-            <uc:MainMenuControl />
+
+        <Grid x:Name="MainMenu" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <model:KinectTextButton Grid.Row="0">
+                <Image Height="80px" Margin="0 40" Source="..\image\logo.png"/>
+            </model:KinectTextButton>
+
+            <model:KinectTextButton Grid.Row="1" Click="BackButton_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="1" Source="..\icons\back_icon.png" Height="100px" />
+                    <TextBlock Grid.Column="2" x:Name="BackTrack"></TextBlock>
+                </Grid>
+            </model:KinectTextButton>
+
+            <Grid Grid.Row="2" Background="{StaticResource BackgroundGray}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1.1*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" HorizontalAlignment="Right" Height="25px"
+                       Source="..\icons/yellowsearch.png"/>
+
+                <TextBlock Grid.Column="1" Text="Search" />
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <model:KinectTextButton Click="MainMenuClick" Width="{Binding ActualWidth, ElementName=MainMenu}">
+                        <TextBlock Text="Womens" />
+                    </model:KinectTextButton>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <model:KinectTextButton Click="MainMenuClick" Width="{Binding ActualWidth, ElementName=MainMenu}">
+                    <TextBlock Text="Mens" />
+                </model:KinectTextButton>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <model:KinectTextButton>
+                    <TextBlock Text="Boys" />
+                </model:KinectTextButton>
+            </Grid>
+
+            <Grid Grid.Row="7">
+                <model:KinectTextButton>
+                    <TextBlock Text="Girls" />
+                </model:KinectTextButton>
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
@@ -28,8 +99,7 @@
                 <uc:TopBarUserControl />
             </Grid>
 
-            <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource VerticalScroll}"
-                                           k:KinectTileButton.Click="KinectTileButton_Click">
+            <k:KinectScrollViewer x:Name="MainViewer" Grid.Row="1" Style="{StaticResource VerticalScroll}" >
                 <Grid Margin="0 -50 0 0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
@@ -46,12 +116,12 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <TextBlock Margin="50 0 0 0" HorizontalAlignment="Left" Text="Shop by Product" />
+                        <TextBlock Margin="50 0 0 0" FontSize="35" HorizontalAlignment="Left" Text="Shop by Product" />
                     </Grid>
 
                     <Grid Grid.Row="1" Margin="10 0 0 0">
-                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}" >
-                            <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}" k:KinectTileButton.Click="KinectTileButton_Click">
+                            <WrapPanel Margin=" -100, 0, 0, 0" x:Name="ProductPanel" VerticalAlignment="Center" Orientation="Horizontal">
                                 <k:KinectTileButton Label="New In">
                                     <k:KinectTileButton.Background>
                                         <ImageBrush ImageSource="..\image\newin.jpg" />
@@ -176,11 +246,11 @@
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <TextBlock Margin="50 0 0 0" HorizontalAlignment="Left" Text="Footwear" />
+                        <TextBlock Margin="50 0 0 0" FontSize="35" HorizontalAlignment="Left" Text="Footwear" />
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}">
+                        <k:KinectScrollViewer Opacity="0.4" Style="{StaticResource HorizontalScroll}">
                             <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                 <k:KinectTileButton Label="Boots &amp; Wellies">
                                     <k:KinectTileButton.Background>
@@ -228,11 +298,11 @@
                     </Grid>
                     
                     <Grid Grid.Row="4">
-                        <TextBlock Margin="50 0 0 0" HorizontalAlignment="Left" Text="Collections" />
+                        <TextBlock Margin="50 0 0 0" FontSize="35" HorizontalAlignment="Left" Text="Collections" />
                     </Grid>
                     
                     <Grid Grid.Row="5">
-                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}">
+                        <k:KinectScrollViewer Opacity="0.4" Style="{StaticResource HorizontalScroll}">
                             <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                 <k:KinectTileButton Label="Character Shop">
                                     <k:KinectTileButton.Background>
@@ -310,11 +380,11 @@
                     </Grid>
                     
                     <Grid Grid.Row="6">
-                        <TextBlock Margin="50 0 0 0" HorizontalAlignment="Left" Text="Shop by Fit" />
+                        <TextBlock Margin="50 0 0 0" FontSize="35" HorizontalAlignment="Left" Text="Shop by Fit" />
                     </Grid>
                     
                     <Grid Grid.Row="7">
-                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}">
+                        <k:KinectScrollViewer Opacity="0.4" Style="{StaticResource HorizontalScroll}">
                             <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                 <k:KinectTileButton Label="Maternity">
                                     <k:KinectTileButton.Background>
@@ -339,11 +409,11 @@
                     </Grid>
                     
                     <Grid Grid.Row="8">
-                        <TextBlock Margin="50 0 0 0" HorizontalAlignment="Left" Text="Electrical Beauty" />
+                        <TextBlock Margin="50 0 0 0" FontSize="35" HorizontalAlignment="Left" Text="Electrical Beauty" />
                     </Grid>
                     
                     <Grid Grid.Row="9">
-                        <k:KinectScrollViewer Style="{StaticResource HorizontalScroll}">
+                        <k:KinectScrollViewer Opacity="0.4" Style="{StaticResource HorizontalScroll}">
                             <WrapPanel Margin=" -100, 0, 0, 0" VerticalAlignment="Center" Orientation="Horizontal">
                                 <k:KinectTileButton Label="Hairdryers">
                                     <k:KinectTileButton.Background>

@@ -21,7 +21,7 @@
                                Text="Hi, Jessica" />
 
             <TextBlock Grid.Column="1" Margin="25 0 25 0"
-                               Text="Here's your Basket" />
+                               Text="Here's your Wishlist" />
 
             <Border Grid.Column="0" Style="{StaticResource Underline}" Margin="0 0 5 -5" />
 

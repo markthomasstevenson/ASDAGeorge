@@ -208,6 +208,9 @@ namespace ASDAGeorgeApp
                 }
             }
         }
+
+        private double Height = 0;
+
         #endregion
 
         public MainWindow()
@@ -296,15 +299,8 @@ namespace ASDAGeorgeApp
 
             if (rightShoulder == null || leftShoulder == null)
                 throw new ArgumentNullException("Could not find one or both shoulders");
-            
-            if (rightShoulder.X > leftShoulder.X)
-            {
-                return (rightShoulder.X - leftShoulder.X) * 1.5;
-            }
-            else
-            {
-                return (leftShoulder.X - rightShoulder.X) * 1.5;
-            }
+
+            return Math.Sqrt(Math.Pow(Math.Abs(rightShoulder.X - leftShoulder.X), 2) + Math.Pow(Math.Abs(rightShoulder.Y - leftShoulder.Y), 2));
         }
 
         private ColorImagePoint GetPointToUse(Skeleton skel)
@@ -345,9 +341,9 @@ namespace ASDAGeorgeApp
         private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc)
         {
             pointToUse.X += ProductTextSpacing;
-            Point point = new Point(pointToUse.X, pointToUse.Y);
+            Point point = new Point(pointToUse.X, pointToUse.Y - 60);
 
-            dc.DrawText(new FormattedText(Product.Title, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
+            dc.DrawText(new FormattedText(Product.Title, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 18, Brushes.White), point);
 
             point.Y += 20;
             dc.DrawText(new FormattedText("£" + Product.Price.ToString(), CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
@@ -360,23 +356,92 @@ namespace ASDAGeorgeApp
 
             /* Get the coords of the body */
             CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
+            DepthImagePoint head = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.Head].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint centerShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderCenter].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint rightShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderLeft].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint rightElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowLeft].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint rightHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint centerHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipCenter].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipLeft].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint rightKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeLeft].Position, DepthImageFormat.Resolution640x480Fps30);
 
-            double width = GetDepthPointToUse(skel);
-            double x = centerShoulder.X - (width / 2);
-            double y = centerShoulder.Y + ((leftShoulder.Y - centerShoulder.Y) / 2);
-            double height = (rightHip.Y - y) * 1.4;
+            ImageSource image = new BitmapImage(new Uri(Product.ProductImage));
+            DrawingGroup drawingGroup = new DrawingGroup();
+            double angleRotate = GetAngle(centerHip, centerShoulder);
 
-            ImageSource image = new BitmapImage(new Uri(@"D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\ASDAGeorgeApp\image\marvel_tee_psd.png"));
-            dc.DrawImage(image, new Rect(x, y, width, height));
+            double imageHeight = image.Height;
+            double imageWidth = image.Width;
+
+            double ratio = imageHeight / imageWidth;
+
+            centerShoulder.Y += 10;
+
+            double width = GetDepthPointToUse(skel) * 1.5;
+
+            Point newPoint = GetXYCoordToUse(centerShoulder, width, angleRotate);
+            double x = newPoint.X;
+            double y = newPoint.Y;
+
+            if (Math.Abs(leftShoulder.Depth - rightShoulder.Depth) < 10)
+            {
+                Height = ratio * width;
+            }
+
+            double xcoord = centerShoulder.X;
+            double ycoord = centerShoulder.Y;
+
+            if (angleRotate > 0)
+            {
+                x = x + (angleRotate * 1.15);
+            }
+            else if (angleRotate < 0)
+            {
+                x = x - (Math.Abs(angleRotate) * 1.15);
+            }
+
+            //dc.DrawEllipse(Brushes.AliceBlue, null, new Point(xcoord, ycoord), JointThickness, JointThickness);
+            if (Height != 0)
+            {
+                drawingGroup.Transform = new RotateTransform(angleRotate, xcoord, ycoord - 50);
+                drawingGroup.Children.Add(new ImageDrawing(image, new Rect(x, y, width, Height)));
+                dc.DrawDrawing(drawingGroup);
+            }
+            else
+            {
+                dc.DrawText(new FormattedText("Please stand straight for configuration", CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), new Point(centerShoulder.X - 200, centerShoulder.Y + 100));
+            }
+        }
+
+        private Point GetXYCoordToUse(DepthImagePoint centerShoulder, double width, double angle)
+        {
+            Point point = new Point();
+            point.X = centerShoulder.X - (width / 2);
+
+            double x = (180 - angle) / 2;
+            double h = Math.Sin(x) * (width * Math.PI/180) * 2 * Math.Cos(x);
+
+            point.Y = centerShoulder.Y + h;
+
+            return point;
+        }
+
+        private double GetAngle(DepthImagePoint centerHip, DepthImagePoint centerShoulder)
+        {
+            double w = centerShoulder.X - centerHip.X;
+            double h = centerShoulder.Y - centerHip.Y;
+
+            if (w == 0)
+                w = 0.0000000000000001;
+
+            var atan = Math.Atan(h / w) / Math.PI * 180;
+            if (w < 0 && h <= 0)
+                atan -= 180;
+            if (w < 0 && h > 0)
+                atan += 180;
+            return (atan + 90) % 360;
         }
 
         #endregion
@@ -715,6 +780,7 @@ namespace ASDAGeorgeApp
             else
                 Product = null;
 
+            Height = 0;
             this.kinectRegion.Content = nextPage;
         }
 

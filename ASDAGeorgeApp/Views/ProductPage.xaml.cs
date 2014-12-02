@@ -22,10 +22,14 @@ namespace ASDAGeorgeApp.Views
     /// </summary>
     public partial class ProductPage : UserControl, ISwitchable
     {
-        public ProductPage()
+        private SubCategory SubCat = null;
+
+        public ProductPage(Item item, SubCategory subCat)
         {
             InitializeComponent();
-            DataContext = new ProductPageViewModel();
+            DataContext = new ProductPageViewModel(item);
+            SubCat = subCat;
+            this.BackToString.Text = subCat.Parent + " &gt; " + subCat.Title;
         }
 
         public Item Product
@@ -45,6 +49,11 @@ namespace ASDAGeorgeApp.Views
         private void KinectTextButton_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new CategoryListPage());
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new SubCategoryPage(SubCat));
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ASDAGeorgeApp.ViewModels
     {
         public LandingPageViewModel()
         {
-            int rand = new Random().Next(Collector.Categories.Count - 1);
+            int rand = new Random().Next(Collector.Categories.Count);
             int newrand = new Random().Next(Collector.Categories[rand].Products.Count - 1);
             CurrentProduct = Collector.Categories[rand].Products[newrand];
         }

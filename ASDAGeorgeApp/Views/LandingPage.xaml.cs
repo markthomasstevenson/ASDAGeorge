@@ -40,17 +40,7 @@ namespace ASDAGeorgeApp.Views
 
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                KinectTextButton newButton = e.OriginalSource as KinectTextButton;
-                Grid newGrid = (Grid)newButton.Content;
-                Switcher.Switch(new CategoryListPage());
-            }
-            catch
-            {
-                KinectTextButton newButton = e.OriginalSource as KinectTextButton;
-                MessageBox.Show("Lol Lol Lol. You clicked " + ((TextBlock)newButton.Content).Text.ToString());
-            }
+            Switcher.Switch(new CategoryListPage());
         }
     }
 }

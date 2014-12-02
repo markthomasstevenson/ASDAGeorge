@@ -9,6 +9,11 @@ namespace ASDAGeorgeApp.ViewModels
 {
     public class ProductPageViewModel : BaseViewModel
     {
+        public ProductPageViewModel(Item item)
+        {
+            Product = item;
+        }
+
         private Item _Product;
         public Item Product
         {

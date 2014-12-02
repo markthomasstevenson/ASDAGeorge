@@ -22,8 +22,8 @@ namespace ASDAGeorgeApp.Models
         {
             List<KeyValuePair<FileChooser, string>> fileList = new List<KeyValuePair<FileChooser,string>>();
             
-            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.WomenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/women.csv"));
-            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.MenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources/men.csv"));
+            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.WomenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\women.csv"));
+            fileList.Add(new KeyValuePair<FileChooser,string>(FileChooser.MenFile, System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\men.csv"));
 
             return fileList;
         }
@@ -72,12 +72,14 @@ namespace ASDAGeorgeApp.Models
                         newCat.SubCategories.Add(currentSub);
 
                     currentSub = new SubCategory(thisLine[1]);
+                    string newstring = newCat.Title;
+                    currentSub.Parent = newstring;
                 }
 
                 currentProd = new Item();
 
                 /* Get Image */
-                currentProd.ProductImage = System.AppDomain.CurrentDomain.BaseDirectory + thisLine[3];
+                currentProd.ProductImage = System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\" + thisLine[3] + ".png";
 
                 /* Get Title */
                 currentProd.Title = thisLine[4];
