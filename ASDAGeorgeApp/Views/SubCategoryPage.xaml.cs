@@ -3,6 +3,7 @@ using ASDAGeorgeApp.Views.SubViews;
 using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,21 +25,40 @@ namespace ASDAGeorgeApp.Views
     /// </summary>
     public partial class SubCategoryPage : UserControl
     {
-        private string Cat = "";
+        private SubCategory SubCat = null;
 
         public SubCategoryPage(SubCategory subCategory)
         {
             InitializeComponent();
             this.backText.Text = subCategory.Parent;
-            Cat = subCategory.Parent;
-            DoTheProducts(subCategory);
+            SubCat = subCategory;
+            DisplayItems(subCategory.Products);
         }
 
-        private void DoTheProducts(SubCategory subCat)
+        public SubCategoryPage()
+        {
+            InitializeComponent();
+            this.backText.Text = "Main Menu";
+            DoTheWishlist();
+        }
+
+        private void DoTheWishlist()
+        {
+            if(Collector.Wishlist.Count == 0)
+            {
+                this.NothingText.Visibility = Visibility.Visible;
+                this.ScrollViewer.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                DisplayItems(Collector.Wishlist);
+            }
+        }
+
+        private void DisplayItems(ObservableCollection<Item> items)
         {
             this.ProductContainer.Children.Clear();
-
-            foreach(Item item in subCat.Products)
+            foreach (Item item in items)
             {
                 KinectTileButton newTile = new KinectTileButton();
                 newTile.Label = item.Title;
@@ -51,7 +71,13 @@ namespace ASDAGeorgeApp.Views
                 bitImg.EndInit();
                 newTile.Background = new ImageBrush(bitImg);
 
-                newTile.Name = subCat.Title + "_" + subCat.Parent;
+                newTile.Name = item.UniqueID;
+
+                double ratio = bitImg.Width / bitImg.Height;
+
+                newTile.Height = 400;
+
+                newTile.Width = 200;
 
                 this.ProductContainer.Children.Add(newTile);
             }
@@ -60,21 +86,16 @@ namespace ASDAGeorgeApp.Views
         private void KinectTileButton_Click(object sender, RoutedEventArgs e)
         {
             KinectTileButton newButton = e.OriginalSource as KinectTileButton;
-            SubCategory subCat = Collector.GetSubCategory(newButton.Name.Split(new char[] { '_' })[0], newButton.Name.Split(new char[] { '_' })[1]);
-            
-            Item itemFound = null;
-            foreach(Item item in subCat.Products)
-            {
-                if (item.Title == newButton.Label.ToString())
-                    itemFound = item;
-            }
-
-            Switcher.Switch(new ProductPage(itemFound, subCat));
+            Item itemFound = Collector.GetItem(newButton.Name);
+            Switcher.Switch(new ProductPage(itemFound, SubCat));
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CategoryListPage(Cat));
+            if (this.backText.Text == "Main Menu")
+                Switcher.Switch(new CategoryListPage());
+            else
+                Switcher.Switch(new CategoryListPage(SubCat.Parent));
         }
     }
 }

@@ -402,7 +402,6 @@ namespace ASDAGeorgeApp
                 x = x - (Math.Abs(angleRotate) * 1.15);
             }
 
-            //dc.DrawEllipse(Brushes.AliceBlue, null, new Point(xcoord, ycoord), JointThickness, JointThickness);
             if (Height != 0)
             {
                 drawingGroup.Transform = new RotateTransform(angleRotate, xcoord, ycoord - 50);

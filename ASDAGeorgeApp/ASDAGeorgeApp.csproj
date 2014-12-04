@@ -190,6 +190,14 @@
     </None>
     <AppDesigner Include="Properties\" />
     <Resource Include="icons\back_icon.png" />
+    <Resource Include="image\heart.png" />
+    <Resource Include="image\number1.png" />
+    <Resource Include="image\palet1.png" />
+    <Resource Include="image\palettewhite.png" />
+    <Resource Include="image\shopping.png" />
+    <Resource Include="image\shoppingbag1.png" />
+    <Resource Include="image\tape1.png" />
+    <Resource Include="image\tapes.png" />
     <Content Include="Resources\men.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

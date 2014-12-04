@@ -24,6 +24,20 @@ namespace ASDAGeorgeApp.Models
             Price = price;
         }
 
+        private string _UniqueID;
+        public string UniqueID
+        {
+            get { return _UniqueID; }
+            set
+            {
+                if (_UniqueID != value)
+                {
+                    _UniqueID = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        
         private string _Title;
         public string Title
         {
@@ -75,6 +89,34 @@ namespace ASDAGeorgeApp.Models
                 if (_WasPrice != value)
                 {
                     _WasPrice = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private string _ParentSub;
+        public string ParentSub
+        {
+            get { return _ParentSub; }
+            set
+            {
+                if (_ParentSub != value)
+                {
+                    _ParentSub = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private string _ParentCat;
+        public string ParentCat
+        {
+            get { return _ParentCat; }
+            set
+            {
+                if (_ParentCat != value)
+                {
+                    _ParentCat = value;
                     NotifyPropertyChanged();
                 }
             }

@@ -24,12 +24,24 @@ namespace ASDAGeorgeApp.Views
     {
         private SubCategory SubCat = null;
 
-        public ProductPage(Item item, SubCategory subCat)
+        public ProductPage(Item item, SubCategory subCat = null)
         {
             InitializeComponent();
             DataContext = new ProductPageViewModel(item);
+            if(subCat == null)
+            {
+                subCat = Collector.GetSubCategory(item.ParentSub, item.ParentCat);
+            }
             SubCat = subCat;
-            this.BackToString.Text = subCat.Parent + " &gt; " + subCat.Title;
+            this.BackToString.Text = subCat.Parent + " > " + subCat.Title;
+            this.DescriptionText.Text = item.Description.Replace("[BULLET]", "•");
+            this.DeliveryText.Text = item.DeliveryMethods.Replace("[POUND]", "£");
+
+            if(Collector.Wishlist.Contains(item))
+            {
+                this.Wishlist.Visibility = Visibility.Hidden;
+                this.WishlistRemove.Visibility = Visibility.Visible;
+            }
         }
 
         public Item Product
@@ -46,14 +58,21 @@ namespace ASDAGeorgeApp.Views
             throw new NotImplementedException();
         }
 
-        private void KinectTextButton_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new CategoryListPage());
-        }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new SubCategoryPage(SubCat));
+        }
+
+        private void Wishlist_Click(object sender, RoutedEventArgs e)
+        {
+            Collector.Wishlist.Add(Product);
+            Switcher.Switch(new SubCategoryPage());
+        }
+
+        private void WishlistRemove_Click(object sender, RoutedEventArgs e)
+        {
+            Collector.Wishlist.Remove(Product);
+            Switcher.Switch(new SubCategoryPage());
         }
     }
 }

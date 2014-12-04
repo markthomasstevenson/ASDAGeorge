@@ -9,197 +9,103 @@
     <Grid>
         <!-- TOP LEVEL GRIDS -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="480*" />
-            <ColumnDefinition Width="223*" />
-            <ColumnDefinition Width="737*"/>
-            <ColumnDefinition Width="480*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
 
         <!-- LEFT PANEL -->
         <Grid Grid.Column="0" Background="{StaticResource BackgroundBlack}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
+                <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <!-- LEFT TOP PANEL -->
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"  />
                 </Grid.RowDefinitions>
 
                 <!-- GEORGE LOGO -->
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="1.5*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" HorizontalAlignment="Right" Height="30px" Source="..\icons\align2.png" />
-                    <Image Grid.Column="1" Source="..\image\logo.png" />
+                <Grid Grid.Row="0">
+                    <Image Grid.Column="1" Margin="40 54 40 40" Height="80px" Source="..\image\logo.png" />
                 </Grid>
 
                 <model:KinectTextButton Grid.Row="2" Click="BackButton_Click">
-                    <Grid>
+                    <Grid Margin="0 0 0 20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="1" Height="60px" Source="..\icons\back_icon.png" />
-                        <TextBlock Grid.Column="2" x:Name="BackToString" />
+                        <Image Grid.Column="1" Height="100px" Source="..\icons\back_icon.png" />
+                        <TextBlock Grid.Column="2" Margin="20 0 0 0" x:Name="BackToString" />
                     </Grid>
                 </model:KinectTextButton>
             </Grid>
-            
+
             <!-- DESCRIPTION -->
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="5*" />
-                        <RowDefinition Height="3*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22" HorizontalAlignment="Center">
-                            Give your formal
-                            wardrobe a fresh update with this stunning floral
-                            bodycon dress.<LineBreak/><LineBreak/>
-                            Crafted using stretch fabric and stamped with bold print,
-                            this sophisticated piece will take you from work to the weekend in sensational style.
-                        </TextBlock>
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <TextBlock  Foreground="White" FontSize="22" Text="bullet">
-                            <LineBreak/>
-                            - V-neck 
-                            <LineBreak/>
-                            - Back zip fastening
-                           <LineBreak/>
-                            - Sleeveless
-                             <LineBreak/>
-                            - Back vent
-                        </TextBlock>
-                    </Grid>
-                    <Grid Grid.Row="2">
-                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
-                            Length: 40 inches / 103cm
-                        </TextBlock>
-                    </Grid>
-                    <Grid Grid.Row="3">
-                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
-                            Fabric composition: 95%
-                        </TextBlock>
-                    </Grid>
-                    <Grid Grid.Row="4">
-                        <TextBlock Foreground="White" TextWrapping="Wrap" FontSize="22">
-                            Polyester: 5% Elastane
-                        </TextBlock>
-                    </Grid>
+            <Grid Grid.Row="1" Margin="50 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock TextWrapping="Wrap" FontSize="24" x:Name="DescriptionText" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock TextWrapping="Wrap" FontSize="24" x:Name="DeliveryText" />
                 </Grid>
             </Grid>
         </Grid>
 
         <!-- RIGHT PANEL -->
-        <Grid Grid.Column="3" >
+        <Grid Grid.Column="3">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="Black">
-                    <Image Height="150px" Width="200px" Source="..\image\palettewhite.png"></Image>
-                </Grid>
-            </Grid>
-            <Grid Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="BLack">
-                    <Image Height="200px" Width="250px" Source="..\image\tapes.png"></Image>
-                </Grid>
-            </Grid>
-            <Grid Grid.Row="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="Black">
-                    <Image Height="120px" Width="150px" Source="..\image\number1.png"></Image>
-                </Grid>
-            </Grid>
-            <Grid Grid.Row="9">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="green">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="1">
-
-                        <Image Height="80px" Width="150px" Source="..\image\shoppingbag1.png"></Image>
+            <Grid Grid.Row="1" x:Name="WishListCont" Background="{StaticResource ASDAGreen}">
+                <model:KinectTextButton x:Name="Wishlist" Click="Wishlist_Click" Height="{Binding ActualHeight, ElementName=WishListCont}" Width="{Binding ActualWidth, ElementName=WishListCont}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" HorizontalAlignment="Right" Height="100px" Source="..\image\heart.png" />
+                        <Grid Grid.Column="1" Margin="30 0 0 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Style="{StaticResource ImportantText}" VerticalAlignment="Bottom" FontSize="50" Text="Add to" />
+                            <TextBlock Grid.Row="1" Style="{StaticResource ImportantText}" VerticalAlignment="Top" FontSize="50" Text="Wishlist" />
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Row="2">
-                        <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
-                        BUY IT NOW
-                        </TextBlock>
+                </model:KinectTextButton>
+                <model:KinectTextButton x:Name="WishlistRemove" Click="WishlistRemove_Click" Visibility="Hidden" Height="{Binding ActualHeight, ElementName=WishListCont}" Width="{Binding ActualWidth, ElementName=WishListCont}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" HorizontalAlignment="Right" Height="100px" Source="..\image\heart.png"></Image>
+                        <Grid Grid.Column="1" Margin="30 0 0 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Style="{StaticResource ImportantText}" VerticalAlignment="Bottom" FontSize="50" Text="Remove from" />
+                            <TextBlock Grid.Row="1" Style="{StaticResource ImportantText}" VerticalAlignment="Top" FontSize="50" Text="Wishlist" />
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Grid>
-
-            <Grid Grid.Row="7">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="LightPink">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="1">
-                        <Image Height="80px" Width="150px" Source="..\image\heart.png"></Image>
-                    </Grid>
-                    <Grid Grid.Row="2">
-                        <TextBlock VerticalAlignment="Center" Foreground="white" FontSize="20" HorizontalAlignment="Center">
-                       WISHLIST
-                        </TextBlock>
-                    </Grid>
-                </Grid>
+                </model:KinectTextButton>
             </Grid>
         </Grid>
     </Grid>

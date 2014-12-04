@@ -29,13 +29,16 @@
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Height="100px" Margin="50,15,0,0" Source="..\image\logo.png"/>
                     <Image Grid.Column="1" Height="100px" Margin="25 15" Source="..\icons\back_icon.png" />
-                    <TextBlock Grid.Column="2" x:Name="backText" />
+                    <TextBlock Grid.Column="2" Style="{StaticResource ImportantText}" x:Name="backText" />
                 </Grid>
             </model:KinectTextButton>
             <uc:TopBarUserControl Grid.Column="1" />
         </Grid>
-
-        <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}"
+        <TextBlock Grid.Row="1" x:Name="NothingText" FontSize="60" Visibility="Hidden">
+            Your wishlist is empty! <LineBreak />
+            Add something new to your wishlist now!
+        </TextBlock>
+        <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}" x:Name="ScrollViewer"
                                            k:KinectTileButton.Click="KinectTileButton_Click">
             <WrapPanel VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
                 <k:KinectTileButton Height="auto" Width="500" Label="One">

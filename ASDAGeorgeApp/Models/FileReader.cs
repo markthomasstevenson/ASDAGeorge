@@ -84,8 +84,11 @@ namespace ASDAGeorgeApp.Models
                 /* Get Title */
                 currentProd.Title = thisLine[4];
 
+                /* Get Unique ID */
+                currentProd.UniqueID = thisLine[5].Replace(" ", "");
+
                 /* Get Price */
-                currentProd.Price = double.Parse(Regex.Replace(thisLine[6], @"[^\u0000-\u007F]", string.Empty));
+                currentProd.Price = double.Parse(thisLine[6].Replace("[POUND]", string.Empty).Replace("£", ""));
 
                 /* Get first bit of description */
                 currentProd.Description = thisLine[7].Replace("\"", "");
@@ -95,7 +98,18 @@ namespace ASDAGeorgeApp.Models
                     thisLine = fileText[i].Split(new char[] { '|' });
                     
                     /* Add next description */
-                    currentProd.Description += Regex.Replace(thisLine[0], @"[^\u0000-\u007F]", string.Empty);
+                    if (thisLine[0] != "" && thisLine[0].Contains("•"))
+                    {
+                        string temp = "";
+                        for(int k = 0; k < thisLine[0].Length; k++)
+                        {
+                            if (thisLine[0][k] == '•')
+                                temp += "\r\n";
+                            temp += thisLine[0][k];
+                        }
+                        thisLine[0] = temp;
+                    }
+                    currentProd.Description += "\r\n" + thisLine[0].Replace("\"", "");
                     
                     /* if end of description */
                     if (thisLine.Length > 1)
@@ -107,17 +121,19 @@ namespace ASDAGeorgeApp.Models
                         currentProd.StarRating = thisLine[2] == "No Review" ? 0 : double.Parse(thisLine[2]);
 
                         /* Add first bit of delivery methods */
-                        currentProd.DeliveryMethods = Regex.Replace(thisLine[3], @"[^\u0000-\u007F]", string.Empty).Replace("\"", "");
+                        currentProd.DeliveryMethods = thisLine[3].Replace("\"", "");
 
                         for (i = i + 1; i <= fileText.Length; i++)
                         {
                             thisLine = fileText[i].Split(new char[] { '|' });
                             
                             /* Add next bit of delivery methods */
-                            currentProd.DeliveryMethods += Regex.Replace(thisLine[0], @"[^\u0000-\u007F]", string.Empty);
+                            currentProd.DeliveryMethods += "\r\n" + thisLine[0].Replace("\"", "");
 
                             if (thisLine[0].Contains("\""))
                             {
+                                currentProd.ParentSub = currentSub.Title;
+                                currentProd.ParentCat = newCat.Title;
                                 currentSub.Products.Add(currentProd);
                                 break;
                             }

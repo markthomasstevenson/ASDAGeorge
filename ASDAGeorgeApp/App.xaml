@@ -11,9 +11,19 @@
             <SolidColorBrush x:Key="BackgroundGray" Color="Gray" Opacity="0.5"/>
             <SolidColorBrush x:Key="BackgroundWhite" Color="White" Opacity="0.7"/>
             <SolidColorBrush x:Key="VerySeeThroughWhite" Color="White" Opacity="0.2" />
+            <SolidColorBrush x:Key="ASDAGreen" Color="#78be20" Opacity="0.8" />
             <SolidColorBrush x:Key="KinectButtonPressedOverlayBrush" Color="#32000000"/>
 
-            <Style TargetType="TextBlock">
+            <Style x:Name="Standard" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Segoe" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="ImportantText">
+                <Setter Property="FontFamily" Value="Segoe" />
                 <Setter Property="Foreground" Value="White" />
                 <Setter Property="FontSize" Value="42" />
                 <Setter Property="HorizontalAlignment" Value="Center" />

@@ -11,7 +11,7 @@ namespace ASDAGeorgeApp.Models
     {
         public static  ObservableCollection<Category> Categories = null;
 
-        public static ObservableCollection<Item> Wishlist = new ObservableCollection<Item>();
+        public static ObservableCollection<Item> Wishlist = null;
 
         /// <summary>
         /// Loads the information needed to run the application
@@ -19,6 +19,7 @@ namespace ASDAGeorgeApp.Models
         public static void LoadInformation()
         {
             Categories = FileReader.ReadAllFiles();
+            Wishlist = new ObservableCollection<Item>();
         }
 
         /// <summary>
@@ -63,6 +64,27 @@ namespace ASDAGeorgeApp.Models
                     return cat;
             }
 
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the Item from the unique ID given
+        /// </summary>
+        /// <param name="UID">Unique ID to find</param>
+        /// <returns>The found item, else null</returns>
+        public static Item GetItem(string UID)
+        {
+            foreach(Category cat in Categories)
+            {
+                foreach(SubCategory sub in cat.SubCategories)
+                {
+                    foreach(Item item in sub.Products)
+                    {
+                        if (item.UniqueID == UID)
+                            return item;
+                    }
+                }
+            }
             return null;
         }
     }
