@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Speech.Recognition;
 
 namespace ASDAGeorgeApp.Models
 {
@@ -12,6 +13,23 @@ namespace ASDAGeorgeApp.Models
         public static  ObservableCollection<Category> Categories = null;
 
         public static ObservableCollection<Item> Wishlist = null;
+
+        /// <summary>
+        /// Get the most suitable speech recognizer
+        /// </summary>
+        /// <returns>The recogniser if found, null otherwise</returns>
+        public static RecognizerInfo GetKinectRecognizer()
+        {
+            foreach(RecognizerInfo recognizer in SpeechRecognitionEngine.InstalledRecognizers())
+            {
+                string value;
+                recognizer.AdditionalInfo.TryGetValue("Kinect", out value);
+                if ("True".Equals(value, StringComparison.OrdinalIgnoreCase) && "en-US".Equals(recognizer.Culture.Name, StringComparison.OrdinalIgnoreCase))
+                    return recognizer;
+            }
+
+            return null;
+        }
 
         /// <summary>
         /// Loads the information needed to run the application

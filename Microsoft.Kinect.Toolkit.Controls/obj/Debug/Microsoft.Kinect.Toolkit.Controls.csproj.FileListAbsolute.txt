@@ -49,6 +49,7 @@ C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
 C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Mark\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.csprojResolveAssemblyReference.cache
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\.Debug\KinectInteraction180_32.dll
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\.Debug\KinectInteraction180_64.dll
 D:\Documents\Dropbox\University\Third Year\Advanced Human Computer Interaction\Coursework 2\ASDAGeorge\.Debug\Microsoft.Kinect.Toolkit.Controls.dll

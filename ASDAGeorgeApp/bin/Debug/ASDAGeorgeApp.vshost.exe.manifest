@@ -47,14 +47,19 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="14012416">
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Speech" version="11.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="14017024">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XscTC+yzGmOkw/DmR8d4TNlPVnBqhFJApGp3+5PtzIY=</dsig:DigestValue>
+        <dsig:DigestValue>nIxFSWPz2Rd28qZ4zotktpwi3mw+e8F8RSTxz7GaamU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,7 +71,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ipzi+9Boqt4+f7fDvbwlcx9WVismP6dRbStyM5d1jTY=</dsig:DigestValue>
+        <dsig:DigestValue>BSXaFQW9FIVH/8FwHXqzqVX6TEMpHlxWESUuLiyJmUI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,7 +83,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2OHyPlde/rmrKPSsAFZzzJdI33aC4YYSw8xw/UolZc8=</dsig:DigestValue>
+        <dsig:DigestValue>5+PSlDap0Mf427aqnPPq76c6T5uoLrxzDYEK0V2V+fM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

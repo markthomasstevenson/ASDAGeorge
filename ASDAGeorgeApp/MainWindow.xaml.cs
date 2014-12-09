@@ -5,6 +5,8 @@ using ASDAGeorgeApp.Views;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
+using Microsoft.Speech.AudioFormat;
+using Microsoft.Speech.Recognition;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -209,8 +211,40 @@ namespace ASDAGeorgeApp
             }
         }
 
-        private double Height = 0;
+        private double ClothingHeight = 0;
 
+        #endregion
+
+        #region SpeechRegion
+        private SpeechRecognitionEngine speechEngine;
+
+        private Grammar ActivateGrammar;
+        private Grammar SearchCatGrammar;
+        private Grammar SearchSubCatGrammar;
+
+        private bool _IsListening = true;
+        public bool IsListening
+        {
+            get { return _IsListening; }
+            set
+            {
+                if(_IsListening != value)
+                {
+                    _IsListening = value;
+                    NotifyPropertyChanged();
+                    if(value)
+                    {
+                        speechEngine.LoadGrammarAsync(SearchCatGrammar);
+                        speechEngine.LoadGrammarAsync(SearchSubCatGrammar);
+                    }
+                    else
+                    {
+                        speechEngine.UnloadAllGrammars();
+                        speechEngine.LoadGrammarAsync(ActivateGrammar);
+                    }
+                }
+            }
+        }
         #endregion
 
         public MainWindow()
@@ -219,6 +253,67 @@ namespace ASDAGeorgeApp
             // Thread.Sleep(5000);
             InitializeComponent();
             Collector.LoadInformation();
+            
+            /* Load the speech recognition engine */
+            RecognizerInfo ri = Collector.GetKinectRecognizer();
+            if (ri != null)
+                this.speechEngine = new SpeechRecognitionEngine(ri.Id);
+
+            SemanticResultValue listen = new SemanticResultValue("George Listen", "Start Listening");
+            SemanticResultValue stopListen = new SemanticResultValue("Stop Listening", "Stop Listening");
+
+            // Create SemanticResultValue objects that contain search possibilities
+            SemanticResultValue search = new SemanticResultValue("Search", "Search");
+            SemanticResultValue searchFor = new SemanticResultValue("Search for", "Search");
+            SemanticResultValue searchIn = new SemanticResultValue("Search in", "Search");
+
+            // Create SemanticResultValue objects that contain category possibilities
+            SemanticResultValue woman = new SemanticResultValue("woman", "womens");
+            SemanticResultValue women = new SemanticResultValue("women", "womens");
+            SemanticResultValue womens = new SemanticResultValue("womens", "womens");
+            SemanticResultValue female = new SemanticResultValue("female", "womens");
+            SemanticResultValue male = new SemanticResultValue("male", "mens");
+            SemanticResultValue man = new SemanticResultValue("man", "mens");
+            SemanticResultValue men = new SemanticResultValue("men", "mens");
+            SemanticResultValue mens = new SemanticResultValue("mens", "mens");
+
+            // Create SemanticResultValue objects that contain sub category possibilities
+            SemanticResultValue dresses = new SemanticResultValue("dresses", "dresses");
+
+            // Create Activator
+            Choices activator = new Choices();
+            activator.Add(new Choices(new GrammarBuilder[] { listen, stopListen }));
+
+            // Create Search
+            Choices searchActive = new Choices();
+            searchActive.Add(new Choices(new GrammarBuilder[] { search, searchFor, searchIn }));
+
+            //Create Categories
+            Choices categories = new Choices();
+            categories.Add(new Choices(new GrammarBuilder[] { woman, women, womens, female, male, man, men, mens }));
+
+            // Create sub categories
+            Choices subCategories = new Choices();
+            subCategories.Add(new Choices(new GrammarBuilder[] { dresses }));
+
+            // Build the phrase and add SemanticResultKeys.
+            GrammarBuilder chooseActive = new GrammarBuilder();
+            chooseActive.Append(new SemanticResultKey("activator", activator));
+
+            GrammarBuilder chooseCat = new GrammarBuilder();
+            chooseCat.Append(new SemanticResultKey("searchterm", searchActive));
+            chooseCat.Append(new SemanticResultKey("category", categories));
+
+            GrammarBuilder choosesubCat = new GrammarBuilder();
+            choosesubCat.Append(new SemanticResultKey("searchterm", searchActive));
+            choosesubCat.Append(new SemanticResultKey("subcategory", subCategories));
+
+            // Build a Grammar object from the GrammarBuilder.
+            ActivateGrammar = new Grammar(chooseActive);
+            SearchCatGrammar = new Grammar(chooseCat);
+            SearchSubCatGrammar = new Grammar(choosesubCat);
+
+            IsListening = false;
 
             ProductTextSpacing = 20;
 
@@ -235,6 +330,43 @@ namespace ASDAGeorgeApp
             var regionSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
         }
+
+        #region SpeechFunctionRegion
+        void speechEngine_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
+        {
+            foreach(RecognizedPhrase phrase in e.Result.Alternates)
+            {
+                MessageBox.Show("Words: " + phrase.Text + "\r\nConfidence: " + phrase.Confidence.ToString());
+            }
+        }
+
+        void speechEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        { 
+            // Speech utterance confidence below which we treat speech as if it hadn't been heard
+            const double ConfidenceThreshold = 0.3;
+
+            if (e.Result.Confidence >= ConfidenceThreshold)
+            {
+                try
+                {
+                    if(e.Result.Semantics["activator"].Value.ToString() == "Start Listening")
+                    {
+                        IsListening = true;
+                        this.ListeningIdentifier.Text = "Kinect Listening";
+                    }
+                    else if(e.Result.Semantics["activator"].Value.ToString() == "Stop Listening")
+                    {
+                        IsListening = false;
+                        this.ListeningIdentifier.Text = "Kinect not listening";
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+        }
+        #endregion
 
         #region Clothes Function
         /// <summary>
@@ -387,7 +519,7 @@ namespace ASDAGeorgeApp
 
             if (Math.Abs(leftShoulder.Depth - rightShoulder.Depth) < 10)
             {
-                Height = ratio * width;
+                ClothingHeight = ratio * width;
             }
 
             double xcoord = centerShoulder.X;
@@ -402,10 +534,10 @@ namespace ASDAGeorgeApp
                 x = x - (Math.Abs(angleRotate) * 1.15);
             }
 
-            if (Height != 0)
+            if (ClothingHeight != 0)
             {
                 drawingGroup.Transform = new RotateTransform(angleRotate, xcoord, ycoord - 50);
-                drawingGroup.Children.Add(new ImageDrawing(image, new Rect(x, y, width, Height)));
+                drawingGroup.Children.Add(new ImageDrawing(image, new Rect(x, y, width, ClothingHeight)));
                 dc.DrawDrawing(drawingGroup);
             }
             else
@@ -500,7 +632,7 @@ namespace ASDAGeorgeApp
                 DepthImagePoint depthPoint = this.sensorChooser.Kinect.CoordinateMapper.MapSkeletonPointToDepthPoint(skelpoint, DepthImageFormat.Resolution640x480Fps30);
                 return new Point(depthPoint.X, depthPoint.Y);
             }
-            catch(Exception e)
+            catch
             { return new Point(0, 0); }
         }
 
@@ -681,6 +813,12 @@ namespace ASDAGeorgeApp
 
                     /* Null the drawing group we'll use for drawing */
                     this.drawingGroup = null;
+
+                    args.OldSensor.AudioSource.Stop();
+
+                    this.speechEngine.SpeechRecognized -= speechEngine_SpeechRecognized;
+                    this.speechEngine.SpeechRecognitionRejected -= speechEngine_SpeechRecognitionRejected;
+                    this.speechEngine.RecognizeAsyncStop();
                 }
                 catch (InvalidOperationException)
                 {
@@ -722,6 +860,11 @@ namespace ASDAGeorgeApp
                     /* Display the drawing using our image control */
                     Image.Source = this.imageSource;
 
+                    this.speechEngine.SpeechRecognized += speechEngine_SpeechRecognized;
+                    this.speechEngine.SpeechRecognitionRejected += speechEngine_SpeechRecognitionRejected;
+                    this.speechEngine.SetInputToAudioStream(args.NewSensor.AudioSource.Start(), new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
+
+                    this.speechEngine.RecognizeAsync(RecognizeMode.Multiple);
                 }
                 catch (InvalidOperationException)
                 {
@@ -779,7 +922,7 @@ namespace ASDAGeorgeApp
             else
                 Product = null;
 
-            Height = 0;
+            ClothingHeight = 0;
             this.kinectRegion.Content = nextPage;
         }
 

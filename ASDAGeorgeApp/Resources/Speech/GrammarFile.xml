@@ -1,0 +1,69 @@
+<grammar version="1.0" xml:lang="en-US" root="topLevel"
+ xmlns="http://www.w3.org/2001/06/grammar">
+
+	<rule id="topLevel">
+		<one-of>
+	    	<ruleref uri="#searchCategory" />
+	    	<ruleref uri="#searchCatSubCategory" />
+	    	<ruleref uri="#searchSubCategoryCat" />
+	    	<ruleref uri="#searchItem" />
+    	</one-of>
+  	</rule>
+
+  	<rule id="searchCategory">
+    	<ruleref uri="#searchAction" />
+    	<ruleref uri="#category" />
+  	</rule>
+
+  	<rule id="searchCatSubCategory">
+  		<ruleref uri="#searchAction" />
+  		<ruleref uri="#category" />
+  		<ruleref uri="#subCategory" />
+  	</rule>
+
+  	<rule id="searchSubCategoryCat">
+  		<ruleref uri="#searchAction" />
+  		<ruleref uri="#subCategory" />
+  		<item> in </item>
+  		<ruleref uri="#category" />
+  	</rule>
+
+  	<rule id="searchItem">
+  		<ruleref uri="#searchAction" />
+  		<ruleref uri="#subCategory" />
+  	</rule>
+
+  	<rule id="subCategory">
+    	<one-of>
+      		<item> dresses </item>
+      		<item> dress </item>
+      		<item> skirt </item>
+      		<item> skirts </item>
+      		<item> jean </item>
+      		<item> jeans </item>
+      		<item> top </item>
+      		<item> tops </item>
+      		<item> suit </item>
+      		<item> suits </item>
+      		<item> jean </item>
+      		<item> jeans </item>
+    	</one-of>
+  	</rule>
+
+  	<rule id="category">
+    	<one-of>
+    	  	<item> women </item>
+      		<item> womens </item>
+      		<item> men </item>
+      		<item> mens </item>
+    	</one-of>
+  	</rule>
+
+  	<rule id="searchAction">
+    	<one-of>
+      		<item> search </item>
+      		<item> search for </item>
+      		<item> search in </item>
+    	</one-of>
+  	</rule>
+</grammar>
