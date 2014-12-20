@@ -4,25 +4,58 @@
              xmlns:k="http://schemas.microsoft.com/kinect/2013"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ASDAGeorgeApp" 
-             xmlns:uc="clr-namespace:ASDAGeorgeApp.Views.SubViews"
+             xmlns:local="clr-namespace:ASDAGeorgeApp"
+             xmlns:sv="clr-namespace:ASDAGeorgeApp.Views.SubViews"
              xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
-    <Grid model:KinectTextButton.Click="Grid_Click" Margin="40">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
+        <sv:MainMenu Margin="94 88 40 88" Grid.Column="0" ParentPage="null" />
+        <Grid Grid.Column="1" Margin="0 88 94 88">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="228px" />
+                <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
-            <model:KinectTextButton Grid.Row="0">
-                <Image Grid.Column="1" Height="80px" Margin="0,15,0,0" Source="..\image\logo.png"/>
-            </model:KinectTextButton>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="2" Margin="0 0 0 8" Width="220px" Height="220px" Source="../image/logo.png" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="440" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Background="{StaticResource BackgroundBlack}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="300" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Margin="0 40 0 0" Width="360" x:Name="TitleTextOne" Text="This is the Title" Style="{StaticResource InfoText}" TextWrapping="Wrap" />
+                        <TextBlock Grid.Row="1" Width="360" x:Name="TitleTextTwo" Text="Category" Style="{StaticResource InfoTextTitle}" TextWrapping="Wrap" />
+                        <model:KinectTextButton Grid.Row="2" Margin="40" x:Name="ShopLink" Click="ShopLink_Click">
+                            <Border Style="{StaticResource MenuBox}" Background="{StaticResource ProductAddedButton}" Width="360" >
+                                <TextBlock Height="auto" Width="auto" Text="TextLol" Style="{StaticResource InfoText}" TextWrapping="Wrap" />
+                            </Border>
+                        </model:KinectTextButton>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

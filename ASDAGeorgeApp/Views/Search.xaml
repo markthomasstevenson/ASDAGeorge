@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="ASDAGeorgeApp.Views.Search"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sv="clr-namespace:ASDAGeorgeApp.Views.SubViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="{StaticResource BackgroundBlack}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <sv:MainMenu Margin="94 88 40 88" Grid.Column="0" ParentPage="search" />
+        <Grid Grid.Column="1" Margin="0 88 94 88">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="0 0 0 8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Margin="220px 20 0 0" x:Name="CountText" Text="SOME RESULTS LOL" Style="{StaticResource SubCatText}" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Margin="220px -15 0 0" x:Name="SearchTermText" TextDecorations="Underline" Text="SEARCH TERM HERE LOLS" Style="{StaticResource TitleText}"/>
+                </Grid>
+
+                <model:KinectTextButton Grid.Column="1" x:Name="Home" Click="Home_Click">
+                    <Image Width="220px" Height="220px" HorizontalAlignment="Right" Source="../image/logo.png" />
+                </model:KinectTextButton>
+            </Grid>
+
+            <Grid Grid.Row="1" x:Name="HiddenStuff">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Visibility="Hidden" x:Name="IsListeningBox">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Style="{StaticResource InfoText}" Text="GEORGE IS CURRENTLY" />
+                        <Image Grid.Column="1" x:Name="ImListeningIcon" Source="../icons/microphone.png" Height="35" Margin="20 0 20 0" />
+                        <TextBlock Grid.Column="2" Text="listening" Foreground="{StaticResource ListeningColour}" Style="{StaticResource InfoText}"/>
+                    </Grid>
+                    <TextBlock Grid.Row="1" Style="{StaticResource InfoText}" Text="SPEAK TO SEARCH" VerticalAlignment="Top" />
+                </Grid>
+
+                <Grid Grid.Row="0" x:Name="IsNotListeningBox">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Style="{StaticResource InfoText}" Text="GEORGE IS CURRENTLY" />
+                        <Image Grid.Column="1" x:Name="ImNotListeningIcon" Source="../icons/microphone_off.png" Height="35" Margin="20 0 20 0" />
+                        <TextBlock Grid.Column="2" Text="not listening" Foreground="{StaticResource NotListeningColour}" Style="{StaticResource InfoText}"/>
+                    </Grid>
+                    <TextBlock Grid.Row="1" Style="{StaticResource InfoText}" Text="SAY 'OKAY GEORGE'" VerticalAlignment="Top" />
+                </Grid>
+                <Image Grid.Row="1" x:Name="SearchImage" Height="auto" Width="auto"/>
+            </Grid>
+            
+            <k:KinectScrollViewer Visibility="Hidden" Grid.Row="1" Style="{StaticResource HorizontalScroll}" x:Name="ScrollViewer" Margin="0 0 -94 0"
+                                           k:KinectTileButton.Click="KinectTileButton_Click">
+                <WrapPanel Margin="-100 0 -100 0" VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                </WrapPanel>
+            </k:KinectScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

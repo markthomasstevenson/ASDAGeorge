@@ -27,6 +27,10 @@ namespace ASDAGeorgeApp.Views
             InitializeComponent();
 
             DataContext = new LandingPageViewModel();
+
+            this.TitleTextOne.Text = "20% off all";
+            this.TitleTextTwo.Text = CurrentProduct.ParentCat + " " + CurrentProduct.ParentSub;
+            ((TextBlock)((Border)this.ShopLink.Content).Child).Text = "Shop " + CurrentProduct.ParentSub;
         }
 
         public Item CurrentProduct
@@ -38,9 +42,9 @@ namespace ASDAGeorgeApp.Views
             }
         }
 
-        private void Grid_Click(object sender, RoutedEventArgs e)
+        private void ShopLink_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CategoryListPage());
+            Switcher.Switch(new ProductList(Collector.GetSubCategory(CurrentProduct.ParentSub, CurrentProduct.ParentCat), Collector.GetCategory(CurrentProduct.ParentCat)));
         }
     }
 }

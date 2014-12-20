@@ -60,12 +60,6 @@ namespace ASDAGeorgeApp.Models
                 {
                     _SubCategories = value;
                     NotifyPropertyChanged();
-                    if (_SubCategories.Count > 0)
-                    {
-                        int rand = new Random().Next(_SubCategories.Count - 1);
-                        int newRand = new Random().Next(_SubCategories[rand].Products.Count - 1);
-                        SamplePicture = _SubCategories[rand].Products[newRand].ProductImage;
-                    }
                 }
             }
         }

@@ -104,18 +104,28 @@
     <Compile Include="Models\KinectTextButton.cs" />
     <Compile Include="Models\SubCategory.cs" />
     <Compile Include="ViewModels\LandingPageViewModel.cs" />
+    <Compile Include="ViewModels\ProductListViewModel.cs" />
     <Compile Include="ViewModels\ProductPageViewModel.cs" />
-    <Compile Include="Views\SubCategoryPage.xaml.cs">
-      <DependentUpon>SubCategoryPage.xaml</DependentUpon>
+    <Compile Include="Views\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Category.xaml.cs">
+      <DependentUpon>Category.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product.xaml.cs">
+      <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductList.xaml.cs">
+      <DependentUpon>ProductList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubCategory.xaml.cs">
+      <DependentUpon>SubCategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ProductPage.xaml.cs">
-      <DependentUpon>ProductPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CategoryListPage.xaml.cs">
-      <DependentUpon>CategoryListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Featured.cs" />
@@ -124,28 +134,39 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Switcher.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\FeaturedViewModel.cs" />
-    <Compile Include="Views\SubViews\FeatureUserControl.xaml.cs">
-      <DependentUpon>FeatureUserControl.xaml</DependentUpon>
+    <Compile Include="Views\SubViews\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SubViews\TopBarUserControl.xaml.cs">
-      <DependentUpon>TopBarUserControl.xaml</DependentUpon>
+    <Compile Include="Views\Wishlist.xaml.cs">
+      <DependentUpon>Wishlist.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\SubCategoryPage.xaml">
+    <Page Include="Views\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Category.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LandingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ProductPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\CategoryListPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -159,11 +180,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\SubViews\FeatureUserControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Views\SubViews\MainMenu.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SubViews\TopBarUserControl.xaml">
+    <Page Include="Views\Wishlist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +203,95 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="icons\microphone.png" />
+    <Resource Include="icons\microphone_off.png" />
+    <Content Include="Resources\CustomImages\profileImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\SearchImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\SearchImageFive.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\SearchImageFour.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\SearchImageThree.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\SearchImageTwo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\ShopImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_accessories.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_christmas_jumpers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_christmas_novelty.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_christmas_party.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_coats.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_dresses.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_hats.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_jeans.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_jumpers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_jumpsuit.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_leggings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_maternity.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_new_in.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_nightwear.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_onesie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_plus_size.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_shirts.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_skirts.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_swimwear.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_tops.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_trousers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WomensCategories\womens_tunics.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -193,17 +303,84 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Resource Include="icons\back_icon.png" />
+    <Resource Include="icons\back.png" />
     <Resource Include="image\heart.png" />
     <Resource Include="image\number1.png" />
-    <Resource Include="image\palet1.png" />
-    <Resource Include="image\palettewhite.png" />
     <Resource Include="image\shopping.png" />
     <Resource Include="image\shoppingbag1.png" />
     <Resource Include="image\tape1.png" />
     <Resource Include="image\tapes.png" />
+    <Content Include="Resources\CustomImages\boys.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\girls.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\mens.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomImages\womens.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\men.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_accessories.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_chirstmas_novelty.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_christmas_jumpers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_christmas_party.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_coats.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_jeans.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_jumpers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_new_in.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_nightwear.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_onesie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_shirts.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_socks.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_suits.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_sweatshirts.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_swimwear.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_ties.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_trousers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_tshirts.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MensCategories\mens_underwear.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\ProductImages\5054065581498.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -903,62 +1080,9 @@
     <Resource Include="image\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\accessories.jpg" />
-    <Resource Include="image\blouse.jpg" />
-    <Resource Include="image\coat.jpg" />
-    <Resource Include="image\dresses.jpg" />
-    <Resource Include="image\jeans.jpg" />
-    <Resource Include="image\jumpers.jpg" />
-    <Resource Include="image\jumpsuits.jpg" />
-    <Resource Include="image\lastchance.jpg" />
-    <Resource Include="image\lingerie.jpg" />
-    <Resource Include="image\maternity.jpg" />
-    <Resource Include="image\newin.jpg" />
-    <Resource Include="image\onesie.jpg" />
-    <Resource Include="image\plussize.jpg" />
-    <Resource Include="image\pyjama.jpg" />
-    <Resource Include="image\scarf.jpg" />
-    <Resource Include="image\shorts.jpg" />
-    <Resource Include="image\skirt.jpg" />
-    <Resource Include="image\socks.jpg" />
-    <Resource Include="image\swimwear.jpg" />
-    <Resource Include="image\tops.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\boots.jpg" />
-    <Resource Include="image\flats.jpg" />
-    <Resource Include="image\heels.jpg" />
-    <Resource Include="image\sandals.jpg" />
-    <Resource Include="image\shoes.jpg" />
-    <Resource Include="image\slippers.jpg" />
-    <Resource Include="image\trainers.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\petite.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\hairdryer.jpg" />
-    <Resource Include="image\removal.jpg" />
-    <Resource Include="image\spa.jpg" />
-    <Resource Include="image\straightners.jpg" />
-    <Resource Include="image\styling.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\character.jpg" />
-    <Resource Include="image\contemporary.jpg" />
-    <Resource Include="image\fancydress.jpg" />
-    <Resource Include="image\graduate.jpg" />
-    <Resource Include="image\hshop.jpg" />
-    <Resource Include="image\novelty.jpg" />
-    <Resource Include="image\party.jpg" />
-    <Resource Include="image\sportswear.jpg" />
-    <Resource Include="image\thermal.jpg" />
-    <Resource Include="image\tickled.jpg" />
-    <Resource Include="image\winter.jpg" />
-    <Resource Include="image\workwear.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\marvel_tee_psd.png" />
+    <Content Include="Resources\ProductImages\tempImage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\men.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -971,6 +1095,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

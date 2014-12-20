@@ -52,14 +52,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="14017024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASDAGeorgeApp.exe" size="1899520">
       <assemblyIdentity name="ASDAGeorgeApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nIxFSWPz2Rd28qZ4zotktpwi3mw+e8F8RSTxz7GaamU=</dsig:DigestValue>
+        <dsig:DigestValue>sJJ4S6t1yojueug2YHmdKXi1hH/Gh+jwAITZ+c+G4VQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -71,7 +71,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BSXaFQW9FIVH/8FwHXqzqVX6TEMpHlxWESUuLiyJmUI=</dsig:DigestValue>
+        <dsig:DigestValue>1W8r50/emdEJbTRy+7x7/SvV5jm2rhYL912kwXBqN30=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -83,7 +83,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5+PSlDap0Mf427aqnPPq76c6T5uoLrxzDYEK0V2V+fM=</dsig:DigestValue>
+        <dsig:DigestValue>FLCGXQbq1wP1yntUiTUfn+mQQRMdL9Mpt/jfhauedTQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -108,6 +108,105 @@
       <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\CustomImages\boys.jpg" size="264086">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tjPr2nkEYE/uyS3yut1s4LQBtL9BFDjaV84Zum8eYTw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\girls.jpg" size="238488">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+oJiDqqMtnImT+oakvIj/isV8dCPnHV7U31NQUqu+SA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\mens.jpg" size="194685">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>25gnVCruP1dWucpmUo7N/6n9nRhYgIIPqs/nYXIhmIc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\profileImage.jpg" size="29824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3NAOQ3Tt2tiC7SXGf2C98mUzHxgoT3HoY2jOgMtnOrE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\SearchImage.jpg" size="27636">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YbK9QYfcnYNCSnq9/Dv9+8EeVqeqwhMnj36wQvWruxM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\SearchImageFive.jpg" size="24251">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3iVgq9lVY2WCxLRljY7t2rlS6iB3T82aFGZtYbmMoE8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\SearchImageFour.jpg" size="24251">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3iVgq9lVY2WCxLRljY7t2rlS6iB3T82aFGZtYbmMoE8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\SearchImageThree.jpg" size="29002">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KT5x5bufhR8YHnqH+OrPOzW94aRn1YsdSujc+TGlv4g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\SearchImageTwo.jpg" size="27033">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8Odghz3pJACHq0zNTwj5XTTPmzTGJcvrOzKzvlPOtO8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\ShopImage.jpg" size="23367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>J9Gjmhzt5BOBY+Tp7xxj1YbeFMA5FcvOh9TlwIDjmbs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\CustomImages\womens.jpg" size="259400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>v757fLctgHMxJgPA6bABtwtZJW3uVJ4GtUhOfcgaARo=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\men.csv" size="36557">
     <hash>
       <dsig:Transforms>
@@ -124,6 +223,177 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>1V+ctooGaE8qi1ootH+GbkZ9XDpdFwvaEr030UDX/7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_accessories.jpg" size="63423">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2Ff5+jvP1bbphSYp1ZKAWL+MkuQWVgAgPN9e5xkYqj0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_chirstmas_novelty.jpg" size="62701">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JdJZdc6bI9IwQu+D4ysDPEKYDt3fCf+oS8AoBW+Rz3c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_christmas_jumpers.jpg" size="270829">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EVe3k29X9cfO3YRAydOGsh74LEsO06GIPq5AlFO2LnU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_christmas_party.jpg" size="54854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hwohJ1MWtfPcgcEEEljpgHgLXcxPlgrO4Q2kX6mj1xY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_coats.jpg" size="50808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>M2LzG9qXDiaJjDYeXahU/wMRfJYaWqhKqY3QNYWwkE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_jeans.jpg" size="61021">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tI4ejWJtUtPQ83AD0JPKcWs6TDFIQmzgZ165iuo8Iw4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_jumpers.jpg" size="73732">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bbV84jJRJaSKUZdmU7wQTEvIMM/F5RR4UPO0C6nIVUU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_new_in.jpg" size="154255">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SMlfGvih0aVbpSt6V9pdMPS6Dlw6s9CiT+51Q+32Qho=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_nightwear.jpg" size="79654">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NjVWnUbs9grkGJf7cx7xPfk5UwpJemb93J59ztJVtFM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_onesie.jpg" size="51635">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dzAW5MifqBBBEevKofRbSOGGTRT9HOo9IuVBAwAB4Kk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_shirts.jpg" size="117455">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Fq2JGQcFA9cBbf243zZZ/ufOGTQbuPm0iDMxE6SvpvY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_socks.jpg" size="62030">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ESlTS0lHcnsO87sqZJ5kjIm7j8I0TFBC+bcAMx6h7Vc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_suits.jpg" size="66306">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ux08z0CjA5PtZFh0d3zHMRiBxxD5gxzX7MPixQ/D9Do=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_sweatshirts.jpg" size="77299">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>I2X+NNH2737G71H0eOTf6WHJBX4dKggPTIFIU9hJ5CA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_swimwear.jpg" size="65801">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UKD12oubRylk444poUF0Ne9ITCf/ex5UMVidMhJ9y7U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_ties.jpg" size="54765">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ag4w1OL2VsUbGfRHhj5lhN6m7tbOchQG6/uojoOVul0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_trousers.jpg" size="94399">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5BcSnfiBxd+1IFa6wESEN95wrWAv39zgnXazPKNbGgg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_tshirts.jpg" size="70474">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Rql4vC+xiz4Fxiv7GfhywwCr8m3WhqGq+P7dR6CMk+c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MensCategories\mens_underwear.jpg" size="62611">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3EHFgcewMQM/te8PVzCs6WQLmoMO20l6ePkaSz+l4uQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ProductImages\5054065581498.png" size="2933806">
@@ -963,6 +1233,15 @@
       <dsig:DigestValue>kwvdzdxW+PNoikGzivlVYRqJiOVqMXjRVA74M99h35s=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\ProductImages\tempImage.png" size="8478657">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vxf86Pmdgerp0mu+zkato0H3Yp0kDpL9HdNXZBg6uoo=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\women.csv" size="33065">
     <hash>
       <dsig:Transforms>
@@ -979,6 +1258,204 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>XABDdQc3BR/fEyzpWhpqjyn+fLb/zJr8WDD4fP/Z9Dc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_accessories.jpg" size="86603">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PA7c6fy1Sa2MmdigEoWvhRN7ToQOy8Y0efBsBSetu2U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_christmas_jumpers.jpg" size="198342">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u8poyYDZzI0SGRsae8nNMXSbe4B/MUKoWstNFJ7WrVc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_christmas_novelty.jpg" size="71152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yAwByjejIdnze75lUXcIOpSiU4+yiwiJOaeyiPLxqXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_christmas_party.jpg" size="67273">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>58/mfIAjXbXxUqp7lsj7YLojUcI365PQH2qsynXgkHQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_coats.jpg" size="67034">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Vzq+MLReLIz3if3Bq8yJ27KSoU1cWgeamEKF+kIVUPI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_dresses.jpg" size="100119">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DOYhreRd2CjaShCe+AD3u4FIvHf9SK8FaDFxr/ouaUA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_hats.jpg" size="78115">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RkLxPDgrrGT6UuvDhk/7FV9nzFBy5JRRD484a5Zx05Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_jeans.jpg" size="80704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Jrp58dhkGwrh1XhnhEL2nB6ZZSkEzRaFlJVF5g9roWE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_jumpers.jpg" size="84752">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GwX1s+/3xn8dYOK99CTdemkSqFGtz/AcM3fwU2En4ek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_jumpsuit.jpg" size="56986">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>G0W0esSo2Nz/BojVpC70GGrUG+u7VXEcIC64PxA7iiU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_leggings.jpg" size="71336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R302BupBz4twLP9+WMQa0EK6Na/FONr7714qcrgbeYU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_maternity.jpg" size="53247">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iLwuDjM4BFgZ9OFOKL73EAab7SivCC+/a4d8/rfJa5Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_new_in.jpg" size="157917">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OucSwWSz/F7sCOK7XiLFao1c6Rue5+aq0dUitlR6w0s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_nightwear.jpg" size="75854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w0XHzn/9TLikDGvz1+6CdDc2LMDwNNMKb3WsPKNrzK0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_onesie.jpg" size="62134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uP9+yncBJkvwoAiOOdRKO2yyUMC6+XLTxA8VGqk+uxM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_plus_size.jpg" size="49765">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rtVaKZGD8qEWLa873GTgNtZvYp6CCYOZGq692PXKKmk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_shirts.jpg" size="82466">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NS/qoax9xD4E4GmLcr1m3uyr1x6egz5OlJfD0Y/OQH4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_skirts.jpg" size="72103">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>t3KtZhOmHMPTtX7a8Pv4gjz5buBiRztmomCC9cTkpWE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_swimwear.jpg" size="76677">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uDZsY5yXf28fhAffGqfMW4Mzq0G9hKkFswGnZBq3/84=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_tops.jpg" size="75461">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fPWYpeXBBbHx1UNJ4mlrcvc1oe/BRQrGDxPs8ql8EXg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_trousers.jpg" size="57932">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u4THkdOIDCVP/yzpbUecX/Qkcx+JVvWT+5gwy0olPME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WomensCategories\womens_tunics.jpg" size="63754">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ksrcymJuqjeVD++Ftegn6wyDbv7McuH2+3Pc1BNqypM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -9,6 +9,7 @@ using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
@@ -197,7 +198,7 @@ namespace ASDAGeorgeApp
             }
         }
 
-        private int _ProductTextSpacing;
+        private int _ProductTextSpacing = 20;
         public int ProductTextSpacing
         {
             get { return _ProductTextSpacing; }
@@ -211,7 +212,19 @@ namespace ASDAGeorgeApp
             }
         }
 
-        private double ClothingHeight = 0;
+        private double _ClothingHeight = 0;
+        public double ClothingHeight
+        {
+            get { return _ClothingHeight; }
+            set
+            {
+                if (_ClothingHeight != value)
+                {
+                    _ClothingHeight = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
 
         #endregion
 
@@ -219,6 +232,7 @@ namespace ASDAGeorgeApp
         private SpeechRecognitionEngine speechEngine;
 
         private Grammar ActivateGrammar;
+        private Grammar NavigateGrammar;
         private Grammar SearchCatGrammar;
         private Grammar SearchSubCatGrammar;
 
@@ -228,29 +242,35 @@ namespace ASDAGeorgeApp
             get { return _IsListening; }
             set
             {
-                if(_IsListening != value)
+                if (_IsListening != value)
                 {
                     _IsListening = value;
                     NotifyPropertyChanged();
-                    if(value)
-                    {
-                        speechEngine.LoadGrammarAsync(SearchCatGrammar);
-                        speechEngine.LoadGrammarAsync(SearchSubCatGrammar);
-                    }
-                    else
-                    {
-                        speechEngine.UnloadAllGrammars();
-                        speechEngine.LoadGrammarAsync(ActivateGrammar);
-                    }
+                    Collector.IsListening = _IsListening;
                 }
+                EnableSpeechGrammars();
             }
         }
+
+        private bool _IsSearch = true;
+        public bool IsSearch
+        {
+            get { return _IsSearch; }
+            set
+            {
+                if (_IsSearch != value)
+                {
+                    _IsSearch = value;
+                    NotifyPropertyChanged();
+                }
+                EnableSpeechGrammars();
+            }
+        }
+
         #endregion
 
         public MainWindow()
         {
-            /* HACK : This keeps the splashscreen from disappearing by adding a second to the load time for the Initialisation */
-            // Thread.Sleep(5000);
             InitializeComponent();
             Collector.LoadInformation();
             
@@ -259,63 +279,7 @@ namespace ASDAGeorgeApp
             if (ri != null)
                 this.speechEngine = new SpeechRecognitionEngine(ri.Id);
 
-            SemanticResultValue listen = new SemanticResultValue("George Listen", "Start Listening");
-            SemanticResultValue stopListen = new SemanticResultValue("Stop Listening", "Stop Listening");
-
-            // Create SemanticResultValue objects that contain search possibilities
-            SemanticResultValue search = new SemanticResultValue("Search", "Search");
-            SemanticResultValue searchFor = new SemanticResultValue("Search for", "Search");
-            SemanticResultValue searchIn = new SemanticResultValue("Search in", "Search");
-
-            // Create SemanticResultValue objects that contain category possibilities
-            SemanticResultValue woman = new SemanticResultValue("woman", "womens");
-            SemanticResultValue women = new SemanticResultValue("women", "womens");
-            SemanticResultValue womens = new SemanticResultValue("womens", "womens");
-            SemanticResultValue female = new SemanticResultValue("female", "womens");
-            SemanticResultValue male = new SemanticResultValue("male", "mens");
-            SemanticResultValue man = new SemanticResultValue("man", "mens");
-            SemanticResultValue men = new SemanticResultValue("men", "mens");
-            SemanticResultValue mens = new SemanticResultValue("mens", "mens");
-
-            // Create SemanticResultValue objects that contain sub category possibilities
-            SemanticResultValue dresses = new SemanticResultValue("dresses", "dresses");
-
-            // Create Activator
-            Choices activator = new Choices();
-            activator.Add(new Choices(new GrammarBuilder[] { listen, stopListen }));
-
-            // Create Search
-            Choices searchActive = new Choices();
-            searchActive.Add(new Choices(new GrammarBuilder[] { search, searchFor, searchIn }));
-
-            //Create Categories
-            Choices categories = new Choices();
-            categories.Add(new Choices(new GrammarBuilder[] { woman, women, womens, female, male, man, men, mens }));
-
-            // Create sub categories
-            Choices subCategories = new Choices();
-            subCategories.Add(new Choices(new GrammarBuilder[] { dresses }));
-
-            // Build the phrase and add SemanticResultKeys.
-            GrammarBuilder chooseActive = new GrammarBuilder();
-            chooseActive.Append(new SemanticResultKey("activator", activator));
-
-            GrammarBuilder chooseCat = new GrammarBuilder();
-            chooseCat.Append(new SemanticResultKey("searchterm", searchActive));
-            chooseCat.Append(new SemanticResultKey("category", categories));
-
-            GrammarBuilder choosesubCat = new GrammarBuilder();
-            choosesubCat.Append(new SemanticResultKey("searchterm", searchActive));
-            choosesubCat.Append(new SemanticResultKey("subcategory", subCategories));
-
-            // Build a Grammar object from the GrammarBuilder.
-            ActivateGrammar = new Grammar(chooseActive);
-            SearchCatGrammar = new Grammar(chooseCat);
-            SearchSubCatGrammar = new Grammar(choosesubCat);
-
-            IsListening = false;
-
-            ProductTextSpacing = 20;
+            CreateSpeechGrammars();
 
             Switcher.pageSwitcher = this;
             Switcher.Switch(new LandingPage());
@@ -332,6 +296,120 @@ namespace ASDAGeorgeApp
         }
 
         #region SpeechFunctionRegion
+
+        private void CreateSpeechGrammars()
+        {
+            // Create SemanticResultValue objects that contain activator possibilities
+            SemanticResultValue okayGeorge = new SemanticResultValue("Okay George", "Start Listening");
+            SemanticResultValue georgeListen = new SemanticResultValue("George Listen", "Start Listening");
+            SemanticResultValue stopListening = new SemanticResultValue("Stop Listening", "Stop Listening");
+
+            // Create Activator 'choices'
+            Choices choicesActivator = new Choices();
+            choicesActivator.Add(new Choices(new GrammarBuilder[] { okayGeorge, georgeListen, stopListening }));
+
+            // Build the phrase and add 'choices'
+            GrammarBuilder grammarActivator = new GrammarBuilder();
+            grammarActivator.Append(new SemanticResultKey("activator", choicesActivator));
+
+            // Build a Grammar object from the GrammarBuilder.
+            ActivateGrammar = new Grammar(grammarActivator);
+
+            // Create SemanticResultValue objects that contain Navigation possibilities
+            SemanticResultValue goTo = new SemanticResultValue("Go to", "Navigate");
+            SemanticResultValue navigateTo = new SemanticResultValue("Navigate to", "Navigate");
+            SemanticResultValue menuShop = new SemanticResultValue("Shop", "Shop");
+            SemanticResultValue menuAccount = new SemanticResultValue("Account", "Account");
+            SemanticResultValue menuWish_list = new SemanticResultValue("Wish list", "Wishlist");
+            SemanticResultValue menuWishlist = new SemanticResultValue("Wishlist", "Wishlist");
+            SemanticResultValue menuSearch = new SemanticResultValue("Search", "Search");
+            SemanticResultValue menuHome = new SemanticResultValue("Home", "Home");
+
+            // Create Navigator 'Choices'
+            Choices choicesNavigatorActivate = new Choices();
+            choicesNavigatorActivate.Add(new Choices(new GrammarBuilder[] { goTo, navigateTo }));
+
+            Choices choicesNavigation = new Choices();
+            choicesNavigation.Add(new Choices(new GrammarBuilder[] { menuShop, menuAccount, menuWish_list, menuWishlist, menuSearch, menuHome }));
+
+            // build the phrasing
+            GrammarBuilder grammarNavigation = new GrammarBuilder();
+            grammarNavigation.Append(new SemanticResultKey("activator", choicesNavigatorActivate));
+            grammarNavigation.Append(new SemanticResultKey("where", choicesNavigation));
+
+            NavigateGrammar = new Grammar(grammarNavigation);
+
+            // Create SemanticResultValue objects that contain search possibilities
+            SemanticResultValue search = new SemanticResultValue("Search", "Search");
+            SemanticResultValue searchFor = new SemanticResultValue("Search for", "Search");
+            SemanticResultValue searchIn = new SemanticResultValue("Search in", "Search");
+
+            // Create SemanticResultValue objects that contain category possibilities
+            SemanticResultValue woman = new SemanticResultValue("woman", "womens");
+            SemanticResultValue women = new SemanticResultValue("women", "womens");
+            SemanticResultValue womens = new SemanticResultValue("womens", "womens");
+            SemanticResultValue female = new SemanticResultValue("female", "womens");
+            SemanticResultValue male = new SemanticResultValue("male", "mens");
+            SemanticResultValue man = new SemanticResultValue("man", "mens");
+            SemanticResultValue men = new SemanticResultValue("men", "mens");
+            SemanticResultValue mens = new SemanticResultValue("mens", "mens");
+
+            // Create Search
+            Choices choicesSearch = new Choices();
+            choicesSearch.Add(new Choices(new GrammarBuilder[] { search, searchFor, searchIn }));
+
+            //Create Categories
+            Choices choicesCategories = new Choices();
+            choicesCategories.Add(new Choices(new GrammarBuilder[] { woman, women, womens, female, male, man, men, mens }));
+
+            // build category search
+            GrammarBuilder grammarSearchCategories = new GrammarBuilder();
+            grammarSearchCategories.Append(new SemanticResultKey("activator", choicesSearch));
+            grammarSearchCategories.Append(new SemanticResultKey("category", choicesCategories));
+
+            SearchCatGrammar = new Grammar(grammarSearchCategories);
+
+            List<SemanticResultValue> arraySubCatValue = new List<SemanticResultValue>();
+
+            foreach(Models.Category category in Collector.Categories)
+                foreach(Models.SubCategory subCategory in category.SubCategories)
+                    arraySubCatValue.Add(new SemanticResultValue(subCategory.Title.Replace("&", "and"), subCategory.Title));
+
+            Choices choicesSubCategories = new Choices();
+            foreach(SemanticResultValue semValue in arraySubCatValue)
+            {
+                choicesSubCategories.Add(new Choices(new GrammarBuilder(semValue)));
+            }
+
+            GrammarBuilder grammarSubCat = new GrammarBuilder();
+            grammarSubCat.Append(new SemanticResultKey("activator", choicesSearch));
+            grammarSubCat.Append(new SemanticResultKey("category", choicesCategories));
+            grammarSubCat.Append(new SemanticResultKey("subcategory", choicesSubCategories));
+
+            SearchSubCatGrammar = new Grammar(grammarSubCat);
+
+            IsListening = false;
+        }
+
+        private void EnableSpeechGrammars()
+        {
+            speechEngine.UnloadAllGrammars();
+            speechEngine.LoadGrammarAsync(ActivateGrammar);
+
+            if (IsListening)
+            {
+                // nav grammar
+                speechEngine.LoadGrammarAsync(NavigateGrammar);
+
+                if (IsSearch)
+                {
+                    //do search page grammar
+                    speechEngine.LoadGrammarAsync(SearchCatGrammar);
+                    speechEngine.LoadGrammarAsync(SearchSubCatGrammar);
+                }
+            }
+        }
+
         void speechEngine_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
             foreach(RecognizedPhrase phrase in e.Result.Alternates)
@@ -343,7 +421,7 @@ namespace ASDAGeorgeApp
         void speechEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         { 
             // Speech utterance confidence below which we treat speech as if it hadn't been heard
-            const double ConfidenceThreshold = 0.3;
+            const double ConfidenceThreshold = 0.7;
 
             if (e.Result.Confidence >= ConfidenceThreshold)
             {
@@ -352,12 +430,79 @@ namespace ASDAGeorgeApp
                     if(e.Result.Semantics["activator"].Value.ToString() == "Start Listening")
                     {
                         IsListening = true;
-                        this.ListeningIdentifier.Text = "Kinect Listening";
+                        this.ImNotListening.Visibility = Visibility.Hidden;
+                        this.ImNotListeningIcon.Visibility = Visibility.Hidden;
+                        this.ImListening.Visibility = Visibility.Visible;
+                        this.ImListeningIcon.Visibility = Visibility.Visible;
                     }
                     else if(e.Result.Semantics["activator"].Value.ToString() == "Stop Listening")
                     {
                         IsListening = false;
-                        this.ListeningIdentifier.Text = "Kinect not listening";
+                        this.ImListening.Visibility = Visibility.Hidden;
+                        this.ImListeningIcon.Visibility = Visibility.Hidden;
+                        this.ImNotListening.Visibility = Visibility.Visible;
+                        this.ImNotListeningIcon.Visibility = Visibility.Visible;
+                    }
+                    else if (e.Result.Semantics["activator"].Value.ToString() == "Navigate")
+                    {
+                        string searchTerm = e.Result.Semantics["where"].Value.ToString();
+
+                        UserControl userControl;
+
+                        switch(searchTerm)
+                        {
+                            case "Shop":
+                                userControl = new Views.Category();
+                                break;
+                            case "Account":
+                                userControl = new Account();
+                                break;
+                            case "Wishlist":
+                                userControl = new Wishlist();
+                                break;
+                            case "Search":
+                                userControl = new Search();
+                                break;
+                            case "Home":
+                                userControl = new LandingPage();
+                                break;
+                            default:
+                                userControl = null;
+                                break;
+                        }
+
+                        if (userControl != null)
+                            Switcher.Switch(userControl);
+                        else
+                            MessageBox.Show("The Search Term failed (coding error, soz... ignore this bit:) \r\n " + searchTerm + " : " + e.Result.Semantics["activator"].Value.ToString());
+                    }
+                    else if(e.Result.Semantics["activator"].Value.ToString() == "Search")
+                    {
+                        Collector.lastSearchTerm = "";
+                        Collector.Search = new ObservableCollection<Item>();
+
+                        string category = e.Result.Semantics["category"].Value.ToString();
+                        string subCategory;
+                        try
+                        {
+                            subCategory = e.Result.Semantics["subcategory"].Value.ToString();
+                            //yes subcategory
+                            Models.SubCategory subCategoryFound = Collector.GetSubCategory(subCategory, category);
+                            if (subCategoryFound != null)
+                                foreach (Item product in subCategoryFound.Products)
+                                    Collector.Search.Add(product);
+                            Collector.lastSearchTerm = category.ToUpper() + " " + subCategory.ToUpper();
+                        }
+                        catch
+                        {
+                            //no subcategory
+                            Models.Category categoryFound = Collector.GetCategory(category);
+                            if(categoryFound != null)
+                                foreach(Models.SubCategory subCat in categoryFound.SubCategories)
+                                    foreach(Item product in subCat.Products)
+                                        Collector.Search.Add(product);
+                            Collector.lastSearchTerm = category.ToUpper();
+                        }
                     }
                 }
                 catch
@@ -911,18 +1056,26 @@ namespace ASDAGeorgeApp
 
         public void Navigate(UserControl nextPage)
         {
-            if (nextPage.GetType() == typeof(ProductPage))
+            if (nextPage.GetType() == typeof(Product))
             {
-                Product = ((ProductPage)nextPage).Product;
+                Product = ((Product)nextPage).CurrentProduct;
+                IsSearch = false;
             }
             else if (nextPage.GetType() == typeof(LandingPage))
             {
                 Product = ((LandingPage)nextPage).CurrentProduct;
+                IsSearch = false;
+            }
+            else if (nextPage.GetType() == typeof(Search))
+            {
+                IsSearch = true;
             }
             else
+            {
                 Product = null;
+                IsSearch = false;
+            }
 
-            ClothingHeight = 0;
             this.kinectRegion.Content = nextPage;
         }
 

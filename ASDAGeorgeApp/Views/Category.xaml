@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="ASDAGeorgeApp.Views.Category"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:model="clr-namespace:ASDAGeorgeApp.Models"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sv="clr-namespace:ASDAGeorgeApp.Views.SubViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="{StaticResource BackgroundBlack}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <sv:MainMenu Margin="94 88 40 88" Grid.Column="0" ParentPage="shop" />
+        <Grid Grid.Column="1" Margin="0 88 94 88">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1423*"/>
+                <ColumnDefinition Width="49*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="228px" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Margin="220px 0 0 8" Text="SHOP" Style="{StaticResource TitleText}"/>
+
+                <model:KinectTextButton Grid.Column="1" VerticalAlignment="Top" x:Name="Home" Click="Home_Click">
+                    <Image Width="220px" Height="220px" Source="../image/logo.png" />
+                </model:KinectTextButton>
+            </Grid>
+
+            <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}" x:Name="ScrollViewer"
+                                           k:KinectTileButton.Click="KinectTileButton_Click" Grid.ColumnSpan="2">
+                <WrapPanel VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                    <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
+                    </k:KinectTileButton>
+                </WrapPanel>
+            </k:KinectScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

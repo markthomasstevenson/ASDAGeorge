@@ -56,6 +56,12 @@ namespace ASDAGeorgeApp.Models
                 if(i == fileText.Length)
                 {
                     newCat.SubCategories.Add(currentSub);
+                    if (newCat.SubCategories.Count > 0)
+                    {
+                        int rand = new Random().Next(newCat.SubCategories.Count - 1);
+                        int newRand = new Random().Next(newCat.SubCategories[rand].Products.Count - 1);
+                        newCat.SamplePicture = newCat.SubCategories[rand].Products[newRand].ProductImage;
+                    }
                     break;
                 }
 
@@ -69,7 +75,15 @@ namespace ASDAGeorgeApp.Models
                 if (thisLine[1] != "")
                 {
                     if (currentSub != null)
+                    {
                         newCat.SubCategories.Add(currentSub);
+                        if (newCat.SubCategories.Count > 0)
+                        {
+                            int rand = new Random().Next(newCat.SubCategories.Count - 1);
+                            int newRand = new Random().Next(newCat.SubCategories[rand].Products.Count - 1);
+                            newCat.SamplePicture = newCat.SubCategories[rand].Products[newRand].ProductImage;
+                        }
+                    }
 
                     currentSub = new SubCategory(thisLine[1]);
                     string newstring = newCat.Title;

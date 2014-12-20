@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDAGeorgeApp"
         xmlns:view="clr-namespace:ASDAGeorgeApp.Views"
-        Height="768" Width="1024"
+        Height="1080" Width="1920"
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
@@ -25,11 +25,20 @@
         <Viewbox Stretch="UniformToFill" HorizontalAlignment="Center">
             <Image Name="Image" Width="640" Height="480"/>
         </Viewbox>
-        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Kinect not listening" x:Name="ListeningIdentifier" />
         <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" DefaultUserColor="Gray" />
         <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
 
         <k:KinectRegion x:Name="kinectRegion">
         </k:KinectRegion>
+        <Grid Margin="0 88 94 0" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Visibility="Hidden" x:Name="ImListeningIcon" Source="icons/microphone.png" Height="35" Margin="0 0 20 0" />
+            <Image Grid.Column="0" x:Name="ImNotListeningIcon" Source="icons/microphone_off.png" Height="35" Margin="0 0 20 0" />
+            <TextBlock Grid.Column="1" Visibility="Hidden" Text="listening" Foreground="{StaticResource ListeningColour}" Style="{StaticResource ListeningText}" x:Name="ImListening" />
+            <TextBlock Grid.Column="1" Text="not listening" Foreground="{StaticResource NotListeningColour}" Style="{StaticResource ListeningText}" x:Name="ImNotListening" />
+        </Grid>
     </Grid>
 </Window>

@@ -14,6 +14,12 @@ namespace ASDAGeorgeApp.Models
 
         public static ObservableCollection<Item> Wishlist = null;
 
+        public static ObservableCollection<Item> Search = null;
+
+        public static string lastSearchTerm = "";
+
+        public static bool IsListening = false;
+
         /// <summary>
         /// Get the most suitable speech recognizer
         /// </summary>
@@ -38,6 +44,7 @@ namespace ASDAGeorgeApp.Models
         {
             Categories = FileReader.ReadAllFiles();
             Wishlist = new ObservableCollection<Item>();
+            Search = new ObservableCollection<Item>();
         }
 
         /// <summary>

@@ -7,34 +7,65 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="BackgroundBlack" Color="Black" Opacity="0.5" />
-            <SolidColorBrush x:Key="BackgroundGray" Color="Gray" Opacity="0.5"/>
-            <SolidColorBrush x:Key="BackgroundWhite" Color="White" Opacity="0.7"/>
-            <SolidColorBrush x:Key="VerySeeThroughWhite" Color="White" Opacity="0.2" />
-            <SolidColorBrush x:Key="ASDAGreen" Color="#78be20" Opacity="0.8" />
+            <SolidColorBrush x:Key="BackgroundBlack" Color="#161616" />
+            <SolidColorBrush x:Key="MenuGray" Color="#413e3e" Opacity="0.9" />
+            <SolidColorBrush x:Key="MenuGreen" Color="#41ae1b" Opacity="0.9" />
+            <SolidColorBrush x:Key="SubMenuNotSelected" Color="#cccccc" Opacity="0.9" />
+            <SolidColorBrush x:Key="LabelBackground" Color="#161616" Opacity="0.52" />
+            <SolidColorBrush x:Key="ProductWishlistButton" Color="#e71359" />
+            <SolidColorBrush x:Key="ProductAddedButton" Color="#41ae1b" />
+            <SolidColorBrush x:Key="ListeningColour" Color="#41ae1b" />
+            <SolidColorBrush x:Key="NotListeningColour" Color="#413e3e" />
+
             <SolidColorBrush x:Key="KinectButtonPressedOverlayBrush" Color="#32000000"/>
 
-            <Style x:Name="Standard" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="Segoe" />
-                <Setter Property="Foreground" Value="White" />
+            <Style TargetType="TextBlock" x:Key="Default">
+                <Setter Property="FontFamily" Value="Segoe UI Light" />
+                <Setter Property="Foreground" Value="#fdfdfd" />
                 <Setter Property="FontSize" Value="35" />
                 <Setter Property="HorizontalAlignment" Value="Center" />
                 <Setter Property="VerticalAlignment" Value="Center" />
             </Style>
 
-            <Style TargetType="TextBlock" x:Key="ImportantText">
-                <Setter Property="FontFamily" Value="Segoe" />
-                <Setter Property="Foreground" Value="White" />
+            <Style TargetType="TextBlock" x:Key="MenuText" BasedOn="{StaticResource Default}">
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Bottom" />
+                <Setter Property="Margin" Value="20 0 0 20" />
+            </Style>
+            
+            <Style TargetType="Border" x:Key="MenuBox">
+                <Setter Property="Height" Value="220px" />
+                <Setter Property="Width" Value="220px" />
+                <Setter Property="Background" Value="{StaticResource MenuGray}" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+            </Style>
+            
+            <Style TargetType="TextBlock" x:Key="SubCatText" BasedOn="{StaticResource Default}">
                 <Setter Property="FontSize" Value="42" />
-                <Setter Property="HorizontalAlignment" Value="Center" />
-                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
             </Style>
-            
-            <Style x:Key="Underline" TargetType="Border" >
-                <Setter Property="BorderThickness" Value="0 0 0 8" />
-                <Setter Property="BorderBrush" Value="Yellow" />
+
+            <Style TargetType="TextBlock" x:Key="ListeningText" BasedOn="{StaticResource Default}">
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
             </Style>
-            
+
+            <Style TargetType="TextBlock" x:Key="TitleText" BasedOn="{StaticResource Default}">
+                <Setter Property="FontFamily" Value="Segoe UI Regular" />
+                <Setter Property="FontSize" Value="57" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="InfoTextTitle" BasedOn="{StaticResource Default}">
+                <Setter Property="FontFamily" Value="Segoe UI Regular" />
+                <Setter Property="FontSize" Value="52" />
+                <Setter Property="VerticalAlignment" Value="Top" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="InfoText" BasedOn="{StaticResource Default}">
+                <Setter Property="FontSize" Value="52" />
+            </Style>
+
             <Style x:Key="VerticalScroll" TargetType="{x:Type k:KinectScrollViewer}">
                 <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
                 <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
@@ -45,27 +76,80 @@
                 <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
             </Style>
 
-            <Style x:Key="ClickableText" TargetType="{x:Type model:KinectTextButton}">
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="BorderBrush" Value="White"/>
-                <Setter Property="BorderThickness" Value="0" />
-                <Setter Property="Foreground" Value="White" />
+            <Style x:Key="ProductListItem" TargetType="{x:Type k:KinectTileButton}">
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type model:KinectTextButton}">
-                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
-                                <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        <ControlTemplate TargetType="k:KinectTileButton">
+                            <Grid>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <Storyboard>
+                                                <ThicknessAnimation Duration="00:00:00.15" To="5" Storyboard.TargetProperty="BorderThickness" Storyboard.TargetName="transparentBorder" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ThicknessAnimation Duration="00:00:00.15" To="0" Storyboard.TargetProperty="BorderThickness" Storyboard.TargetName="transparentBorder" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <Storyboard>
+                                                <ThicknessAnimation Duration="00:00:00.15" To="10" Storyboard.TargetProperty="BorderThickness" Storyboard.TargetName="transparentBorder" />
+                                                <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="PressedVisualElement" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Disabled">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup x:Name="FocusStates">
+                                        <VisualState x:Name="Focused">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" To="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Unfocused" />
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border BorderThickness="5" BorderBrush="Transparent"
+                            x:Name="transparentBorder">
+                                    <Viewbox  Stretch="UniformToFill">
+                                        <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                            <Grid Background="{TemplateBinding Background}" Height="{TemplateBinding ActualHeight}" Width="{TemplateBinding ActualWidth}" >
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                            Content="{TemplateBinding Content}" />
+                                                <Border Background="{TemplateBinding LabelBackground}" VerticalAlignment="{TemplateBinding VerticalLabelAlignment}">
+                                                    <ContentPresenter 
+                                                        x:Name="contentPresenter" 
+                                                        ContentTemplate="{TemplateBinding LabelTemplate}"
+                                                        ContentTemplateSelector="{TemplateBinding LabelTemplateSelector}"
+                                                        Content="{TemplateBinding Label}" 
+                                                        HorizontalAlignment="{TemplateBinding HorizontalLabelAlignment}">
+                                                            <ContentPresenter.Resources>
+                                                                <Style TargetType="{x:Type TextBlock}">
+                                                                    <Setter Property="Height" Value="95" />
+                                                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                                                    <Setter Property="VerticalAlignment" Value="Bottom" />
+                                                                    <Setter Property="Margin" Value="20 10 0 0" />
+                                                                </Style>
+                                                            </ContentPresenter.Resources>
+                                                    </ContentPresenter>
+                                                </Border>
+                                                <Rectangle x:Name="DisabledVisualElement" Fill="White" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3" />
+                                                <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" Stroke="White" StrokeThickness="2" />
+                                                <Rectangle x:Name="PressedVisualElement" IsHitTestVisible="false" Opacity="0" Fill="{StaticResource KinectButtonPressedOverlayBrush}" />
+                                            </Grid>
+                                        </Border>
+                                    </Viewbox>
                                 </Border>
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-                <Style.Triggers>
-                    <Trigger Property="IsHandPointerOver" Value="True">
-                        <Setter Property="Background" Value="{StaticResource VerySeeThroughWhite}"/>
-                    </Trigger>
-                </Style.Triggers>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

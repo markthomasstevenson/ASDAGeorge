@@ -675,7 +675,7 @@
         <Setter Property="VerticalLabelAlignment" Value="Bottom" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="BorderBrush" Value="{StaticResource KinectButtonBorderBrush}" />
 
         <Setter Property="Template">
@@ -733,7 +733,10 @@
                                                 HorizontalAlignment="{TemplateBinding HorizontalLabelAlignment}">
                                                 <ContentPresenter.Resources>
                                                     <Style TargetType="{x:Type TextBlock}">
-                                                        <Setter Property="Padding" Value="14,13,15,15"/>
+                                                        <Setter Property="Height" Value="55" />
+                                                        <Setter Property="HorizontalAlignment" Value="Left" />
+                                                        <Setter Property="VerticalAlignment" Value="Bottom" />
+                                                        <Setter Property="Margin" Value="20 10 0 0" />
                                                     </Style>
                                                 </ContentPresenter.Resources>
                                             </ContentPresenter>
