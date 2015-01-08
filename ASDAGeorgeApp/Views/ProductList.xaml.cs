@@ -108,8 +108,7 @@ namespace ASDAGeorgeApp.Views
         {
             KinectTileButton newButton = e.OriginalSource as KinectTileButton;
             Item item = Collector.GetItem(newButton.Name);
-            ProductListViewModel model = (ProductListViewModel)this.DataContext;
-            Switcher.Switch(new Product(item, model.ParentSub, model.ParentCategoryInstance));
+            Switcher.Switch(new Product(item, Collector.GetSubCategory(item.ParentSub, item.ParentCat), Collector.GetCategory(item.ParentCat)));
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
