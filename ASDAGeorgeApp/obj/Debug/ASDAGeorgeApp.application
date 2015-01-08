@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ASDAGeorgeApp.exe.manifest" size="110748">
+    <dependentAssembly dependencyType="install" codebase="ASDAGeorgeApp.exe.manifest" size="113291">
       <assemblyIdentity name="ASDAGeorgeApp.exe" version="0.0.1.4" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Hz7N0eGaSxFpfFW+omNbZdfkyXSWb162egoyh5HZxio=</dsig:DigestValue>
+        <dsig:DigestValue>AaboF8Rf2bdr+XibzXa+dhi+29fqCbQBcMSRRXkz4Lw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
