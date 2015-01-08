@@ -41,7 +41,31 @@ namespace ASDAGeorgeApp.Views
             if (SelectedCategory != null)
             {
                 this.ProductContainer.Children.Clear();
-                bool first = true;
+
+                KinectTileButton newIn = new KinectTileButton();
+                newIn.Label = "New In";
+                newIn.Width = 448;
+                newIn.Height = 448;
+                BitmapImage newInImg = new BitmapImage();
+                newInImg.BeginInit();
+                if (SelectedCategory.Title.ToLower().Contains("women"))
+                    newInImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\WomensCategories\\womens_new_in.jpg");
+                else
+                    newInImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\MensCategories\\mens_new_in.jpg");
+
+                newInImg.EndInit();
+                // add image
+                newIn.Background = new ImageBrush(newInImg);
+                // add name
+                newIn.Name = "NewIn";
+                // set label background
+                newIn.LabelBackground = (Brush)Application.Current.Resources["LabelBackground"];
+                // set foreground
+                newIn.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#fdfdfd"));
+                //set font family
+                newIn.FontFamily = new FontFamily("Segoe UI Light");
+
+                this.ProductContainer.Children.Add(newIn);
 
                 foreach (Models.SubCategory subCat in SelectedCategory.SubCategories)
                 {
@@ -97,24 +121,92 @@ namespace ASDAGeorgeApp.Views
 
 
                     // set height, width, and margin
-                    if(first)
-                    {
-                        newTile.Height = 448;
-                        newTile.Width = 448;
-                        first = false;
-                    }
-                    else
-                    {
-                        newTile.Height = 220;
-                        newTile.Width = 220;
-                        newTile.Margin = new Thickness(8, 0, 0, 4);
-                    }
+                    newTile.Height = 220;
+                    newTile.Width = 220;
+                    newTile.Margin = new Thickness(8, 0, 0, 4);
 
                     // add to container
                     this.ProductContainer.Children.Add(newTile);
                 }
 
+                if (SelectedCategory.Title.ToLower().Contains("mens"))
+                {
+                    List<string> files = new List<string>();
+                    files.Add("mens_accessories");
+                    files.Add("mens_jumpers");
+                    files.Add("mens_nightwear");
+                    files.Add("mens_onesie");
+                    files.Add("mens_socks");
+                    files.Add("mens_sweatshirts");
+                    files.Add("mens_ties");
+                    files.Add("mens_trousers");
+                    files.Add("mens_tshirts");
+                    files.Add("mens_underwear");
+
+                    string catName = "Mens";
+                    NewInDisplay(files, catName);
+                }
+                else
+                {
+
+                    List<string> files = new List<string>();
+                    files.Add("womens_accessories");
+                    files.Add("womens_hats");
+                    files.Add("womens_jumpers");
+                    files.Add("womens_jumpsuit");
+                    files.Add("womens_leggings");
+                    files.Add("womens_maternity");
+                    files.Add("womens_nightwear");
+                    files.Add("womens_onesie");
+                    files.Add("womens_plus_size");
+                    files.Add("womens_shirts");
+                    files.Add("womens_swimwear");
+                    files.Add("womens_trousers");
+                    files.Add("womens_tunics");
+
+                    string catName = "Womens";
+                    NewInDisplay(files, catName);
+                }
+
                 this.ProductContainer.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void NewInDisplay(List<string> files, string catName)
+        {
+
+            foreach (string file in files)
+            {
+                // create tile button
+                KinectTileButton newTile = new KinectTileButton();
+                // add label
+                string label = file.Replace("mens_", "").Replace("womens_", "");
+                label = char.ToUpper(label[0]) + label.Substring(1);
+                newTile.Label = label;
+                // create image
+                BitmapImage bitImg = new BitmapImage();
+                bitImg.BeginInit();
+                bitImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\" + catName + "Categories\\" + file + ".jpg");
+                bitImg.EndInit();
+                // add image
+                newTile.Background = new ImageBrush(bitImg);
+                // add name
+                newTile.Name = label;
+                // set label background
+                newTile.LabelBackground = (Brush)Application.Current.Resources["LabelBackground"];
+                // set foreground
+                newTile.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#fdfdfd"));
+                //set font family
+                newTile.FontFamily = new FontFamily("Segoe UI Light");
+                newTile.Opacity = 0.6;
+
+                // set height, width, and margin
+                newTile.Height = 220;
+                newTile.Width = 220;
+                newTile.Margin = new Thickness(8, 0, 0, 4);
+
+                // add to container
+                this.ProductContainer.Children.Add(newTile);
             }
         }
 
@@ -131,7 +223,14 @@ namespace ASDAGeorgeApp.Views
         private void KinectTileButton_Click(object sender, RoutedEventArgs e)
         {
             KinectTileButton newButton = e.OriginalSource as KinectTileButton;
-            Switcher.Switch(new ProductList(Collector.GetSubCategory(newButton.Name, SelectedCategory.Title), SelectedCategory));
+            if (newButton.Name == "NewIn")
+                Switcher.Switch(new ProductList("NewIn", SelectedCategory));
+            else
+            {
+                Models.SubCategory subCat = Collector.GetSubCategory(newButton.Name, SelectedCategory.Title);
+                if(subCat != null)
+                    Switcher.Switch(new ProductList(subCat, SelectedCategory));
+            }
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

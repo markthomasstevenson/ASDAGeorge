@@ -37,9 +37,9 @@
                 </model:KinectTextButton>
             </Grid>
 
-            <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}" x:Name="ScrollViewer"
+            <k:KinectScrollViewer Grid.Row="1" Style="{StaticResource HorizontalScroll}" x:Name="ScrollViewer" Margin="0 0 -94 0"
                                            k:KinectTileButton.Click="KinectTileButton_Click" Grid.ColumnSpan="2">
-                <WrapPanel VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
+                <WrapPanel Margin="-100 0 -100 0" VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Horizontal">
                     <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
                     </k:KinectTileButton>
                     <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">

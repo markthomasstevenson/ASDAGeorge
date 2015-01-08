@@ -67,6 +67,40 @@ namespace ASDAGeorgeApp.Views
 
                 this.ProductContainer.Children.Add(newTile);
             }
+
+            //new boys
+            KinectTileButton boysButton = new KinectTileButton();
+            boysButton.Label = "Boys";
+            BitmapImage boyImage = new BitmapImage();
+            boyImage.BeginInit();
+            boyImage.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\CustomImages\\boys.jpg");
+            boyImage.EndInit();
+            boysButton.Background = new ImageBrush(boyImage);
+            boysButton.Name = "boys";
+            boysButton.LabelBackground = (Brush)Application.Current.Resources["LabelBackground"];
+            boysButton.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#fdfdfd"));
+            boysButton.FontFamily = new FontFamily("Segoe UI Light");
+            boysButton.Height = this.ProductContainer.Height;
+            boysButton.Width = 448;
+            boysButton.Opacity = 0.7;
+            this.ProductContainer.Children.Add(boysButton);
+
+            //new girls
+            KinectTileButton girlsButton = new KinectTileButton();
+            girlsButton.Label = "Girls";
+            BitmapImage girlImage = new BitmapImage();
+            girlImage.BeginInit();
+            girlImage.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\CustomImages\\girls.jpg");
+            girlImage.EndInit();
+            girlsButton.Background = new ImageBrush(girlImage);
+            girlsButton.Name = "girls";
+            girlsButton.LabelBackground = (Brush)Application.Current.Resources["LabelBackground"];
+            girlsButton.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#fdfdfd"));
+            girlsButton.FontFamily = new FontFamily("Segoe UI Light");
+            girlsButton.Height = this.ProductContainer.Height;
+            girlsButton.Width = 448;
+            girlsButton.Opacity = 0.7;
+            this.ProductContainer.Children.Add(girlsButton);
         }
 
         public void UtiliseState(object state)
@@ -83,7 +117,8 @@ namespace ASDAGeorgeApp.Views
         {
             KinectTileButton newButton = e.OriginalSource as KinectTileButton;
             Models.Category catFound = Collector.GetCategory(newButton.Name);
-            Switcher.Switch(new SubCategory(catFound));
+            if(catFound != null)
+                Switcher.Switch(new SubCategory(catFound));
         }
     }
 }

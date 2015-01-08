@@ -39,6 +39,20 @@ namespace ASDAGeorgeApp.Views
                     };
         }
 
+        public ProductList(string newIn, Models.Category category)
+        {
+            InitializeComponent();
+
+            this.DataContext = new ProductListViewModel(newIn, category);
+
+            this.TrailText.Text = (this.DataContext as ProductListViewModel).trailText;
+
+            Loaded += (sender, args) =>
+            {
+                DisplayItems();
+            };
+        }
+
         private void DisplayItems()
         {
             // display all the categorys

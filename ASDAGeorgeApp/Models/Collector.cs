@@ -112,5 +112,20 @@ namespace ASDAGeorgeApp.Models
             }
             return null;
         }
+
+        public static ObservableCollection<Item> GetAllItems(Category category)
+        {
+            ObservableCollection<Item> itemList = new ObservableCollection<Item>();
+            
+            foreach(SubCategory subCat in category.SubCategories)
+            {
+                foreach(Item item in subCat.Products)
+                {
+                    itemList.Add(item);
+                }
+            }
+
+            return itemList;
+        }
     }
 }

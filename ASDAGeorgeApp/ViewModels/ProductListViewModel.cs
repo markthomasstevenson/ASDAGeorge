@@ -16,12 +16,26 @@ namespace ASDAGeorgeApp.ViewModels
         public ProductListViewModel(SubCategory subCat, Category category)
         {
             subCategory = subCat;
+            Items = subCat.Products;
+            thisCategory = category;
+        }
+
+        public ProductListViewModel(string newIn, Category category)
+        {
+            subCategory = null;
+            Items = Collector.GetAllItems(category);
             thisCategory = category;
         }
 
         public string trailText
         {
-            get { return subCategory.Parent.ToUpper() + " / " + subCategory.Title.ToUpper(); }
+            get 
+            {
+                if (subCategory != null)
+                    return thisCategory.Title.ToUpper() + " / " + subCategory.Title.ToUpper();
+                else
+                    return thisCategory.Title.ToUpper() + " / " + "NEW IN";
+            }
         }
 
         public string ParentCategory
@@ -34,10 +48,7 @@ namespace ASDAGeorgeApp.ViewModels
             get { return subCategory; }
         }
 
-        public ObservableCollection<Item> Items
-        {
-            get { return subCategory.Products; }
-        }
+        public ObservableCollection<Item> Items;
 
         public Category ParentCategoryInstance
         {

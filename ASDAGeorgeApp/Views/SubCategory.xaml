@@ -60,8 +60,8 @@
                     <TextBlock Grid.Column="4" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Offers" />
                 </Grid>
 
-                <k:KinectScrollViewer x:Name="Scroller" Grid.Row="1" Style="{StaticResource HorizontalScroll}" k:KinectTileButton.Click="KinectTileButton_Click">
-                    <WrapPanel Margin="-100 0" VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Vertical">
+                <k:KinectScrollViewer x:Name="Scroller" Grid.Row="1" Style="{StaticResource HorizontalScroll}" Margin="0 0 -94 0" k:KinectTileButton.Click="KinectTileButton_Click">
+                    <WrapPanel Margin="-100 0 -100 0" VerticalAlignment="Center" x:Name="ProductContainer" Orientation="Vertical">
                         <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
                         </k:KinectTileButton>
                         <k:KinectTileButton Height="auto" Width="200" Label="One" Foreground="#fdfdfd" LabelBackground="{StaticResource LabelBackground}">
