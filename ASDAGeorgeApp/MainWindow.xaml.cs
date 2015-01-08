@@ -669,7 +669,14 @@ namespace ASDAGeorgeApp
             DepthImagePoint rightKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeLeft].Position, DepthImageFormat.Resolution640x480Fps30);
 
-            ImageSource image = new BitmapImage(new Uri(Product.ProductImage + ".png"));
+            BitmapImage bitImg = null;
+
+            if(File.Exists(Product.ProductImage + ".png"))
+               bitImg = new BitmapImage(new Uri(Product.ProductImage + ".png"));
+            else
+               bitImg = new BitmapImage(new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\tempImage.png"));
+
+            ImageSource image = bitImg;
             DrawingGroup drawingGroup = new DrawingGroup();
             double angleRotate = GetAngle(centerHip, centerShoulder);
 
