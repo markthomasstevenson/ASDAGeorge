@@ -56,8 +56,10 @@ namespace ASDAGeorgeApp.Views
                     // create background image
                     BitmapImage bitImg = new BitmapImage();
                     bitImg.BeginInit();
-                    if (File.Exists(item.ProductImage))
-                        bitImg.UriSource = new Uri(item.ProductImage);
+                    if (File.Exists(item.ProductImage + "_list.png"))
+                        bitImg.UriSource = new Uri(item.ProductImage + "_list.png");
+                    else if (File.Exists(item.ProductImage + "_list.jpg"))
+                        bitImg.UriSource = new Uri(item.ProductImage + "_list.jpg");
                     else
                         bitImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\tempImage.png");
                     bitImg.EndInit();

@@ -601,6 +601,7 @@ namespace ASDAGeorgeApp
                 }
                 catch (Exception e)
                 {
+                    // do nothing
                 }
             }
 
