@@ -26,7 +26,7 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Margin="220px 0 0 8" Text="WISHLIST" Style="{StaticResource TitleText}"/>
+                <TextBlock Grid.Column="0" Margin="220px 0 0 8" Text="JESSICA'S WISHLIST" Style="{StaticResource TitleText}"/>
 
                 <model:KinectTextButton Grid.Column="1" VerticalAlignment="Top" x:Name="Home" Click="Home_Click">
                     <Image Width="220px" Height="220px" HorizontalAlignment="Right" Source="../image/logo.png" />

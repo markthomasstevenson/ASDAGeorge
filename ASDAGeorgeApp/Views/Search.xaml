@@ -32,7 +32,7 @@
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Margin="220px 20 0 0" x:Name="CountText" Text="SOME RESULTS LOL" Style="{StaticResource SubCatText}" HorizontalAlignment="Center"/>
-                    <TextBlock Grid.Row="1" Margin="220px -15 0 0" x:Name="SearchTermText" TextDecorations="Underline" Text="SEARCH TERM HERE LOLS" Style="{StaticResource TitleText}"/>
+                    <TextBlock Grid.Row="1" Margin="220px -15 0 0" x:Name="SearchTermText" Text="SEARCH TERM HERE LOLS" Style="{StaticResource TitleText}"/>
                 </Grid>
 
                 <model:KinectTextButton Grid.Column="1" x:Name="Home" Click="Home_Click">
@@ -78,7 +78,7 @@
                         <Image Grid.Column="1" x:Name="ImNotListeningIcon" Source="../icons/microphone_off.png" Height="35" Margin="20 0 20 0" />
                         <TextBlock Grid.Column="2" Text="not listening" Foreground="{StaticResource NotListeningColour}" Style="{StaticResource InfoText}"/>
                     </Grid>
-                    <TextBlock Grid.Row="1" Style="{StaticResource InfoText}" Text="SAY 'OKAY GEORGE'" VerticalAlignment="Top" />
+                    <TextBlock Grid.Row="1" Style="{StaticResource InfoText}" Text="" VerticalAlignment="Top" />
                 </Grid>
                 <Image Grid.Row="1" x:Name="SearchImage" Height="auto" Width="auto"/>
             </Grid>

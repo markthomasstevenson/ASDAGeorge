@@ -235,6 +235,7 @@ namespace ASDAGeorgeApp
         private Grammar NavigateGrammar;
         private Grammar SearchCatGrammar;
         private Grammar SearchSubCatGrammar;
+        private Grammar WishListGrammar;
 
         private bool _IsListening = true;
         public bool IsListening
@@ -252,7 +253,22 @@ namespace ASDAGeorgeApp
             }
         }
 
-        private bool _IsSearch = true;
+        private bool _IsProduct = false;
+        public bool IsProduct
+        {
+            get { return _IsProduct; }
+            set
+            {
+                if (_IsProduct != value)
+                {
+                    _IsProduct = value;
+                    NotifyPropertyChanged();
+                }
+                EnableSpeechGrammars();
+            }
+        }
+
+        private bool _IsSearch = false;
         public bool IsSearch
         {
             get { return _IsSearch; }
@@ -263,7 +279,6 @@ namespace ASDAGeorgeApp
                     _IsSearch = value;
                     NotifyPropertyChanged();
                 }
-                EnableSpeechGrammars();
             }
         }
 
@@ -316,6 +331,7 @@ namespace ASDAGeorgeApp
             ActivateGrammar = new Grammar(grammarActivator);
 
             // Create SemanticResultValue objects that contain Navigation possibilities
+            SemanticResultValue go = new SemanticResultValue("Go", "Navigate");
             SemanticResultValue goTo = new SemanticResultValue("Go to", "Navigate");
             SemanticResultValue navigateTo = new SemanticResultValue("Navigate to", "Navigate");
             SemanticResultValue menuShop = new SemanticResultValue("Shop", "Shop");
@@ -327,7 +343,7 @@ namespace ASDAGeorgeApp
 
             // Create Navigator 'Choices'
             Choices choicesNavigatorActivate = new Choices();
-            choicesNavigatorActivate.Add(new Choices(new GrammarBuilder[] { goTo, navigateTo }));
+            choicesNavigatorActivate.Add(new Choices(new GrammarBuilder[] { go, goTo, navigateTo }));
 
             Choices choicesNavigation = new Choices();
             choicesNavigation.Add(new Choices(new GrammarBuilder[] { menuShop, menuAccount, menuWish_list, menuWishlist, menuSearch, menuHome }));
@@ -388,6 +404,25 @@ namespace ASDAGeorgeApp
 
             SearchSubCatGrammar = new Grammar(grammarSubCat);
 
+            // Create SemanticResultValue objects that contain wishlist possibilities
+            SemanticResultValue addToWishlist = new SemanticResultValue("Add to the wishlist", "Add to Wishlist");
+            SemanticResultValue addToWishlist2 = new SemanticResultValue("Add to my wishlist", "Add to Wishlist");
+            SemanticResultValue removeFromWishlist = new SemanticResultValue("Remove from my wishlist", "Remove from Wishlist");
+            SemanticResultValue add = new SemanticResultValue("add", "Add to Wishlist");
+            SemanticResultValue remove = new SemanticResultValue("remove", "Remove from Wishlist");
+            SemanticResultValue removeFromWishlist2 = new SemanticResultValue("Remove from  the wishlist", "Remove from Wishlist");
+
+            // Create Activator 'choices'
+            Choices choicesWishlist = new Choices();
+            choicesWishlist.Add(new Choices(new GrammarBuilder[] { addToWishlist, addToWishlist2, removeFromWishlist, removeFromWishlist2 }));
+
+            // Build the phrase and add 'choices'
+            GrammarBuilder grammarWishlist = new GrammarBuilder();
+            grammarWishlist.Append(new SemanticResultKey("activator", choicesWishlist));
+
+            // Build a Grammar object from the GrammarBuilder.
+            WishListGrammar = new Grammar(grammarWishlist);
+
             IsListening = false;
         }
 
@@ -401,11 +436,14 @@ namespace ASDAGeorgeApp
                 // nav grammar
                 speechEngine.LoadGrammarAsync(NavigateGrammar);
 
-                if (IsSearch)
+                //do search page grammar
+                speechEngine.LoadGrammarAsync(SearchCatGrammar);
+                speechEngine.LoadGrammarAsync(SearchSubCatGrammar);
+
+                if (IsProduct)
                 {
-                    //do search page grammar
-                    speechEngine.LoadGrammarAsync(SearchCatGrammar);
-                    speechEngine.LoadGrammarAsync(SearchSubCatGrammar);
+                    // do wishlist grammar
+                    speechEngine.LoadGrammarAsync(WishListGrammar);
                 }
             }
         }
@@ -421,7 +459,7 @@ namespace ASDAGeorgeApp
         void speechEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         { 
             // Speech utterance confidence below which we treat speech as if it hadn't been heard
-            const double ConfidenceThreshold = 0.7;
+            const double ConfidenceThreshold = 0.3;
 
             if (e.Result.Confidence >= ConfidenceThreshold)
             {
@@ -430,18 +468,14 @@ namespace ASDAGeorgeApp
                     if(e.Result.Semantics["activator"].Value.ToString() == "Start Listening")
                     {
                         IsListening = true;
-                        this.ImNotListening.Visibility = Visibility.Hidden;
-                        this.ImNotListeningIcon.Visibility = Visibility.Hidden;
-                        this.ImListening.Visibility = Visibility.Visible;
-                        this.ImListeningIcon.Visibility = Visibility.Visible;
+                        this.ImNotListeningBox.Visibility = Visibility.Hidden;
+                        this.ImListeningBox.Visibility = Visibility.Visible;
                     }
                     else if(e.Result.Semantics["activator"].Value.ToString() == "Stop Listening")
                     {
                         IsListening = false;
-                        this.ImListening.Visibility = Visibility.Hidden;
-                        this.ImListeningIcon.Visibility = Visibility.Hidden;
-                        this.ImNotListening.Visibility = Visibility.Visible;
-                        this.ImNotListeningIcon.Visibility = Visibility.Visible;
+                        this.ImListeningBox.Visibility = Visibility.Hidden;
+                        this.ImNotListeningBox.Visibility = Visibility.Visible;
                     }
                     else if (e.Result.Semantics["activator"].Value.ToString() == "Navigate")
                     {
@@ -489,19 +523,44 @@ namespace ASDAGeorgeApp
                             //yes subcategory
                             Models.SubCategory subCategoryFound = Collector.GetSubCategory(subCategory, category);
                             if (subCategoryFound != null)
+                            {
+                                if (!IsSearch)
+                                    Switcher.Switch(new Search());
                                 foreach (Item product in subCategoryFound.Products)
                                     Collector.Search.Add(product);
+                            }
                             Collector.lastSearchTerm = category.ToUpper() + " " + subCategory.ToUpper();
                         }
                         catch
                         {
                             //no subcategory
                             Models.Category categoryFound = Collector.GetCategory(category);
-                            if(categoryFound != null)
-                                foreach(Models.SubCategory subCat in categoryFound.SubCategories)
-                                    foreach(Item product in subCat.Products)
+                            if (categoryFound != null)
+                            {
+                                if(!IsSearch)
+                                    Switcher.Switch(new Search());
+                                foreach (Models.SubCategory subCat in categoryFound.SubCategories)
+                                    foreach (Item product in subCat.Products)
                                         Collector.Search.Add(product);
+                            }
                             Collector.lastSearchTerm = category.ToUpper();
+                        }
+                    }
+                    else if (e.Result.Semantics["activator"].Value.ToString() == "Add to Wishlist")
+                    {
+                        if (!Collector.Wishlist.Contains(Product))
+                        {
+                            Collector.Wishlist.Add(Product);
+                            Switcher.Switch(new Product(Product, Collector.GetSubCategory(Product.ParentSub, Product.ParentCat), Collector.GetCategory(Product.ParentCat)));
+                        }
+
+                    }
+                    else if (e.Result.Semantics["activator"].Value.ToString() == "Remove from Wishlist")
+                    {
+                        if (Collector.Wishlist.Contains(Product))
+                        {
+                            Collector.Wishlist.Remove(Product);
+                            Switcher.Switch(new Product(Product, Collector.GetSubCategory(Product.ParentSub, Product.ParentCat), Collector.GetCategory(Product.ParentCat)));
                         }
                     }
                 }
@@ -539,45 +598,39 @@ namespace ASDAGeorgeApp
                 try
                 {
                     DisplayProductOnUser(skel, dc);
-                    DisplayInformationNextToUser(skel, dc);
                 }
                 catch (Exception e)
                 {
-                    DisplayErrorOnUser(skel, dc, e);
                 }
             }
 
             return;
         }
 
-        /// <summary>
-        /// Display the Title and Price next to the user
-        /// </summary>
-        /// <param name="skel">The skeleton to put the price next to</param>
-        private void DisplayInformationNextToUser(Skeleton skel, DrawingContext dc)
-        {
-            if (skel == null)
-                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
-
-            /* Find which shoulder is more to the right on the screen */
-            ColorImagePoint pointToUse = GetPointToUse(skel);
-
-            PlaceTextOnUser(pointToUse, dc);
-        }
-
-        private double GetDepthPointToUse(Skeleton skel)
+        private double GetShoulderWidth(Skeleton skel)
         {
             /* Get the points of the right and left shoulders */
             CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
             DepthImagePoint rightShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftShoulder = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ShoulderLeft].Position, DepthImageFormat.Resolution640x480Fps30);
-            DepthImagePoint rightElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowRight].Position, DepthImageFormat.Resolution640x480Fps30);
-            DepthImagePoint leftElbow = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.ElbowLeft].Position, DepthImageFormat.Resolution640x480Fps30);
 
             if (rightShoulder == null || leftShoulder == null)
                 throw new ArgumentNullException("Could not find one or both shoulders");
 
             return Math.Sqrt(Math.Pow(Math.Abs(rightShoulder.X - leftShoulder.X), 2) + Math.Pow(Math.Abs(rightShoulder.Y - leftShoulder.Y), 2));
+        }
+
+        private double GetWaistWidth(Skeleton skel)
+        {
+            /* Get the points of the right and left shoulders */
+            CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
+            DepthImagePoint rightHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipRight].Position, DepthImageFormat.Resolution640x480Fps30);
+            DepthImagePoint leftHip = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.HipLeft].Position, DepthImageFormat.Resolution640x480Fps30);
+
+            if (rightHip == null || leftHip == null)
+                throw new ArgumentNullException("Could not find one or both shoulders");
+
+            return Math.Sqrt(Math.Pow(Math.Abs(rightHip.X - leftHip.X), 2) + Math.Pow(Math.Abs(rightHip.Y - leftHip.Y), 2));
         }
 
         private ColorImagePoint GetPointToUse(Skeleton skel)
@@ -596,40 +649,10 @@ namespace ASDAGeorgeApp
                 return leftShoulder;
         }
 
-        private void DisplayErrorOnUser(Skeleton skel, DrawingContext dc, Exception e)
-        {
-            if (skel == null)
-                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
-
-            ColorImagePoint pointToUse = GetPointToUse(skel);
-
-            PlaceTextOnUser(pointToUse, dc, e.Message);
-        }
-
-        private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc, string p)
-        {
-            pointToUse.X += ProductTextSpacing;
-
-            Point point = new Point(pointToUse.X, pointToUse.Y);
-
-            dc.DrawText(new FormattedText(p, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
-        }
-
-        private void PlaceTextOnUser(ColorImagePoint pointToUse, DrawingContext dc)
-        {
-            pointToUse.X += ProductTextSpacing;
-            Point point = new Point(pointToUse.X, pointToUse.Y - 60);
-
-            dc.DrawText(new FormattedText(Product.Title, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 18, Brushes.White), point);
-
-            point.Y += 20;
-            dc.DrawText(new FormattedText("£" + Product.Price.ToString(), CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Segoe"), 24, Brushes.White), point);
-        }
-
         private void DisplayProductOnUser(Skeleton skel, DrawingContext dc)
         {
             if (skel == null)
-                throw new ArgumentNullException("The skeleton was null upon trying to place information next to the user");
+                throw new ArgumentNullException("The skeleton was null upon trying to place product on the user");
 
             /* Get the coords of the body */
             CoordinateMapper coordMapper = new CoordinateMapper(sensorChooser.Kinect);
@@ -645,7 +668,7 @@ namespace ASDAGeorgeApp
             DepthImagePoint rightKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeRight].Position, DepthImageFormat.Resolution640x480Fps30);
             DepthImagePoint leftKnee = coordMapper.MapSkeletonPointToDepthPoint(skel.Joints[JointType.KneeLeft].Position, DepthImageFormat.Resolution640x480Fps30);
 
-            ImageSource image = new BitmapImage(new Uri(Product.ProductImage));
+            ImageSource image = new BitmapImage(new Uri(Product.ProductImage + ".png"));
             DrawingGroup drawingGroup = new DrawingGroup();
             double angleRotate = GetAngle(centerHip, centerShoulder);
 
@@ -653,22 +676,55 @@ namespace ASDAGeorgeApp
             double imageWidth = image.Width;
 
             double ratio = imageHeight / imageWidth;
+            
+            // create variables
+            Point imagePoint = new Point();
+            double x, y, xcoord, ycoord, width;
 
-            centerShoulder.Y += 10;
-
-            double width = GetDepthPointToUse(skel) * 1.5;
-
-            Point newPoint = GetXYCoordToUse(centerShoulder, width, angleRotate);
-            double x = newPoint.X;
-            double y = newPoint.Y;
-
-            if (Math.Abs(leftShoulder.Depth - rightShoulder.Depth) < 10)
+            if (Product.ParentSub.ToLower() == "jeans" || Product.ParentSub.ToLower() == "shorts" || Product.ParentSub.ToLower() == "skirts"
+                || (Product.ParentCat.ToLower() == "mens" && Product.ParentSub.ToLower() == "suits" && Product.Title.ToLower().Contains("trouser")))
             {
-                ClothingHeight = ratio * width;
-            }
+                centerHip.Y += 50;
 
-            double xcoord = centerShoulder.X;
-            double ycoord = centerShoulder.Y;
+                if (Product.ParentSub.ToLower() == "skirts" &&
+                    Product.IsThin)
+                    width = GetShoulderWidth(skel) * 1.5;
+                else
+                    width = GetShoulderWidth(skel) * 1.2;
+
+                imagePoint = GetXYCoordToUse(centerHip, width, angleRotate);
+                x = imagePoint.X;
+                y = imagePoint.Y;
+
+                if (Math.Abs(leftHip.Depth - rightHip.Depth) < 10)
+                {
+                    ClothingHeight = ratio * width;
+                }
+
+                xcoord = centerHip.X;
+                ycoord = centerHip.Y;
+            }
+            else
+            {
+                centerShoulder.Y += 10;
+
+                if (Product.IsThin)
+                    width = GetShoulderWidth(skel);
+                else
+                    width = GetShoulderWidth(skel) * 1.5;
+
+                imagePoint = GetXYCoordToUse(centerShoulder, width, angleRotate);
+                x = imagePoint.X;
+                y = imagePoint.Y;
+
+                if (Math.Abs(leftShoulder.Depth - rightShoulder.Depth) < 10)
+                {
+                    ClothingHeight = ratio * width;
+                }
+
+                xcoord = centerShoulder.X;
+                ycoord = centerShoulder.Y;
+            }
 
             if (angleRotate > 0)
             {
@@ -691,15 +747,15 @@ namespace ASDAGeorgeApp
             }
         }
 
-        private Point GetXYCoordToUse(DepthImagePoint centerShoulder, double width, double angle)
+        private Point GetXYCoordToUse(DepthImagePoint pointToUse, double width, double angle)
         {
             Point point = new Point();
-            point.X = centerShoulder.X - (width / 2);
+            point.X = pointToUse.X - (width / 2);
 
             double x = (180 - angle) / 2;
             double h = Math.Sin(x) * (width * Math.PI/180) * 2 * Math.Cos(x);
 
-            point.Y = centerShoulder.Y + h;
+            point.Y = pointToUse.Y + h;
 
             return point;
         }
@@ -1059,21 +1115,25 @@ namespace ASDAGeorgeApp
             if (nextPage.GetType() == typeof(Product))
             {
                 Product = ((Product)nextPage).CurrentProduct;
-                IsSearch = false;
+                IsProduct = true;
             }
             else if (nextPage.GetType() == typeof(LandingPage))
             {
                 Product = ((LandingPage)nextPage).CurrentProduct;
-                IsSearch = false;
+                IsProduct = false;
             }
             else if (nextPage.GetType() == typeof(Search))
             {
+                Product = null;
+                Collector.Search.Clear();
+                Collector.lastSearchTerm = "";
+                IsProduct = false;
                 IsSearch = true;
             }
             else
             {
                 Product = null;
-                IsSearch = false;
+                IsProduct = false;
             }
 
             this.kinectRegion.Content = nextPage;

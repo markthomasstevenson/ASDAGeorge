@@ -92,8 +92,13 @@ namespace ASDAGeorgeApp.Models
 
                 currentProd = new Item();
 
+                if ((currentSub.Title.ToLower() == "dresses" && (thisLine[2] == "1" || thisLine[2] == "4"))
+                    || currentSub.Title.ToLower() == "tops" && (int.Parse(thisLine[2]) > 4 && int.Parse(thisLine[2]) < 11)
+                    || currentSub.Title.ToLower() == "dresses" && (thisLine[2] == "2" || thisLine[2] == "3" || thisLine[2] == "4" || thisLine[2] == "7" || thisLine[2] == "9"))
+                    currentProd.IsThin = true;
+
                 /* Get Image */
-                currentProd.ProductImage = System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\" + thisLine[3] + ".png";
+                currentProd.ProductImage = System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\" + thisLine[3];
 
                 /* Get Title */
                 currentProd.Title = thisLine[4];

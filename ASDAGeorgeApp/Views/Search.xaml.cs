@@ -28,6 +28,7 @@ namespace ASDAGeorgeApp.Views
         private DispatcherTimer Timer;
 
         private string lastSearch = "";
+        private bool wasListening = false;
 
         public Search()
         {
@@ -38,6 +39,16 @@ namespace ASDAGeorgeApp.Views
             Timer.Tick += CheckForSearchResults;
 
             Loaded += (sender, args) =>
+            {
+                DisplayItems(false);
+                Timer.Start();
+
+            };
+        }
+
+        private void SetImage(bool isListening)
+        {
+            if (isListening)
             {
                 BitmapImage bitImg = new BitmapImage();
                 bitImg.BeginInit();
@@ -55,11 +66,16 @@ namespace ASDAGeorgeApp.Views
                 bitImg.EndInit();
                 // attach background image
                 this.SearchImage.Source = bitImg;
-
-                DisplayItems(false);
-                Timer.Start();
-
-            };
+            }
+            else
+            {
+                BitmapImage bitImg = new BitmapImage();
+                bitImg.BeginInit();
+                bitImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\CustomImages\\OkGeorge.jpg");
+                bitImg.EndInit();
+                // attach background image
+                this.SearchImage.Source = bitImg;
+            }
         }
 
         void CheckForSearchResults(object sender, EventArgs e)
@@ -82,6 +98,7 @@ namespace ASDAGeorgeApp.Views
             {
                 this.CountText.Text = Collector.Search.Count.ToString() + " RESULTS FOR";
                 this.SearchTermText.Text = Collector.lastSearchTerm;
+                this.SearchTermText.TextDecorations.Add(TextDecorations.Underline);
 
                 //show
                 this.ProductContainer.Children.Clear();
@@ -94,8 +111,8 @@ namespace ASDAGeorgeApp.Views
                     // create background image
                     BitmapImage bitImg = new BitmapImage();
                     bitImg.BeginInit();
-                    if (File.Exists(item.ProductImage))
-                        bitImg.UriSource = new Uri(item.ProductImage);
+                    if (File.Exists(item.ProductImage + "_list.png"))
+                        bitImg.UriSource = new Uri(item.ProductImage + "_list.png");
                     else
                         bitImg.UriSource = new Uri(System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\ProductImages\\tempImage.png");
                     bitImg.EndInit();
@@ -124,16 +141,24 @@ namespace ASDAGeorgeApp.Views
             {
                 this.CountText.Text = "";
                 this.SearchTermText.Text = "SEARCH";
+                this.SearchTermText.TextDecorations.Clear();
 
                 if(Collector.IsListening)
                 {
-                    this.IsListeningBox.Visibility = Visibility.Visible;
-                    this.IsNotListeningBox.Visibility = Visibility.Hidden;
+                    if (!wasListening)
+                    {
+                        wasListening = true;
+                        this.IsListeningBox.Visibility = Visibility.Visible;
+                        this.IsNotListeningBox.Visibility = Visibility.Hidden;
+                        SetImage(true);
+                    }
                 }
                 else
                 {
+                    wasListening = false;
                     this.IsListeningBox.Visibility = Visibility.Hidden;
                     this.IsNotListeningBox.Visibility = Visibility.Visible;
+                    SetImage(false);
                 }
 
                 //hide

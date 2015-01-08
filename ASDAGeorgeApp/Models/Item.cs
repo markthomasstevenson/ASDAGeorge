@@ -37,7 +37,7 @@ namespace ASDAGeorgeApp.Models
                 }
             }
         }
-        
+
         private string _Title;
         public string Title
         {
@@ -47,6 +47,20 @@ namespace ASDAGeorgeApp.Models
                 if (_Title != value)
                 {
                     _Title = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        private bool _IsThin = false;
+        public bool IsThin
+        {
+            get { return _IsThin; }
+            set
+            {
+                if (_IsThin != value)
+                {
+                    _IsThin = value;
                     NotifyPropertyChanged();
                 }
             }

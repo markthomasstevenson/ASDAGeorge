@@ -381,17 +381,6 @@
     <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
-    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240438890?nocache=846720491</Data></Cell>
-    <Cell><Data ss:Type="String">Tailor &amp; Cutter Check and Plain Shirt and Tie Set</Data></Cell>
-    <Cell><Data ss:Type="String">GEM311478 </Data></Cell>
-    <Cell ss:StyleID="s62"><Data ss:Type="Number">16</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">Bulk up your formal wardrobe with this great Tailor &amp; Cutter check and plain shirt and tie set. With various designs, you’ll be able to mix and match this 3 piece set whether you’re heading to work or on a night out with friends.&#10;&#10;•  Long sleeve&#10;•  Button through fastening</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19&#10;</Data></Cell>
-    <Cell><Data ss:Type="String">No Review</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">UK Delivery Information&#10;Standard delivery (3-5) days&#10;£2.95&#10;Named day delivery&#10;£4.50&#10;Next working day&#10;£4.50&#10;Free standard delivery when you spend £45 or more.&#10;This offer applies to clothing only. Delivery slots subject to availability.</Data></Cell>
-   </Row>
-   <Row>
     <Cell ss:Index="2"><Data ss:Type="String">Suits</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240445553?nocache=360435896</Data></Cell>
@@ -493,7 +482,7 @@
    </Row>
    <Row>
     <Cell ss:Index="3"><Data ss:Type="Number">10</Data></Cell>
-    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240447694_C?nocache=771785965</Data></Cell>
+    <Cell><Data ss:Type="String">https://asda.scene7.com/is/image/Asda/5054240447694?nocache=771785965</Data></Cell>
     <Cell><Data ss:Type="String">Tailor &amp; Cutter Wide Pinstripe Suit Jacket</Data></Cell>
     <Cell><Data ss:Type="String">GEM310171 </Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="Number">35</Data></Cell>

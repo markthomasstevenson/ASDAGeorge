@@ -131,46 +131,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
                     <Grid x:Name="verticalScrollBar" SnapsToDevicePixels="true" Opacity="1.0">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Stopped">
-                                    <Storyboard>
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <ThicknessAnimation To="0,7,0,7" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                        <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectLightGray}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="GripScrolling">
-                                    <Storyboard>
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <ThicknessAnimation To="7,0,7,0" Duration="0:00:00.0" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                        <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectLightGray}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="MouseScrolling">
-                                    <Storyboard>
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                        <ThicknessAnimation To="0,0,0,0" Duration="0:00:00.0" FillBehavior="HoldEnd" Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                        <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="verticalScrollThumb" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectDarkGray}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
                         <Grid.RowDefinitions>
                             <RowDefinition MaxHeight="{DynamicResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}" />
                             <RowDefinition Height="0.00001*" />
@@ -206,46 +166,6 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ScrollBar}">
                             <Grid x:Name="horizontalScrollBar" SnapsToDevicePixels="true" Opacity="1.0">
-                                <VisualStateManager.VisualStateGroups>
-                                    <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Stopped">
-                                            <Storyboard>
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <ThicknessAnimation To="0,7,0,7" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                                <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectLightGray}"/>
-                                                </ObjectAnimationUsingKeyFrames>
-                                            </Storyboard>
-                                        </VisualState>
-                                        <VisualState x:Name="GripScrolling">
-                                            <Storyboard>
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <ThicknessAnimation To="0,7,0,7" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                                <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectLightGray}"/>
-                                                </ObjectAnimationUsingKeyFrames>
-                                            </Storyboard>
-                                        </VisualState>
-                                        <VisualState x:Name="MouseScrolling">
-                                            <Storyboard>
-                                                <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollbarBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalDecreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalIncreaseRepeatButton" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                                <ThicknessAnimation To="0,0,0,0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Margin" />
-                                                <ObjectAnimationUsingKeyFrames  Storyboard.TargetName="horizontalScrollThumb" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource KinectDarkGray}"/>
-                                                </ObjectAnimationUsingKeyFrames>
-                                            </Storyboard>
-                                        </VisualState>
-                                    </VisualStateGroup>
-                                </VisualStateManager.VisualStateGroups>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition MaxWidth="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}" />
                                     <ColumnDefinition Width="0.00001*" />
@@ -282,20 +202,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:KinectScrollViewer}">
                     <Grid>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <Storyboard>
-                                        <DoubleAnimation To="0.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="HoverBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="HandPointerOver">
-                                    <Storyboard>
-                                        <DoubleAnimation To="1.0" Duration="0:00:00.3" FillBehavior="HoldEnd" Storyboard.TargetName="HoverBackground" Storyboard.TargetProperty="(UIElement.Opacity)" />
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>

@@ -46,17 +46,17 @@
                 
                 <Grid Grid.Row="0" Height="220px" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition MinWidth="400px" Width="auto" />
-                        <ColumnDefinition MinWidth="228px" Width="auto" />
-                        <ColumnDefinition MinWidth="228px" Width="auto" />
-                        <ColumnDefinition MinWidth="228px" Width="auto" />
-                        <ColumnDefinition MinWidth="228px" Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Style="{StaticResource SubCatText}" Text="Shop by Product" />
-                    <TextBlock Grid.Column="1" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Christmas" />
-                    <TextBlock Grid.Column="2" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Brands" />
-                    <TextBlock Grid.Column="3" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Collections" />
+                    <TextBlock Grid.Column="0" Margin="0 0 80 0" Style="{StaticResource SubCatText}" Text="Shop by Product" />
+                    <TextBlock Grid.Column="1" Margin="0 0 80 0" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Christmas" />
+                    <TextBlock Grid.Column="2" Margin="0 0 80 0" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Brands" />
+                    <TextBlock Grid.Column="3" Margin="0 0 80 0" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Collections" />
                     <TextBlock Grid.Column="4" Style="{StaticResource SubCatText}" Foreground="#cccccc" Text="Offers" />
                 </Grid>
 
