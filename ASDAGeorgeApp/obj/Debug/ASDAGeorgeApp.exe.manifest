@@ -59,7 +59,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b6pz+FY8nrCyOwrsJ5p9lLGWsdsNZDjM39xfJS+mKZE=</dsig:DigestValue>
+        <dsig:DigestValue>C6wBptFb9Fzm0IepT2D1csqk7WN4uKxdV0JX3HAAt28=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -71,7 +71,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>isLhld0to52u22paX5FjFKhCvi8G6wnblqHgXjtwRNY=</dsig:DigestValue>
+        <dsig:DigestValue>0LD+brMb3OxhePte5cRaa88MFJegUfMjLEYfRESUSpQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -83,7 +83,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6l1FnOZ4elPHVR4Lx2G6/KzJS96vbncpqubVG6xtc7w=</dsig:DigestValue>
+        <dsig:DigestValue>quGFu4nbtGL3l2s3pnFCTBBt0EAmikxXPa0LX0Jcwb0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2142,13 +2142,13 @@
       <dsig:DigestValue>vxf86Pmdgerp0mu+zkato0H3Yp0kDpL9HdNXZBg6uoo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\women.csv" size="33722">
+  <file name="Resources\women.csv" size="33065">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>anBHEerwloMLR1VJOweTZv58sHqKFDG0lCSkmfNjfxQ=</dsig:DigestValue>
+      <dsig:DigestValue>CeACNa7FYZwCFyjCmlq3YjaDngPj3KaqYRa+Rv0VZtA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\women.xml" size="66480" writeableType="applicationData">
